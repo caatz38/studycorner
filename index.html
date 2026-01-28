@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCorner - The open hub to conquer every exam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #ffffff;
+            padding: 40px 40px 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            background: white;
+            padding: 6px;
+            border-radius: 30px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+            color: #1a1a1a;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0 40px 80px;
+        }
+
+        .hero-content {
+            background: linear-gradient(to bottom, #DCECF9 0%, #ffffff 100%);
+            border-radius: 32px;
+            padding: 100px 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            width: 16px;
+            height: 16px;
+        }
+
+        h1 {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: #000;
+        }
+
+        h1 .italic {
+            font-style: italic;
+        }
+
+        .underline {
+            text-decoration: underline;
+            text-decoration-thickness: 4px;
+            text-underline-offset: 8px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #EFFFF2;
+            color: #349E62;
+            padding: 14px 32px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            border: 2px solid #CCE1D0;
+        }
+
+        .cta-button:hover {
+            background: #e0f7e5;
+            transform: translateY(-2px);
+        }
+
+        /* Features Grid */
+        .features {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .feature-card {
+            border-radius: 32px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card.left {
+            background: #ECF6F9;
+        }
+
+        .feature-card.right {
+            background: #D5D8F9;
+        }
+
+        .feature-icon {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 20px;
+        }
+
+        .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-wrapper .feature-icon {
+            margin-bottom: 0;
+        }
+
+        .pills-decoration {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            height: auto;
+            opacity: 0.6;
+        }
+
+        .feature-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #485660;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-description {
+            font-size: 15px;
+            color: #485660;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .feature-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #485660;
+        }
+
+        .secondary-button {
+            display: inline-block;
+            background: white;
+            color: #485660;
+            padding: 12px 28px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .secondary-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .button-right {
+            text-align: right;
+        }
+
+        /* Story Section */
+        .story {
+            max-width: 1200px;
+            margin: 40px auto 80px;
+            padding: 0 40px;
+        }
+
+        .story-card {
+            background: #E3F5E4;
+            border-radius: 32px;
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .story-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .story-content .icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .story-content .icon-wrapper img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .story-content h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #485660;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .story-content p {
+            font-size: 16px;
+            color: #485660;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+
+        .story-image {
+            position: absolute;
+            bottom: 0;
+            right: 50px;
+            width: 280px;
+            z-index: 1;
+        }
+
+        .cat-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .question-mark {
+            display: none;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-text {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .footer-signature {
+            height: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 56px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .story-card {
+                grid-template-columns: 1fr;
+            }
+
+            .story-image {
+                position: static;
+                width: 200px;
+                margin: 30px auto 0;
+            }
+
+            .question-mark {
+                font-size: 150px;
+                left: -60px;
+                top: -60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 20px 10px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 20px;
+                right: 20px;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                gap: 0;
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .hero-content {
+                padding: 60px 30px;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .features {
+                padding: 0 20px;
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 30px;
+            }
+
+            .story {
+                padding: 0 20px;
+            }
+
+            .story-card {
+                padding: 30px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 30px 20px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .hero-content {
+                padding: 40px 20px;
+            }
+
+            .feature-card {
+                padding: 25px;
+            }
+
+            .story-card {
+                padding: 25px;
+            }
+
+            .story-content h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="studycorner_logo.png" alt="StudyCorner" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#subjects">Subjects</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="rating-badge">
+                    <div class="stars">
+                        <img src="star.svg" alt="★" class="star">
+                        <img src="star.svg" alt="★" class="star">
+                        <img src="star.svg" alt="★" class="star">
+                        <img src="star.svg" alt="★" class="star">
+                        <img src="star.svg" alt="★" class="star">
+                    </div>
+                    <span>Bintang lima tapi ku bukan ancaman.</span>
+                </div>
+                
+                <h1>
+                    The open hub to conquer<br>
+                    <span class="underline italic">every exam.</span>
+                </h1>
+                
+                <p class="subtitle">
+                    StudyCorner <em>(formerly MindShare)</em> is a student-powered learning hub for PDOB students.<br>
+                    Bringing notes, teacher materials, and practice questions into one simple place.
+                </p>
+                
+                <a href="#learn" class="cta-button">Start Learning</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card left">
+                <div class="feature-title">
+                    <div class="icon-wrapper">
+                        <img src="book.svg" alt="📚" class="feature-icon">
+                    </div>
+                    Everything you need, in one place.
+                </div>
+                <img src="pills_falling.svg" alt="" class="pills-decoration">
+            </div>
+
+            <div class="feature-card right">
+                <div class="feature-title">
+                    <div class="icon-wrapper">
+                        <img src="student.svg" alt="👥" class="feature-icon">
+                    </div>
+                    Built by students, for students
+                </div>
+                <p class="feature-description">
+                    StudyCorner is a collaborative project. Notes are collected from students, reviewed for clarity, and shared to help everyone study more effectively.
+                </p>
+                <p class="feature-description">
+                    Contributors are always credited, because learning together matters.
+                </p>
+                <div class="button-right">
+                    <a href="#contribute" class="secondary-button">Become a Contributor!</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="story">
+            <div class="story-card">
+                <div class="story-content">
+                    <h2>
+                        <div class="icon-wrapper">
+                            <img src="16522092.png" alt="?" style="width: 24px; height: 24px;">
+                        </div>
+                        Why do I built StudyCorner?
+                    </h2>
+                    <p>
+                        No wonder that IB is hard. Students gets overwhelmed by scattered notes, unclear explanations, too many links, and no practice questions. StudyCorner was created to solve that problem by organizing everything in one simple, student-friendly platform.
+                    </p>
+                </div>
+                <div class="story-image">
+                    <img src="confused_cat.svg" alt="Confused cat" class="cat-image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <strong>© StudyCorner 2026</strong><br>
+            For educational use only · Respect copyright
+        </div>
+        <img src="nel.png" alt="nel signature" class="footer-signature">
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            const menuToggle = document.querySelector('.menu-toggle');
+            
+            if (!nav.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

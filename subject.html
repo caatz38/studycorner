@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subjects - StudyCorner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #ffffff;
+            padding: 40px 40px 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            background: white;
+            padding: 6px;
+            border-radius: 30px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+            color: #1a1a1a;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0 40px 60px;
+        }
+
+        .hero-content {
+            background: linear-gradient(to bottom, #DCECF9 0%, #ffffff 100%);
+            border-radius: 32px;
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #1a1a1a;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Subjects Grid */
+        .subjects-section {
+            max-width: 1200px;
+            margin: 60px auto 80px;
+            padding: 0 40px;
+        }
+
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .subject-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 24px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .subject-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: #cbd5e1;
+        }
+
+        .subject-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #DCECF9 0%, #D5D8F9 100%);
+            border-radius: 16px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .subject-card:nth-child(1) .subject-icon {
+            background: linear-gradient(135deg, #DCECF9 0%, #bfdbfe 100%);
+        }
+
+        .subject-card:nth-child(2) .subject-icon {
+            background: linear-gradient(135deg, #D5D8F9 0%, #c4b5fd 100%);
+        }
+
+        .subject-card:nth-child(3) .subject-icon {
+            background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+        }
+
+        .subject-card:nth-child(4) .subject-icon {
+            background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+        }
+
+        .subject-card:nth-child(5) .subject-icon {
+            background: linear-gradient(135deg, #fed7aa 0%, #fdba74 100%);
+        }
+
+        .subject-card:nth-child(6) .subject-icon {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+
+        .subject-card:nth-child(7) .subject-icon {
+            background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+        }
+
+        .subject-card:nth-child(8) .subject-icon {
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+        }
+
+        .subject-card:nth-child(9) .subject-icon {
+            background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+        }
+
+        .subject-card:nth-child(10) .subject-icon {
+            background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+        }
+
+        .subject-card:nth-child(11) .subject-icon {
+            background: linear-gradient(135deg, #fae8ff 0%, #f5d0fe 100%);
+        }
+
+        .subject-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subject-info {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-text {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .footer-signature {
+            height: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 48px;
+            }
+
+            .subjects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 20px 10px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 20px;
+                right: 20px;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                gap: 0;
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 38px;
+            }
+
+            .hero-content {
+                padding: 60px 30px;
+            }
+
+            .hero {
+                padding: 0 20px 40px;
+            }
+
+            .subjects-section {
+                padding: 0 20px;
+                margin: 40px auto 60px;
+            }
+
+            .subjects-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 30px 20px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 16px;
+            }
+
+            .hero-content {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="studycorner_logo.png" alt="StudyCorner" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="studycorner.html">Home</a></li>
+                <li><a href="subjects.html" class="active">Subjects</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Browse Subjects</h1>
+                <p class="subtitle">
+                    Explore our collection of student-made notes, materials, and practice questions for all your subjects.
+                </p>
+            </div>
+        </section>
+
+        <section class="subjects-section">
+            <div class="subjects-grid">
+                <a href="#business" class="subject-card">
+                    <div class="subject-icon">💼</div>
+                    <div class="subject-name">Business Management</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#english-b" class="subject-card">
+                    <div class="subject-icon">📖</div>
+                    <div class="subject-name">English B</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#english-a" class="subject-card">
+                    <div class="subject-icon">📚</div>
+                    <div class="subject-name">English A</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#indonesian" class="subject-card">
+                    <div class="subject-icon">🇮🇩</div>
+                    <div class="subject-name">Indonesian A</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#biology" class="subject-card">
+                    <div class="subject-icon">🧬</div>
+                    <div class="subject-name">Biology</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#physics" class="subject-card">
+                    <div class="subject-icon">⚛️</div>
+                    <div class="subject-name">Physics</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#chemistry" class="subject-card">
+                    <div class="subject-icon">🧪</div>
+                    <div class="subject-name">Chemistry</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#math" class="subject-card">
+                    <div class="subject-icon">🔢</div>
+                    <div class="subject-name">Math</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#history" class="subject-card">
+                    <div class="subject-icon">📜</div>
+                    <div class="subject-name">History</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#philosophy" class="subject-card">
+                    <div class="subject-icon">💭</div>
+                    <div class="subject-name">Philosophy</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+
+                <a href="#politics" class="subject-card">
+                    <div class="subject-icon">🌍</div>
+                    <div class="subject-name">Global Politics</div>
+                    <div class="subject-info">Notes & Resources</div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <strong>© StudyCorner 2026</strong><br>
+            For educational use only · Respect copyright
+        </div>
+        <img src="nel.png" alt="nel signature" class="footer-signature">
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

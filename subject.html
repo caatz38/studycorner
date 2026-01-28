@@ -84,6 +84,18 @@
             cursor: pointer;
         }
 
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+
         /* Hero Section */
         .hero {
             padding: 0 40px 60px;
@@ -330,11 +342,10 @@
             <img src="studycorner_logo.png" alt="StudyCorner" class="logo">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="studycorner.html">Home</a></li>
-                <li><a href="subjects.html" class="active">Subjects</a></li>
-                <li><a href="#volunteer">Volunteer</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/contributor.html">Contributor</a></li>
+                <li><a href="/donate.html">Donate</a></li>
+                <li><a href="about_us.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -342,14 +353,15 @@
     <main>
         <section class="hero">
             <div class="hero-content">
+                <div class="rating-badge">
+                    <span>Term 2</span>
+                </div>
                 <h1>Browse Subjects</h1>
                 <p class="subtitle">
                     Explore our collection of student-made notes, materials, and practice questions for all your subjects.
                 </p>
-            </div>
-        </section>
-
-        <section class="subjects-section">
+                <section class="subjects-section"></section>
+                <section class="subjects-section">
             <div class="subjects-grid">
                 <a href="#business" class="subject-card">
                     <div class="subject-icon">💼</div>
@@ -418,6 +430,12 @@
                 </a>
             </div>
         </section>
+            </div>
+
+
+        </section>
+
+        
     </main>
 
     <footer>

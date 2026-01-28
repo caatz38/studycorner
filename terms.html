@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - StudyCorner</title>
+    <title>Choose Your Term - StudyCorner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
             background: #ffffff;
-            color: #968686;
+            color: #1a1a1a;
             line-height: 1.6;
         }
 
@@ -90,7 +90,7 @@
         }
 
         .hero-content {
-            background: linear-gradient(to bottom, #dcf9dd 0%, #ffffff 100%);
+            background: linear-gradient(to bottom, #DCECF9 0%, #ffffff 100%);
             border-radius: 32px;
             padding: 80px 60px;
             text-align: center;
@@ -113,188 +113,69 @@
             margin-right: auto;
         }
 
-        /* Content */
-        .content {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 60px 40px 80px;
+        /* Terms Section */
+        .terms-section {
+            max-width: 1200px;
+            margin: 60px auto 80px;
+            padding: 0 40px;
         }
 
-        .about-section {
-            margin-bottom: 60px;
-        }
-
-        .about-section h2 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
-
-        .about-section p {
-            font-size: 16px;
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        /* Mission/Vision Cards */
-        .cards-grid {
+        .terms-grid {
             display: grid;
-            grid-template-columns:.6fr;
-            gap: 24px;
-            margin-bottom: 60px;
-            justify-content: center;
-            align-items: center;
-            
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
         }
 
-        .info-card {
-            background: #f6fff4;
-            border-radius: 20px;
-            padding: 32px;
-        }
-
-        .info-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-
-        .info-card p {
-            font-size: 15px;
-            color: #4a5568;
-            line-height: 1.7;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            margin-top: 80px;
-        }
-
-        .faq-section h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 32px;
-            text-align: center;
-            color: #1a1a1a;
-        }
-
-        .faq-item {
+        .term-card {
             background: #ffffff;
             border: 2px solid #e5e7eb;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            overflow: hidden;
+            border-radius: 24px;
+            padding: 48px;
+            text-align: center;
             transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
         }
 
-        .faq-item:hover {
+        .term-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
             border-color: #cbd5e1;
         }
 
-        .faq-question {
-            padding: 24px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a1a1a;
-            user-select: none;
-        }
-
-        .faq-icon {
-            font-size: 24px;
-            color: #6b7280;
-            transition: transform 0.3s;
-            flex-shrink: 0;
-            margin-left: 16px;
-        }
-
-        .faq-item.open .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-            padding: 0 24px;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 500px;
-            padding: 0 24px 24px 24px;
-        }
-
-        .faq-answer p {
-            font-size: 15px;
-            color: #4a5568;
-            line-height: 1.8;
-        }
-
-        /* Team Section */
-        .team-section {
-            background: #f9fafb;
-            border-radius: 24px;
-            padding: 40px;
-            margin-bottom: 60px;
-        }
-
-        .team-section h3 {
-            font-size: 24px;
-            font-weight: 600;
+        .term-number {
+            font-size: 72px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #DCECF9 0%, #D5D8F9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 16px;
-            color: #1a1a1a;
+            line-height: 1;
         }
 
-        .team-section p {
+        .term-card:nth-child(2) .term-number {
+            background: linear-gradient(135deg, #D5D8F9 0%, #E3F5E4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .term-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .term-description {
             font-size: 15px;
-            color: #4a5568;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        footer {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 40px 60px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-top: 1px solid #e5e7eb;
-        }
-
-        .footer-text {
             color: #6b7280;
-            font-size: 14px;
-        }
-
-        .footer-text strong {
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        .footer-signature {
-            height: 40px;
+            line-height: 1.7;
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            h1 {
-                font-size: 42px;
-            }
-
-            .cards-grid {
-                grid-template-columns: 1fr;
-                justify-content: center;
-                align-items: center;
-            }
-        }
-
         @media (max-width: 768px) {
             header {
                 padding: 20px 20px 10px 20px;
@@ -326,35 +207,38 @@
                 display: block;
             }
 
-            h1 {
-                font-size: 36px;
-            }
-
-            .hero-content {
-                padding: 60px 30px;
-                justify-content: center;
-                align-items: center;
-            }
-
             .hero {
                 padding: 0 20px 40px;
             }
 
-            .content {
-                padding: 40px 20px 60px;
+            .hero-content {
+                padding: 60px 30px;
             }
 
-            .about-section h2 {
+            h1 {
+                font-size: 36px;
+            }
+
+            .terms-section {
+                padding: 0 20px;
+                margin: 40px auto 60px;
+            }
+
+            .terms-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .term-card {
+                padding: 36px;
+            }
+
+            .term-number {
+                font-size: 56px;
+            }
+
+            .term-title {
                 font-size: 28px;
-            }
-
-            .faq-section h2 {
-                font-size: 28px;
-            }
-
-            .faq-question {
-                font-size: 16px;
-                padding: 20px;
             }
 
             footer {
@@ -378,12 +262,16 @@
                 padding: 40px 20px;
             }
 
-            .info-card {
-                padding: 24px;
+            .term-card {
+                padding: 30px 24px;
             }
 
-            .team-section {
-                padding: 30px 24px;
+            .term-number {
+                font-size: 48px;
+            }
+
+            .term-title {
+                font-size: 24px;
             }
         }
     </style>
@@ -395,8 +283,9 @@
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="/contributor.html">Contributor</a></li>
-                <li><a href="/donate.html" class="active">Donate</a></li>
+                <li><a href="subjects.html">Subjects</a></li>
+                <li><a href="#volunteer">Volunteer</a></li>
+                <li><a href="#pricing">Pricing</a></li>
                 <li><a href="about_us.html">About Us</a></li>
             </ul>
         </nav>
@@ -405,31 +294,34 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="cards-grid"></div>
-                <h1>Donate</h1>
-                <div class="cards-grid"></div>
-                <div class="cards-grid">
-                <div class="info-card">
-                    <h3>Support Us!</h3>
-                    <p>
-                        I’ve spent lots of time, effort, and money into building this website for all of you. 
-</p>
-<h1></h1>
-<p>I don’t need your donations right now. What I need is your courage to open the materials, to keep studying even when it’s hard, and to not give up on yourself.</p>
-<h1></h1>
-<p>
-If this website helps you grow, understand more, and achieve better grades, that’s more than enough for me. Prove that this platform matters by proving to yourself that you can get the grades that you expected.
-                    </p>
-                    <h1></h1>
-                    <p>Thank you.</p>
-                    
-                </div>
-
-
+                <h1>Choose Your Term</h1>
+                <p class="subtitle">
+                    Select the term you're currently studying to access relevant materials
+                </p>
             </div>
         </section>
 
-        
+        <section class="terms-section">
+            <div class="terms-grid">
+                <a href="subjects.html?term=1" class="term-card">
+                    <div class="term-number">01</div>
+                    <h2 class="term-title">Term 1</h2>
+                    <p class="term-description">
+                        August - December<br>
+                        First semester materials and resources
+                    </p>
+                </a>
+
+                <a href="subjects.html?term=2" class="term-card">
+                    <div class="term-number">02</div>
+                    <h2 class="term-title">Term 2</h2>
+                    <p class="term-description">
+                        January - May<br>
+                        Second semester materials and resources
+                    </p>
+                </a>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -444,10 +336,6 @@ If this website helps you grow, understand more, and achieve better grades, that
         function toggleMenu() {
             const navLinks = document.getElementById('navLinks');
             navLinks.classList.toggle('active');
-        }
-
-        function toggleFAQ(element) {
-            element.classList.toggle('open');
         }
 
         // Close menu when clicking outside

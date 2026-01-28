@@ -90,7 +90,7 @@
         }
 
         .hero-content {
-            background: linear-gradient(to bottom, #dcf9dd 0%, #ffffff 100%);
+            background: linear-gradient(to bottom, #DCECF9 0%, #ffffff 100%);
             border-radius: 32px;
             padding: 80px 60px;
             text-align: center;
@@ -138,123 +138,67 @@
             margin-bottom: 16px;
         }
 
-        /* Mission/Vision Cards */
-        .cards-grid {
-            display: grid;
-            grid-template-columns:.6fr;
-            gap: 24px;
-            margin-bottom: 60px;
+        /* Terms Section */
+        .terms-section {
+            max-width: 1200px;
+            margin: 60px auto 80px;
+            padding: 0 40px;
+        }
+
+        .terms-grid {
+            display: flex;
+            grid-template-columns: repeat(3, 1fr);
             justify-content: center;
-            align-items: center;
-            
+            gap: 32px;
         }
 
-        .info-card {
-            background: #f6fff4;
-            border-radius: 20px;
-            padding: 32px;
-        }
-
-        .info-card h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #1a1a1a;
-        }
-
-        .info-card p {
-            font-size: 15px;
-            color: #4a5568;
-            line-height: 1.7;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            margin-top: 80px;
-        }
-
-        .faq-section h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 32px;
-            text-align: center;
-            color: #1a1a1a;
-        }
-
-        .faq-item {
+        .term-card {
             background: #ffffff;
             border: 2px solid #e5e7eb;
-            border-radius: 16px;
-            margin-bottom: 16px;
-            overflow: hidden;
+            border-radius: 24px;
+            padding: 48px;
+            text-align: center;
             transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
         }
 
-        .faq-item:hover {
+        .term-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
             border-color: #cbd5e1;
         }
 
-        .faq-question {
-            padding: 24px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 18px;
-            font-weight: 600;
-            color: #1a1a1a;
-            user-select: none;
-        }
-
-        .faq-icon {
-            font-size: 24px;
-            color: #6b7280;
-            transition: transform 0.3s;
-            flex-shrink: 0;
-            margin-left: 16px;
-        }
-
-        .faq-item.open .faq-icon {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-            padding: 0 24px;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 500px;
-            padding: 0 24px 24px 24px;
-        }
-
-        .faq-answer p {
-            font-size: 15px;
-            color: #4a5568;
-            line-height: 1.8;
-        }
-
-        /* Team Section */
-        .team-section {
-            background: #f9fafb;
-            border-radius: 24px;
-            padding: 40px;
-            margin-bottom: 60px;
-        }
-
-        .team-section h3 {
-            font-size: 24px;
-            font-weight: 600;
+        .term-number {
+            font-size: 72px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #DCECF9 0%, #D5D8F9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 16px;
-            color: #1a1a1a;
+            line-height: 1;
         }
 
-        .team-section p {
+        .term-card:nth-child(2) .term-number {
+            background: linear-gradient(135deg, #D5D8F9 0%, #E3F5E4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .term-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+        }
+
+        .term-description {
             font-size: 15px;
-            color: #4a5568;
-            line-height: 1.8;
+            color: #6b7280;
+            line-height: 1.7;
         }
 
         /* Footer */
@@ -396,7 +340,7 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="/contributor.html">Contributor</a></li>
-                <li><a href="/donate.html" class="active">Donate</a></li>
+                <li><a href="/donate.html">Donate</a></li>
                 <li><a href="about_us.html">About Us</a></li>
             </ul>
         </nav>
@@ -405,27 +349,22 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="cards-grid"></div>
-                <h1>Donate</h1>
-                <div class="cards-grid"></div>
-                <div class="cards-grid">
-                <div class="info-card">
-                    <h3>Support Us!</h3>
-                    <p>
-                        I’ve spent lots of time, effort, and money into building this website for all of you. 
-</p>
-<h1></h1>
-<p>I don’t need your donations right now. What I need is your courage to open the materials, to keep studying even when it’s hard, and to not give up on yourself.</p>
-<h1></h1>
-<p>
-If this website helps you grow, understand more, and achieve better grades, that’s more than enough for me. Prove that this platform matters by proving to yourself that you can get the grades that you expected.
-                    </p>
-                    <h1></h1>
-                    <p>Thank you.</p>
-                    
-                </div>
+                <div class="terms-section"></div>
+                <h1>Choose Your Term</h1>
+                <p class="subtitle">
+                    Select the term you're currently studying to access relevant materials
+                </p>
+            
 
+        <section class="terms-section">
+            <div class="terms-grid">
+                <a href="https://docs.google.com/document/d/1bTM5oWEfcQMuIQZczbgx8OHISnMUa7HLmciHehltz0I/edit?usp=sharing" class="term-card">
+                    <h2 class="term-title">Term 1</h2>
+                </a>
 
+                <a href="subjects.html?term=2" class="term-card">
+                    <h2 class="term-title">Term 2</h2>
+                </a>
             </div>
         </section>
 

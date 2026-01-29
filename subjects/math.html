@@ -108,6 +108,7 @@
             justify-content: center;
             font-size: 40px;
             flex-shrink: 0;
+            transform: translate(0, -47px);
         }
 
         .hero-text h1 {
@@ -275,6 +276,30 @@
             height: 40px;
         }
 
+        /* Back Button */
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 12px;
+        }
+
+        .back-button:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .back-arrow {
+            font-size: 18px;
+        }
+
         /* Responsive Design */
         @media (max-width: 1024px) {
             .courses-grid {
@@ -283,6 +308,20 @@
         }
 
         @media (max-width: 768px) {
+
+            .subject-hero-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            flex-shrink: 0;
+            transform: translate(0, 0px);
+        }
+
             header {
                 padding: 20px 20px 10px 20px;
             }
@@ -383,10 +422,16 @@
                 <div class="hero-text">
                     <h1>Mathematics</h1>
                     <div class="breadcrumb">
-                        <a href="/index.html">Home</a> / <a href="../subject.html">Term 2</a> / Math
+                        <a href="/index.html">Home</a> / <a href="/term2/subject.html">Term 2</a> / Math
                     </div>
+                    <h1></h1>
+                    <a href="/term2/subject.html" class="back-button">
+                        <span class="back-arrow">←</span>
+                        Back
+                    </a>
                 </div>
 
+                
                 
             </div>
 

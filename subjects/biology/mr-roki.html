@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engish B - Mr Roki - StudyCorner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #ffffff;
+            padding: 40px 40px 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            background: white;
+            padding: 6px;
+            border-radius: 30px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+            color: #1a1a1a;
+        }
+
+        /* Mobile menu toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0 40px 60px;
+        }
+
+        .hero-content {
+            background: linear-gradient(to bottom, #dde4ff 0%, #ffffff 100%);
+            border-radius: 32px;
+            padding: 60px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .subject-hero-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .hero-text .course-badge {
+            display: inline-block;
+            background: #fee2e2;
+            color: #991b1b;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 12px;
+            border: 1px solid #fecaca;
+            margin-bottom: 8px;
+        }
+
+        .hero-text .breadcrumb {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .breadcrumb a {
+            color: #6b7280;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            color: #1a1a1a;
+        }
+
+        /* Content Container */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px 80px;
+        }
+
+        /* Section Styling */
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #DCECF9 0%, #bfdbfe 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .section-description {
+            color: #6b7280;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            border-color: #cbd5e1;
+        }
+
+        .resource-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .resource-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .resource-meta {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .resource-badge {
+            background: #EFFFF2;
+            color: #349E62;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+            border: 1px solid #CCE1D0;
+        }
+
+        .resource-badge.video {
+            background: #dcfce7;
+            color: #15803d;
+            border-color: #86efac;
+        }
+
+        .resource-badge.pdf {
+            background: #fee2e2;
+            color: #991b1b;
+            border-color: #fecaca;
+        }
+
+        .resource-badge.slides {
+            background: #e0e7ff;
+            color: #3730a3;
+            border-color: #c7d2fe;
+        }
+
+        /* YouTube Section Special Styling */
+        .video-card {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+
+        .video-card:hover {
+            border-color: #86efac;
+        }
+
+        /* List of Sub-items */
+        .sub-items {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sub-items li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .sub-items li:last-child {
+            border-bottom: none;
+        }
+
+        .sub-items a {
+            color: #1a1a1a;
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: color 0.3s;
+        }
+
+        .sub-items a:hover {
+            color: #3b82f6;
+        }
+
+        .sub-items .arrow {
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* Expandable Card */
+        .expandable-card {
+            background: #ffffff;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        .expandable-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .expandable-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .expand-icon {
+            font-size: 20px;
+            color: #6b7280;
+            transition: transform 0.3s;
+        }
+
+        .expandable-card.open .expand-icon {
+            transform: rotate(180deg);
+        }
+
+        .expandable-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, 0.1s;
+            padding: 0 0;
+        }
+
+        .expandable-card.open .expandable-content {
+            max-height: 1000px;
+            padding-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-text {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .footer-signature {
+            height: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .cards-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 20px 10px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 20px;
+                right: 20px;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                gap: 0;
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 0 20px 40px;
+            }
+
+            .hero-content {
+                padding: 40px 30px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .content {
+                padding: 0 20px 60px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 30px 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="../../images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contributor.html">Contributor</a></li>
+                <li><a href="/donate.html">Donate</a></li>
+                <li><a href="/about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="course-badge">Mr Roki</span>
+                    <h1>English B</h1>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a> / <a href="../subject.html">Term 2</a> / <a href="/term2/english/english.html">English</a> / Mr Roki
+                    </div>
+                </div>
+                <div class="content">
+                    
+                </div>
+            </div>
+        </section>
+
+        <div class="content">
+            <!-- YouTube Videos Section -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon">🎥</div>
+                    <h2>YouTube Videos</h2>
+                </div>
+                
+                <div class="cards-grid">
+                    <a href="https://youtube.com/playlist?list=PLNIrrcgLlUkWk4V6XFFc7LoD4vLbve2TK&si=MHqRMuQEhXGxQYq4" class="resource-card video-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title"></div>
+                                <div class="resource-title">YouTube Playlist</div>
+                                <div class="resource-meta">2 Videos - Reading Tips</div>
+                            </div>
+                        </div>
+                    </a>
+
+                
+                </div>
+            </section>
+
+            
+
+            <!-- Teacher Materials Section -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon">👨‍🏫</div>
+                    <h2>Teacher Materials</h2>
+                </div>
+                
+                <div class="cards-grid">
+                    <div class="expandable-card" onclick="toggleExpand(this)">
+                        <div class="expandable-header">
+                            <div class="expandable-title">Book PDF</div>
+                            <div class="expand-icon">▼</div>
+                        </div>
+                        <div class="expandable-content">
+                            <ul class="sub-items">
+                                <li><a href="https://drive.google.com/file/d/1mey7udhat4daI8LE_EXk6XZjan18RdfM/view">English B Course Companion Book<span class="arrow">→</span></a></li>
+                                <li><a href="https://drive.google.com/file/d/1f46LyzxpntCFhmi8sFlYT-GG4sak7mAt/view?usp=sharing">Fundamental English Grammar<span class="arrow">→</span></a></li>
+                                <li><a href="https://drive.google.com/file/d/1uRF3Jdplf2368EfbnZbGp9eRZNGUbeJb/view?usp=sharing">Railway Children<span class="arrow">→</span></a></li>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+
+            <!-- Practice Questions Section -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon">✍️</div>
+                    <h2>Past Papers</h2>
+                </div>
+        
+                
+                <div class="cards-grid">
+                    <a href="https://drive.google.com/drive/folders/1zV9h_VOkmNl9VOiNMyofOB3WoREbRbOm?usp=share_link" class="resource-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title">November 2022</div>
+                                <div class="resource-meta">Paper 2 - Reading Comprehension</div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1FAgjoujtKZs1IGWWykq9APwE2ia3oENe?usp=sharing" class="resource-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title">May 2022</div>
+                                <div class="resource-meta">Paper 2 - Reading Comprehension</div>
+                            </div>
+                        
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/drive/folders/1JiI8WRH4fL1uhrpnc3EAnkL9FVzEEjsj?usp=sharing" class="resource-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title">November 2021</div>
+                                <div class="resource-meta">Paper 2 - Reading Comprehension</div>
+                            </div>
+                            
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Exam Tips Section -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon">💡</div>
+                    <h2>Exam Tips</h2>
+                </div>
+                
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">Read more!</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <p style="color: #4a5568; line-height: 1.8; padding: 10px 0;">
+                           Work on past papers. Read extracts from Course Companion book.</p>
+                    </div>
+                </div>
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">Practice makes perfect</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <p>Practice reading, improve writing speed, improve writing quality, and improve reading comprehension. </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <strong>© StudyCorner 2026</strong><br>
+            For educational use only · Respect copyright
+        </div>
+        <img src="../../images/nel.png" alt="nel signature" class="footer-signature">
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function toggleExpand(element) {
+            // Only toggle the clicked element, not its siblings
+            element.classList.toggle('open');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

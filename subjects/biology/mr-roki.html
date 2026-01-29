@@ -267,6 +267,28 @@
             border-color: #86efac;
         }
 
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 10px 16px;
+            border-radius: 12px;
+        }
+
+        .back-button:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .back-arrow {
+            font-size: 18px;
+        }
+
         /* List of Sub-items */
         .sub-items {
             list-style: none;
@@ -459,22 +481,56 @@
     <main>
         <section class="hero">
             <div class="hero-content">
+
                 <div class="hero-text">
-                    <span class="course-badge">Mr Roki</span>
+                    
+                    <h1></h1>
                     <h1>English B</h1>
                     <div class="breadcrumb">
-                        <a href="index.html">Home</a> / <a href="../subject.html">Term 2</a> / <a href="/term2/english/english.html">English</a> / Mr Roki
+                        <a href="index.html">Home</a> / <a href="../subject.html">Term 2</a> / English B
                     </div>
+                    <h1></h1>
+                    <a href="/term2/subject.html" class="back-button">
+                        <span class="back-arrow">←</span>
+                        Back
+                    </a>
                 </div>
+                
                 <div class="content">
                     
                 </div>
+                
             </div>
+            
         </section>
 
+        
         <div class="content">
+            
+            <section class="section">
+                
+                
+                <div class="section-header">
+                    <div class="section-icon">ℹ️</div>
+                    <h2>Information</h2>
+                </div>
+                
+                <div class="cards-grid">
+                        <div class="resource-header">
+                            <div>
+
+                                <div class="resource-meta">It doesn’t matter whether you are Mr. Roki’s or Ms. Raizsa’s student this material is designed to support you. Both classes will be assessed using Paper 2 in the exams.</div>
+                            </div>
+                        </div>
+                </div>
+                
+            </section>
+
+
             <!-- YouTube Videos Section -->
             <section class="section">
+                
+                
                 <div class="section-header">
                     <div class="section-icon">🎥</div>
                     <h2>YouTube Videos</h2>
@@ -588,6 +644,7 @@
                         <p>Practice reading, improve writing speed, improve writing quality, and improve reading comprehension. </p>
                     </div>
                 </div>
+                
             </section>
         </div>
     </main>

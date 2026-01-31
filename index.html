@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StudyCorner - The open hub to conquer every exam</title>
+    <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -18,7 +19,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
             background: #ffffff;
             color: #1a1a1a;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         /* Header & Navigation */
@@ -159,6 +160,18 @@
             border: 2px solid #CCE1D0;
         }
 
+        .cta-warning {
+            display: inline-flex;
+            background: #fdffef;
+            color: #9e8e34;
+            padding: 4px 12px;
+            border-radius: 24px;
+            text-decoration: none;
+            font-size: 6px;
+            border: 1px solid #dee1cc;
+            
+        }
+
         .cta-button:hover {
             background: #e0f7e5;
             transform: translateY(-2px);
@@ -171,7 +184,7 @@
             padding: 0 40px;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 40px;
+            gap: 30px;
         }
 
         .feature-card {
@@ -334,9 +347,9 @@
         }
 
         .cat-image {
-            width: 100%;
-            height: auto;
-            display: block;
+            width: 120%;
+            height: 10;
+            display: flex;
         }
 
         .question-mark {
@@ -384,8 +397,9 @@
 
             .story-image {
                 position: static;
-                width: 200px;
                 margin: 30px auto 0;
+                bottom: 0;
+                width: 280px;
             }
 
             .question-mark {
@@ -435,7 +449,7 @@
             }
 
             .hero {
-                padding: 40px 20px;
+                padding: 10px 10px;
             }
 
             .features {
@@ -461,31 +475,86 @@
                 text-align: center;
                 padding: 30px 20px 40px;
             }
+
+            .feature-title {
+                font-size: 17px;
+            }  
+
+            .feature-card.left {
+                height: 280px;
+            }
+            
         }
 
         @media (max-width: 480px) {
+
+            .hero-content {
+                margin-bottom: -80px;
+            }
+
             h1 {
-                font-size: 32px;
+                font-size: 27px;
             }
 
             .subtitle {
-                font-size: 16px;
+                font-size: 13px;
             }
 
             .hero-content {
-                padding: 40px 20px;
+                padding: -40px;
             }
 
-            .feature-card {
-                padding: 25px;
+            .rating-badge {
+                font-size: 8px;
             }
 
             .story-card {
-                padding: 25px;
+                padding: 26px;
             }
 
             .story-content h2 {
-                font-size: 24px;
+                font-size: 14px;
+            }
+
+            .story-content p {
+                font-size: 13px;
+
+            }
+
+            .cta-button {
+                padding: 9px 22px;
+                border-radius: 18px;
+                font-size: 13px;
+            }
+
+            .features {
+                max-width: 400px;
+            }
+
+            .story {
+                max-width: 400px;
+            }
+            
+            .icon-wrapper {
+                width: 48px;
+                height: 48px;
+            }  
+
+            .feature-description {
+                font-size: 13px;
+                color: #485660;
+            }
+
+            .feature-title {
+                font-size: 14px;
+            }  
+
+            .pills-decoration {
+                width: 300px;
+            }
+
+            .feature-card.left {
+                height: 280px;
             }
         }
     </style>
@@ -494,13 +563,13 @@
     <header>
         <nav>
             <img src="images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#subjects">Subjects</a></li>
-                <li><a href="#volunteer">Volunteer</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#about">About Us</a></li>
+                <li><a href="/index.html" class="active">Home</a></li>
+                <li><a href="/contributor.html">Contributor</a></li>
+                <li><a href="/donate.html">Donate</a></li>
+                <li><a href="/about_us.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -510,11 +579,11 @@
             <div class="hero-content">
                 <div class="rating-badge">
                     <div class="stars">
-                        <img src="images/star.svg" alt="★" class="star">
-                        <img src="images/star.svg" alt="★" class="star">
-                        <img src="images/star.svg" alt="★" class="star">
-                        <img src="images/star.svg" alt="★" class="star">
-                        <img src="images/star.svg" alt="★" class="star">
+                        <img src="images/star.svg" alt="â˜…" class="star">
+                        <img src="images/star.svg" alt="â˜…" class="star">
+                        <img src="images/star.svg" alt="â˜…" class="star">
+                        <img src="images/star.svg" alt="â˜…" class="star">
+                        <img src="images/star.svg" alt="â˜…" class="star">
                     </div>
                     <span>Bintang lima tapi ku bukan ancaman.</span>
                 </div>
@@ -525,11 +594,11 @@
                 </h1>
                 
                 <p class="subtitle">
-                    StudyCorner <em>(formerly MindShare)</em> is a student-powered learning hub for PDOB students.<br>
+                    StudyCorner <em>(formerly MindShare)</em> is a student-powered learning hub especially for PD08 students.<br>
                     Bringing notes, teacher materials, and practice questions into one simple place.
                 </p>
                 
-                <a href="#learn" class="cta-button">Start Learning</a>
+                <a href="/choose_terms.html" class="cta-button">Start Learning</a>
             </div>
         </section>
 
@@ -537,7 +606,7 @@
             <div class="feature-card left">
                 <div class="feature-title">
                     <div class="icon-wrapper">
-                        <img src="images/book.svg" alt="📚" class="feature-icon">
+                        <img src="images/book.svg" alt="ðŸ“š" class="feature-icon">
                     </div>
                     Everything you need, in one place.
                 </div>
@@ -547,9 +616,9 @@
             <div class="feature-card right">
                 <div class="feature-title">
                     <div class="icon-wrapper">
-                        <img src="images/student.svg" alt="👥" class="feature-icon">
+                        <img src="images/student.svg" alt="ðŸ‘¥" class="feature-icon">
                     </div>
-                    Built by students, for students
+                    Built by students, for students.
                 </div>
                 <p class="feature-description">
                     StudyCorner is a collaborative project. Notes are collected from students, reviewed for clarity, and shared to help everyone study more effectively.
@@ -561,6 +630,7 @@
                     <a href="#contribute" class="secondary-button">Become a Contributor!</a>
                 </div>
             </div>
+
         </section>
 
         <section class="story">
@@ -580,15 +650,22 @@
                     <img src="images/confused_cat.svg" alt="Confused cat" class="cat-image">
                 </div>
             </div>
+            
+        
+    
         </section>
+
+        
     </main>
 
     <footer>
+       
         <div class="footer-text">
             <strong>© StudyCorner 2026</strong><br>
             For educational use only · Respect copyright
         </div>
-        <img src="images/nel.png" alt="nel signature" class="footer-signature">
+        <img src="/images/nel.png" alt="nel signature" class="footer-signature">
+        
     </footer>
 
     <script>
@@ -608,5 +685,7 @@
             }
         });
     </script>
+    
 </body>
 </html>
+

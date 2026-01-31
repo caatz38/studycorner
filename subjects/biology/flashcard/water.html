@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water - Flashcards | StudyCorner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #ffffff;
+            padding: 40px 40px 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            background: white;
+            padding: 6px;
+            border-radius: 30px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+            color: #1a1a1a;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0 40px 40px;
+        }
+
+        .hero-content {
+            background: linear-gradient(to bottom, #dde4ff 0%, #ffffff 100%);
+            border-radius: 32px;
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        /* Stats */
+        .stats-container {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 16px 24px;
+            border-radius: 16px;
+            border: 2px solid #e5e7eb;
+            min-width: 140px;
+            text-align: center;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        /* Filter Buttons */
+        .filter-section {
+            margin-bottom: 32px;
+        }
+
+        .filter-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            background: white;
+            color: #4a5568;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover {
+            border-color: #cbd5e1;
+            color: #1a1a1a;
+        }
+
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        /* Progress Bar */
+        .progress-section {
+            margin-bottom: 40px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .progress-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .progress-percent {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1a1a1a 0%, #4a5568 100%);
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        /* Flashcard */
+        .flashcard-container {
+            perspective: 1000px;
+            margin-bottom: 32px;
+        }
+
+        .flashcard {
+            width: 100%;
+            height: 420px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 24px;
+            border: 2px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .card-front {
+            background: white;
+        }
+
+        .card-back {
+            background: #f9fafb;
+            transform: rotateY(180deg);
+        }
+
+        .card-header {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            right: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-type {
+            background: #f3f4f6;
+            color: #4a5568;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .card-number {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .question {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+
+        .answer {
+            font-size: 18px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .hint {
+            margin-top: 24px;
+            padding: 12px 20px;
+            background: #f9dcf6;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 14px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            background: white;
+            color: #4a5568;
+        }
+
+        button:hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .btn-primary:hover {
+            background: #2d2d2d;
+            border-color: #2d2d2d;
+            color: white;
+        }
+
+        .btn-success {
+            background: white;
+            color: #16a34a;
+            border-color: #16a34a;
+        }
+
+        .btn-success:hover {
+            background: #16a34a;
+            color: white;
+            border-color: #16a34a;
+        }
+
+        .btn-warning {
+            background: white;
+            color: #ea580c;
+            border-color: #ea580c;
+        }
+
+        .btn-warning:hover {
+            background: #ea580c;
+            color: white;
+            border-color: #ea580c;
+        }
+
+        /* Keyboard Shortcuts */
+        .shortcuts {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .shortcuts h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .shortcut-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .key {
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+            color: #1a1a1a;
+            min-width: 32px;
+            text-align: center;
+        }
+
+        /* Subject Navigation */
+        .subject-navigation {
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .subject-nav-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            background: white;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .nav-button:hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .btn-back {
+            background: #f9fafb;
+        }
+
+        .btn-back:hover {
+            background: #f3f4f6;
+        }
+
+        .nav-icon {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav-text {
+            font-size: 15px;
+        }
+
+        @media (max-width: 640px) {
+            .subject-nav-group {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-button {
+                padding: 14px 20px;
+            }
+
+            .nav-text {
+                font-size: 14px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-text {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Completion Modal */
+        .completion-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .completion-modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .modal-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 24px;
+        }
+
+        .modal-stats {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+
+        .modal-stats strong {
+            font-size: 32px;
+            color: #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 20px 10px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 20px;
+                right: 20px;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                gap: 0;
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .hero {
+                padding: 0 20px 30px;
+            }
+
+            .hero-content {
+                padding: 40px 24px 32px;
+            }
+
+            .main-content {
+                padding: 30px 20px 60px;
+            }
+
+            .flashcard {
+                height: 380px;
+            }
+
+            .card-face {
+                padding: 40px 24px;
+            }
+
+            .question {
+                font-size: 22px;
+            }
+
+            .answer {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .shortcut-list {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 30px 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contributor.html">Contributor</a></li>
+                <li><a href="/donate.html">Donate</a></li>
+                <li><a href="/about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                
+                <h1></h1>
+                <h1>Water</h1>
+                <p class="subtitle">Flashcard</p>
+                
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-label">Total Cards</div>
+                        <div class="stat-value" id="totalCards">25</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Mastered</div>
+                        <div class="stat-value" id="knownCards">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Learning</div>
+                        <div class="stat-value" id="learningCards">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <!-- Subject Navigation at Top -->
+            <div class="subject-navigation">
+                <!-- <a href="/term2/biology/biology.html" class="nav-button btn-back">
+                    <span class="nav-icon">←</span>
+                    <span class="nav-text">Back to Biology</span>
+                </a> -->
+                
+                <div class="subject-nav-group">
+                    <a href="/term2/biology/biology.html" class="nav-button btn-back">
+                        <span class="nav-icon">←</span>
+                        <span class="nav-text">Back to Biology</span>
+                    </a>
+                    <a href="nucleic_acids.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">Nucleic Acids</span>
+                        <span class="nav-icon">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <span class="filter-label">Filter by Topic</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
+                    <button class="filter-btn" onclick="filterCards('structure')">Structure & Bonding</button>
+                    <button class="filter-btn" onclick="filterCards('properties')">Properties</button>
+                    <button class="filter-btn" onclick="filterCards('biological')">Biological Roles</button>
+                    <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span class="progress-label">Your Progress</span>
+                    <span class="progress-percent" id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard" onclick="flipCard()">
+                    <div class="card-face card-front">
+                        <div class="card-header">
+                            <span class="card-type" id="cardType">Structure</span>
+                            <span class="card-number" id="cardNumber">1/25</span>
+                        </div>
+                        <div class="question" id="question">Loading...</div>
+                        <div class="hint">Click card or press Space to reveal answer</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-header">
+                            <span class="card-type" id="cardTypeBack">Structure</span>
+                            <span class="card-number" id="cardNumberBack">1/25</span>
+                        </div>
+                        <div class="answer" id="answer">Loading...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button onclick="previousCard()">← Previous</button>
+                <button class="btn-primary" onclick="flipCard()">Flip Card</button>
+                <button onclick="nextCard()">Next →</button>
+            </div>
+
+            <div class="controls">
+                <button onclick="shuffleCards()">Shuffle</button>
+                <button class="btn-warning" onclick="markCard('learning')"> Still Learning</button>
+                <button class="btn-success" onclick="markCard('known')">I Know This</button>
+            </div>
+
+            <div class="shortcuts">
+                <h3>Keyboard Shortcuts</h3>
+                <div class="shortcut-list">
+                    <div class="shortcut-item">
+                        <span class="key">Space</span>
+                        <span>Flip card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">→</span>
+                        <span>Next card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">←</span>
+                        <span>Previous card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">K</span>
+                        <span>Mark as known</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">L</span>
+                        <span>Still learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <strong>© StudyCorner 2026</strong><br>
+            For educational use only · Respect copyright
+        </div>
+        <img src="/images/nel.png" alt="nel signature" class="footer-signature">
+    </footer>
+
+    <script>
+        const flashcards = [
+            // Structure & Bonding
+            {
+                type: "structure",
+                question: "What type of bond holds water molecules together?",
+                answer: "Hydrogen bonds form between the slightly positive hydrogen atom of one water molecule and the slightly negative oxygen atom of another water molecule."
+            },
+            {
+                type: "structure",
+                question: "Why is water described as a polar molecule?",
+                answer: "Water is polar because oxygen is more electronegative than hydrogen, pulling shared electrons closer. This creates partial negative charge (δ-) on oxygen and partial positive charges (δ+) on hydrogen atoms."
+            },
+            {
+                type: "structure",
+                question: "What is the molecular formula of water?",
+                answer: "H₂O - two hydrogen atoms covalently bonded to one oxygen atom."
+            },
+            {
+                type: "structure",
+                question: "What is electronegativity and how does it relate to water?",
+                answer: "Electronegativity is an atom's ability to attract electrons. Oxygen has higher electronegativity than hydrogen, making water polar as oxygen pulls shared electrons closer."
+            },
+            {
+                type: "structure",
+                question: "What type of bond exists WITHIN a water molecule?",
+                answer: "Covalent bonds exist within water molecules, where oxygen and hydrogen share electrons."
+            },
+            
+            // Properties - Cohesion & Adhesion
+            {
+                type: "properties",
+                question: "Define cohesion in water.",
+                answer: "Cohesion is the tendency of water molecules to stick to EACH OTHER due to hydrogen bonding. This creates internal 'stickiness'."
+            },
+            {
+                type: "properties",
+                question: "Define adhesion in water.",
+                answer: "Adhesion is the tendency of water molecules to stick to OTHER polar or charged surfaces through hydrogen bonding."
+            },
+            {
+                type: "properties",
+                question: "What is surface tension?",
+                answer: "Surface tension occurs when water molecules at the surface cohere more strongly to each other than to air, creating a tight elastic-like surface layer due to inward hydrogen bond forces."
+            },
+            {
+                type: "properties",
+                question: "What causes capillary action?",
+                answer: "Capillary action occurs when adhesion to surfaces is stronger than cohesion between water molecules, causing water to rise in narrow spaces against gravity."
+            },
+            {
+                type: "properties",
+                question: "What is specific heat capacity?",
+                answer: "Specific heat capacity is the quantity of heat energy needed to raise the temperature of a substance per unit mass. Water has HIGH specific heat capacity."
+            },
+            
+            // Properties - Thermal & Solvent
+            {
+                type: "properties",
+                question: "Why does water have high specific heat capacity?",
+                answer: "Water has high specific heat because hydrogen bonds must be broken to increase molecular movement (temperature). This requires significant energy input."
+            },
+            {
+                type: "properties",
+                question: "What is thermal conductivity?",
+                answer: "Thermal conductivity is a measure of a material's ability to move heat across a temperature gradient. Water has moderate thermal conductivity."
+            },
+            {
+                type: "properties",
+                question: "Why is water called the 'universal solvent'?",
+                answer: "Water is called the universal solvent because its polarity allows it to dissolve many ionic and polar substances by surrounding and separating their molecules."
+            },
+            {
+                type: "properties",
+                question: "What does hydrophilic mean?",
+                answer: "Hydrophilic means 'water-loving' - substances that dissolve in or are attracted to water. These are typically polar or ionic molecules."
+            },
+            {
+                type: "properties",
+                question: "What does hydrophobic mean?",
+                answer: "Hydrophobic means 'water-fearing' - substances that do not dissolve in water. These are typically non-polar molecules like lipids."
+            },
+            
+            // Biological Roles
+            {
+                type: "biological",
+                question: "How does cohesion help plants transport water?",
+                answer: "Cohesion allows water molecules to stick together, forming continuous columns in xylem vessels. This enables transpiration pull to draw water from roots to leaves against gravity."
+            },
+            {
+                type: "biological",
+                question: "How does adhesion help plants?",
+                answer: "Adhesion allows water to stick to xylem vessel walls (which are slightly charged). This works with cohesion to support transpiration pull and allows water transport even before leaves develop."
+            },
+            {
+                type: "biological",
+                question: "Give an example of surface tension in nature.",
+                answer: "Surface tension allows small insects like water striders to walk on water without sinking, as the hydrogen bonds create a strong surface film."
+            },
+            {
+                type: "biological",
+                question: "How does water act as a temperature buffer?",
+                answer: "Water's high specific heat capacity means it resists temperature changes, helping organisms maintain stable internal temperatures despite external temperature fluctuations."
+            },
+            {
+                type: "biological",
+                question: "What is solvation (or hydration)?",
+                answer: "Solvation is the interaction of water molecules with dissolved solutes, where water forms hydrogen bonds with the solute, creating a hydration shell around it."
+            },
+            
+            // Biological Roles - Advanced
+            {
+                type: "biological",
+                question: "Why is water important for metabolism?",
+                answer: "Water dissolves metabolic substrates (glucose, amino acids, salts) in cytosol, allowing chemical reactions to occur. About 80% of cytoplasm is water."
+            },
+            {
+                type: "biological",
+                question: "How is water used for transport in animals?",
+                answer: "Water in blood plasma dissolves and transports nutrients, gases (O₂, CO₂), hormones, and waste products throughout the body."
+            },
+            {
+                type: "biological",
+                question: "How is water used for transport in plants?",
+                answer: "Water in xylem transports dissolved minerals from roots to leaves. Water in phloem transports dissolved sugars from leaves to other parts."
+            },
+            {
+                type: "biological",
+                question: "What is buoyancy and how does it help aquatic organisms?",
+                answer: "Buoyancy is the upward force applied to objects in fluids. Water provides buoyancy that supports aquatic organisms, reducing the need for strong skeletal structures."
+            },
+            {
+                type: "biological",
+                question: "Why is water essential as a medium for life?",
+                answer: "Water is essential because: (1) Life likely began in water, (2) Most biological processes occur in aqueous environments, (3) It dissolves essential molecules, (4) It participates in chemical reactions, (5) It maintains temperature stability."
+            }
+        ];
+
+        let currentIndex = 0;
+        let isFlipped = false;
+        let cardStatus = new Array(flashcards.length).fill('new');
+        let currentFilter = 'all';
+        let filteredIndices = [...Array(flashcards.length).keys()];
+
+        function updateCard() {
+            const card = flashcards[filteredIndices[currentIndex]];
+            document.getElementById('question').textContent = card.question;
+            document.getElementById('answer').textContent = card.answer;
+            document.getElementById('cardType').textContent = capitalizeFirst(card.type);
+            document.getElementById('cardTypeBack').textContent = capitalizeFirst(card.type);
+            document.getElementById('cardNumber').textContent = `${currentIndex + 1}/${filteredIndices.length}`;
+            document.getElementById('cardNumberBack').textContent = `${currentIndex + 1}/${filteredIndices.length}`;
+            
+            updateStats();
+            updateProgress();
+        }
+
+        function flipCard() {
+            const flashcard = document.getElementById('flashcard');
+            flashcard.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+        }
+
+        function nextCard() {
+            if (isFlipped) flipCard();
+            currentIndex = (currentIndex + 1) % filteredIndices.length;
+            updateCard();
+            
+            if (currentIndex === 0 && currentFilter === 'all') {
+                checkCompletion();
+            }
+        }
+
+        function previousCard() {
+            if (isFlipped) flipCard();
+            currentIndex = (currentIndex - 1 + filteredIndices.length) % filteredIndices.length;
+            updateCard();
+        }
+
+        function shuffleCards() {
+            if (isFlipped) flipCard();
+            
+            for (let i = filteredIndices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [filteredIndices[i], filteredIndices[j]] = [filteredIndices[j], filteredIndices[i]];
+            }
+            
+            currentIndex = 0;
+            updateCard();
+        }
+
+        function markCard(status) {
+            const actualIndex = filteredIndices[currentIndex];
+            cardStatus[actualIndex] = status;
+            updateStats();
+            nextCard();
+        }
+
+        function updateStats() {
+            const known = cardStatus.filter(s => s === 'known').length;
+            const learning = cardStatus.filter(s => s === 'learning').length;
+            
+            document.getElementById('knownCards').textContent = known;
+            document.getElementById('learningCards').textContent = learning;
+            document.getElementById('totalCards').textContent = flashcards.length;
+        }
+
+        function updateProgress() {
+            const known = cardStatus.filter(s => s === 'known').length;
+            const percentage = (known / flashcards.length) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressPercent').textContent = Math.round(percentage) + '%';
+        }
+
+        function filterCards(filter) {
+            if (isFlipped) flipCard();
+            currentFilter = filter;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            if (filter === 'all') {
+                filteredIndices = [...Array(flashcards.length).keys()];
+            } else if (filter === 'learning') {
+                filteredIndices = cardStatus.map((status, index) => 
+                    status === 'learning' ? index : -1
+                ).filter(index => index !== -1);
+            } else {
+                filteredIndices = flashcards.map((card, index) => 
+                    card.type === filter ? index : -1
+                ).filter(index => index !== -1);
+            }
+            
+            if (filteredIndices.length === 0) {
+                alert('No cards in this category!');
+                filterCards('all');
+                return;
+            }
+            
+            currentIndex = 0;
+            updateCard();
+        }
+
+        function checkCompletion() {
+            const known = cardStatus.filter(s => s === 'known').length;
+            if (known === flashcards.length) {
+                document.getElementById('masteredCount').textContent = known;
+                document.getElementById('completionModal').classList.add('show');
+            }
+        }
+
+        function resetProgress() {
+            cardStatus = new Array(flashcards.length).fill('new');
+            currentIndex = 0;
+            document.getElementById('completionModal').classList.remove('show');
+            updateCard();
+        }
+
+        function capitalizeFirst(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                if (e.key === ' ' && !isFlipped) {
+                    flipCard();
+                } else {
+                    nextCard();
+                }
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousCard();
+            } else if (e.key === 'ArrowUp' || e.key === 'Enter') {
+                e.preventDefault();
+                flipCard();
+            } else if (e.key === 'k' || e.key === 'K') {
+                markCard('known');
+            } else if (e.key === 'l' || e.key === 'L') {
+                markCard('learning');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Initialize
+        updateCard();
+    </script>
+</body>
+</html>

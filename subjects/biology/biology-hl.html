@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math AA HL - StudyCorner</title>
+    <title>Biology - StudyCorner</title>
+    <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -470,7 +471,7 @@
 <body>
     <header>
         <nav>
-            <img src="../../images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            <img src="/images/studycorner_logo.png" alt="StudyCorner" class="logo">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="/index.html">Home</a></li>
@@ -487,7 +488,7 @@
                 <div class="hero-text">
                     <h1>Biology</h1>
                     <div class="breadcrumb">
-                        <a href="index.html">Home</a> / <a href="../subject.html">Term 2</a> / Math
+                        <a href="/index.html">Home</a> / <a href="/term2/subject.html">Term 2</a> / Biology
                     </div>
                     <h1></h1>
                     <a href="/term2/subject.html" class="back-button">
@@ -508,12 +509,12 @@
                 </div>
                 
                 <div class="cards-grid">
-                    <a href="https://youtube.com/playlist?list=PLNIrrcgLlUkW_HPZbS7cDgtasLkjA92x2&si=Q9DuHN_rNa-DYTP_" class="resource-card video-card">
+                    <a href="https://youtube.com/playlist?list=PLNIrrcgLlUkXDuZ3BCajQW7oVVujfUj8u&si=w7rAKVUzollFCHUu" class="resource-card video-card">
                         <div class="resource-header">
                             <div>
                                 <div class="resource-title"></div>
                                 <div class="resource-title">YouTube Playlist</div>
-                                <div class="resource-meta">14 Videos, All materials covered.</div>
+                                <div class="resource-meta">8 Videos, All materials covered.</div>
                             </div>
                         </div>
                     </a>
@@ -522,36 +523,127 @@
                 </div>
             </section>
 
-            
+            <!-- Flashcard Section -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon">🗂️</div>
+                    <h2>Flashcard</h2>
+                </div>
 
-            <!-- Teacher Materials Section -->
+                
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">Materials</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <ul class="sub-items">
+                            <li><a href="/term2/flashcard/water.html">Water<span class="arrow">→</span></a></li>
+                            <li><a href="">Nucleic Acids<span class="arrow">→</span></a></li>
+                            <li><a href="">Carbohydrate & Lipids<span class="arrow">→</span></a></li>
+                            <li><a href="">Protein<span class="arrow">→</span></a></li>
+                            <li><a href="">Enzyme & Metabolism<span class="arrow">→</span></a></li>
+                            <li><a href="">Cell Respiration<span class="arrow">→</span></a></li>
+                            <li><a href="">Photosynthesis<span class="arrow">→</span></a></li>
+                            <li><a href="">DNA Replication<span class="arrow">→</span></a></li>
+                            <li><a href="">Protein Synthesis<span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </section>
+            
+            <!-- Notes Section -->
+            <section class="section">
+                <div class="section-header">
+                    <div class="section-icon">📝</div>
+                    <h2>Notes</h2>
+                </div>
+
+                
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">Essentials</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <ul class="sub-items">
+                            <li><a href="https://drive.google.com/file/d/1F2S_mNYGPya59YFEqfTQAa28qI5WeBvL/view?usp=share_link">Water<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1e1Uwzi1gka2M4ScNo7qHRCbB8GVv9LhP/view?usp=sharing">Nucleic Acids<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1H2xFqvlujBtcqgcm69Z1YkPYbRgxb8F5/view?usp=sharing">Carbohydrate & Lipids<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1UWyT0MBJVvXW-eBKXDrpZAHrVeTq4MoI/view?usp=sharing">Protein<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1Q0UtiXAVMZsFkAZVCgs2ZnwZuo1HPlaH/view?usp=sharing">Enzyme & Metabolism<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/16mxo5gANkDMTJyn4nahKYTlaNCueSjkT/view?usp=sharing">Cell Respiration<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1vjvIMDi260_7LF0eM51LQy8WYpfeBZY6/view?usp=sharing">Photosynthesis<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1tsTe_JDXmDclC8OmuajlRcPD7W3uK2Rg/view?usp=sharing">DNA Replication<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1BsmESr3J8Q5UhoCqZ2GGwF-djbeosoP2/view?usp=sharing">Protein Synthesis<span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">+ Add-ons</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <ul class="sub-items">
+                            <li><a href="https://drive.google.com/file/d/1kHLj-EGJUqM8bugFOEeDasaAY7Dn3nuP/view?usp=sharing">More detailed explanation<span class="arrow">→</span></a></li>
+                            <li><a href="https://docs.google.com/document/d/1NMudrt8VK7h3QzGce_lb4dJn1_xWo_hOfavA2horKkY/edit?usp=sharing">IBDP Biology Major Concept Check<span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Teacher Materials -->
             <section class="section">
                 <div class="section-header">
                     <div class="section-icon">👨‍🏫</div>
                     <h2>Teacher Materials</h2>
                 </div>
-                
-                <div class="cards-grid">
-                    <div class="expandable-card" onclick="toggleExpand(this)">
-                        <div class="expandable-header">
-                            <div class="expandable-title">PPTs</div>
-                            <div class="expand-icon">▼</div>
-                        </div>
-                        <div class="expandable-content">
-                            <ul class="sub-items">
-                                <li><a href="https://docs.google.com/presentation/d/1uosiXeJJF8e0gWWytjEeuMk_MTuheQMi-jQzztM72_8/edit?usp=sharing">Compound Interest<span class="arrow">→</span></a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1RjULaLohgGowcLo9-UKSQNjHlptvpNM_Srdnmr9czs4/edit?usp=sharing">Counting Principles & Binomial Theorem<span class="arrow">→</span></a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1pNCT9Jh3mjw37w86uS8MI7Aglw4AF2QnsvFCWmTvNh8/edit?usp=sharing">Exponents & Logarithms<span class="arrow">→</span></a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1APwhdmW-D8qQTh7IIr5bZI5IqZ5TRKXTux2Nj-qXW3k/edit?usp=sharing">Proofing <span class="arrow">→</span></a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1k1dSY-eE95kW8ZyD4459-Fm5RgYPMEKIDCH_fYYhgrs/edit?usp=sharing">Functional Relationships <span class="arrow">→</span></a></li>
-                                <li><a href="https://docs.google.com/presentation/d/1vRfno7KVB9Vpoda_1FfoFhPWR9CARG6xzGcSwtuhUEY/edit?usp=sharing">Absolute Functions <span class="arrow">→</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
 
-                    
+                
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">SL</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <ul class="sub-items">
+                            <li><a href="https://www.canva.com/design/DAG4RW8Iv7Y/nJgLdPDOFgjpAUAJQERVEQ/edit?utm_content=DAG4RW8Iv7Y&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Water<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAG4oGFshGI/JLG3w8UEbzOQtrXsnccPJQ/edit?utm_content=DAG4oGFshGI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Nucleic Acids<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAG5rhnvdyw/xkcap79gPLB0uvOl8GlRdA/edit?utm_content=DAG5rhnvdyw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Carbohydrate & Lipids<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAGYGx-uK2Q/UZJ1E9jHvocD2a2_HbAYgw/edit?utm_content=DAGYGx-uK2Q&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Proteins<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAGYYWqaoc4/rj-MuV2lTujjYM3IPlehUA/edit?utm_content=DAGYYWqaoc4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Enzyme & Metabolism<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAGbH9Fwr94/8NDp4xzj8WG9m7ICDLV3cw/edit?utm_content=DAGbH9Fwr94&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Cell Respiration<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAGbIeMxyss/WtfQFM1I5Vj74jITrRvWPw/edit?utm_content=DAGbIeMxyss&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Photosynthesis<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAGcynLW4f8/CGMDGZ-uqm8N8zRbblSSGw/edit?utm_content=DAGcynLW4f8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">DNA Replication<span class="arrow">→</span></a></li>
+                            <li><a href="https://www.canva.com/design/DAGdjSCIP0A/195vGS-KgenDkQgcA0Ry0Q/edit?utm_content=DAGdjSCIP0A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">Protein Synthesis<span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="expandable-card" onclick="toggleExpand(this)">
+                    <div class="expandable-header">
+                        <div class="expandable-title">HL</div>
+                        <div class="expand-icon">▼</div>
+                    </div>
+                    <div class="expandable-content">
+                        <ul class="sub-items">
+                            <li><a href="https://drive.google.com/file/d/1HSBIxScjr8qC6xtYnSJFs926zIecU8yR/view?usp=sharing">Water<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1XR7ZYtTvLTDxrU7KhQ5oekF4L0gqV2lW/view?usp=sharing">Photosynthesis<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1zpgMthaINHxjgqvP75hhb5l22A1Le_J-/view?usp=sharing">Macromolecules<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1Uf5RfBcHqQ-3H3HCQIL-7vc9ttEMn2Rg/view?usp=sharing">Enzymes<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1ZRDn4WGyXL8zg9HwapThweAaLaWiUmS3/view?usp=sharing">DNA Replication<span class="arrow">→</span></a></li>
+                            <li><a href="https://drive.google.com/file/d/1RwxW6h_Y-cq8SDsiJFs0kd43Rwbqo1qy/view?usp=sharing">Cellular Respiration<span class="arrow">→</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
             </section>
+
 
             <!-- Practice Questions Section -->
             <section class="section">
@@ -562,35 +654,66 @@
         
                 
                 <div class="cards-grid">
-                    <a href="https://www.canva.com/design/DAG_wtQt3e8/MXBf-Ftq-plBV3wG12EeUQ/edit?utm_content=DAG_wtQt3e8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="resource-card">
+                    <a href="https://drive.google.com/file/d/1qftcsoV8Y_DUn0CQcpxqobWcUjGG-ex2/view?usp=sharing" class="resource-card">
                         <div class="resource-header">
                             <div>
-                                <div class="resource-title">Easy Questions</div>
-                                <div class="resource-meta">30 questions · Foundation level</div>
+                                <div class="resource-title">Short Answer</div>
+                                <div class="resource-meta">50 questions</div>
                             </div>
-                            <span class="resource-badge">EASY</span>
+                            <span class="resource-badge">Practice</span>
                         </div>
                     </a>
 
-                    <a href="https://www.canva.com/design/DAG_wgu26A0/Lt2RiaptAa1oSSyJ-AGhqw/edit?utm_content=DAG_wgu26A0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="resource-card">
+                    <a href="https://drive.google.com/file/d/1l1JbpxkzqCusECh7_rrW2VE-Jkv1C97b/view?usp=sharing" class="resource-card">
                         <div class="resource-header">
                             <div>
-                                <div class="resource-title">Medium Questions</div>
-                                <div class="resource-meta">35 questions · Intermediate level</div>
+                                <div class="resource-title">[ANSWER KEY] Short Answer </div>
+                                <div class="resource-meta">50 questions</div>
                             </div>
-                            <span class="resource-badge" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">MEDIUM</span>
+                            <span class="resource-badge">Answer Key</span>
                         </div>
                     </a>
 
-                    <a href="https://www.canva.com/design/DAG_wmwaf-M/_Z7XcZAoQt9Hn4SnCsUteA/edit?utm_content=DAG_wmwaf-M&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="resource-card">
+                    <a href="https://drive.google.com/file/d/12gHDFoONOKOLNBwXgR2tywQhKITB-c1P/view?usp=sharing" class="resource-card">
                         <div class="resource-header">
                             <div>
-                                <div class="resource-title">IB-Style Questions</div>
-                                <div class="resource-meta">25 questions · Exam difficulty</div>
+                                <div class="resource-title">Multiple Choices</div>
+                                <div class="resource-meta">50 questions</div>
                             </div>
-                            <span class="resource-badge pdf">IB-STYLE</span>
+                            <span class="resource-badge">Practice</span>
                         </div>
                     </a>
+
+                    <a href="https://drive.google.com/file/d/1_e_pncEvmXLiDCZxkoQEoUc0mrqud3_l/view?usp=sharing" class="resource-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title">[ANSWER KEY] Multiple Choices</div>
+                                <div class="resource-meta">50 questions</div>
+                            </div>
+                            <span class="resource-badge">Answer Key</span>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1eGJWajGjnyqkCv3H9XJEbK4EZu9bHI8a/view?usp=sharing" class="resource-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title">Paper 1</div>
+                                <div class="resource-meta">40 questions</div>
+                            </div>
+                            <span class="resource-badge" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">Mock Test</span>
+                        </div>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1Peb__Hz7FNY3XxqWkY2gbCp36Oy88w4b/view?usp=sharing" class="resource-card">
+                        <div class="resource-header">
+                            <div>
+                                <div class="resource-title">Paper 2</div>
+                                <div class="resource-meta">7 questions</div>
+                            </div>
+                            <span class="resource-badge" style="background: #fef3c7; color: #92400e; border-color: #fde68a;">Mock Test</span>
+                        </div>
+                    </a>
+
                 </div>
             </section>
 
@@ -601,17 +724,10 @@
                     <h2>Exam Tips</h2>
                 </div>
                 
-                <div class="expandable-card" onclick="toggleExpand(this)">
-                    <div class="expandable-header">
-                        <div class="expandable-title">VERY IMPORTANT TIPS!1!!!1!!</div>
-                        <div class="expand-icon">▼</div>
-                    </div>
-                    <div class="expandable-content">
-                        <p style="color: #4a5568; line-height: 1.8; padding: 10px 0;">
-                           kata Mr Rinaldi, peer teeching. buat grup sama temen akrab kalian, terus saling ngajarin.
-                        </p>
-                    </div>
-                </div>
+                
+                <a href="https://drive.google.com/file/d/1HqGdBw9UTc7h85Jt1459hcZXVC1zNU4w/view?usp=sharing" class="resource-card">
+                    <div class="resource-title">Command Terms</div>
+                </a>
             </section>
         </div>
     </main>
@@ -621,7 +737,7 @@
             <strong>© StudyCorner 2026</strong><br>
             For educational use only · Respect copyright
         </div>
-        <img src="../../images/nel.png" alt="nel signature" class="footer-signature">
+        <img src="/images/nel.png" alt="nel signature" class="footer-signature">
     </footer>
 
     <script>

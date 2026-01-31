@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nucleic Acids - Flashcards | StudyCorner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background: #ffffff;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #ffffff;
+            padding: 40px 40px 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            list-style: none;
+            background: white;
+            padding: 6px;
+            border-radius: 30px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 10px 24px;
+            border-radius: 24px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .nav-links a.active {
+            background: #e5e7eb;
+            color: #1a1a1a;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #4a5568;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 0 40px 40px;
+        }
+
+        .hero-content {
+            background: linear-gradient(to bottom, #dde4ff 0%, #ffffff 100%);
+            border-radius: 32px;
+            padding: 60px 40px 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #4a5568;
+            max-width: 600px;
+            margin: 0 auto 32px;
+        }
+
+        /* Stats */
+        .stats-container {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 16px 24px;
+            border-radius: 16px;
+            border: 2px solid #e5e7eb;
+            min-width: 140px;
+            text-align: center;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+        }
+
+        /* Filter Buttons */
+        .filter-section {
+            margin-bottom: 32px;
+        }
+
+        .filter-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            background: white;
+            color: #4a5568;
+            border: 2px solid #e5e7eb;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .filter-btn:hover {
+            border-color: #cbd5e1;
+            color: #1a1a1a;
+        }
+
+        .filter-btn.active {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        /* Progress Bar */
+        .progress-section {
+            margin-bottom: 40px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .progress-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .progress-percent {
+            font-size: 14px;
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1a1a1a 0%, #4a5568 100%);
+            transition: width 0.5s ease;
+            border-radius: 10px;
+        }
+
+        /* Flashcard */
+        .flashcard-container {
+            perspective: 1000px;
+            margin-bottom: 32px;
+        }
+
+        .flashcard {
+            width: 100%;
+            height: 420px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .flashcard.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 24px;
+            border: 2px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .card-front {
+            background: white;
+        }
+
+        .card-back {
+            background: #f9fafb;
+            transform: rotateY(180deg);
+        }
+
+        .card-header {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            right: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-type {
+            background: #f3f4f6;
+            color: #4a5568;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .card-number {
+            color: #6b7280;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .question {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.3;
+        }
+
+        .answer {
+            font-size: 18px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        .hint {
+            margin-top: 24px;
+            padding: 12px 20px;
+            background: #f9dcf6;
+            border-radius: 12px;
+            font-size: 14px;
+            color: #4a5568;
+            font-weight: 500;
+        }
+
+        /* Controls */
+        .controls {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        button {
+            padding: 14px 28px;
+            font-size: 15px;
+            font-weight: 600;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            background: white;
+            color: #4a5568;
+        }
+
+        button:hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary {
+            background: #1a1a1a;
+            color: white;
+            border-color: #1a1a1a;
+        }
+
+        .btn-primary:hover {
+            background: #2d2d2d;
+            border-color: #2d2d2d;
+            color: white;
+        }
+
+        .btn-success {
+            background: white;
+            color: #16a34a;
+            border-color: #16a34a;
+        }
+
+        .btn-success:hover {
+            background: #16a34a;
+            color: white;
+            border-color: #16a34a;
+        }
+
+        .btn-warning {
+            background: white;
+            color: #ea580c;
+            border-color: #ea580c;
+        }
+
+        .btn-warning:hover {
+            background: #ea580c;
+            color: white;
+            border-color: #ea580c;
+        }
+
+        /* Keyboard Shortcuts */
+        .shortcuts {
+            background: #f9fafb;
+            border-radius: 20px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .shortcuts h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+        }
+
+        .shortcut-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+
+        .shortcut-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: #4a5568;
+        }
+
+        .key {
+            background: white;
+            border: 2px solid #e5e7eb;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 12px;
+            color: #1a1a1a;
+            min-width: 32px;
+            text-align: center;
+        }
+
+        /* Subject Navigation */
+        .subject-navigation {
+            margin-bottom: 40px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .subject-nav-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px 24px;
+            border: 2px solid #e5e7eb;
+            border-radius: 16px;
+            background: white;
+            color: #4a5568;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .nav-button:hover {
+            border-color: #1a1a1a;
+            color: #1a1a1a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .btn-back {
+            background: #f9fafb;
+        }
+
+        .btn-back:hover {
+            background: #f3f4f6;
+        }
+
+        .nav-icon {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .nav-text {
+            font-size: 15px;
+        }
+
+        @media (max-width: 640px) {
+            .subject-nav-group {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-button {
+                padding: 14px 20px;
+            }
+
+            .nav-text {
+                font-size: 14px;
+            }
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 40px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .footer-text {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .footer-text strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Completion Modal */
+        .completion-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .completion-modal.show {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 48px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .modal-content h2 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+
+        .modal-content p {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 24px;
+        }
+
+        .modal-stats {
+            background: #f9fafb;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 24px;
+        }
+
+        .modal-stats strong {
+            font-size: 32px;
+            color: #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 20px 10px 20px;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 20px;
+                right: 20px;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+                gap: 0;
+                margin-top: 10px;
+            }
+
+            .nav-links a {
+                padding: 12px 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .hero {
+                padding: 0 20px 30px;
+            }
+
+            .hero-content {
+                padding: 40px 24px 32px;
+            }
+
+            .main-content {
+                padding: 30px 20px 60px;
+            }
+
+            .flashcard {
+                height: 380px;
+            }
+
+            .card-face {
+                padding: 40px 24px;
+            }
+
+            .question {
+                font-size: 22px;
+            }
+
+            .answer {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .shortcut-list {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                padding: 30px 20px 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="/images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/contributor.html">Contributor</a></li>
+                <li><a href="/donate.html">Donate</a></li>
+                <li><a href="/about_us.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                
+                <h1></h1>
+                <h1>Nucleic Acids</h1>
+                <p class="subtitle">Flashcard</p>
+                
+                <div class="stats-container">
+                    <div class="stat-box">
+                        <div class="stat-label">Total Cards</div>
+                        <div class="stat-value" id="totalCards">32</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Mastered</div>
+                        <div class="stat-value" id="knownCards">0</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-label">Learning</div>
+                        <div class="stat-value" id="learningCards">0</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="main-content">
+            <!-- Subject Navigation at Top -->
+            <div class="subject-navigation">
+                <a href="/term2/biology/biology.html" class="nav-button btn-back">
+                    <span class="nav-icon">←</span>
+                    <span class="nav-text">Back to Biology</span>
+                </a>
+                
+                <div class="subject-nav-group">
+                    <a href="water.html" class="nav-button btn-prev-subject">
+                        <span class="nav-icon">←</span>
+                        <span class="nav-text">Water</span>
+                    </a>
+                    <a href="carbohydrate_and_lipids.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">Carbohydrate & Lipids</span>
+                        <span class="nav-icon">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <span class="filter-label">Filter by Topic</span>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
+                    <button class="filter-btn" onclick="filterCards('structure')">Structure</button>
+                    <button class="filter-btn" onclick="filterCards('comparison')">Comparison</button>
+                    <button class="filter-btn" onclick="filterCards('basepairing')">Basepairing</button>
+                    <button class="filter-btn" onclick="filterCards('rna')">RNA</button>
+                    <button class="filter-btn" onclick="filterCards('function')">Function</button>
+                    <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-header">
+                    <span class="progress-label">Your Progress</span>
+                    <span class="progress-percent" id="progressPercent">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="flashcard-container">
+                <div class="flashcard" id="flashcard" onclick="flipCard()">
+                    <div class="card-face card-front">
+                        <div class="card-header">
+                            <span class="card-type" id="cardType">Structure</span>
+                            <span class="card-number" id="cardNumber">1/25</span>
+                        </div>
+                        <div class="question" id="question">Loading...</div>
+                        <div class="hint">Click card or press Space to reveal answer</div>
+                    </div>
+                    <div class="card-face card-back">
+                        <div class="card-header">
+                            <span class="card-type" id="cardTypeBack">Structure</span>
+                            <span class="card-number" id="cardNumberBack">1/25</span>
+                        </div>
+                        <div class="answer" id="answer">Loading...</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button onclick="previousCard()">← Previous</button>
+                <button class="btn-primary" onclick="flipCard()">Flip Card</button>
+                <button onclick="nextCard()">Next →</button>
+            </div>
+
+            <div class="controls">
+                <button onclick="shuffleCards()">Shuffle</button>
+                <button class="btn-warning" onclick="markCard('learning')"> Still Learning</button>
+                <button class="btn-success" onclick="markCard('known')">I Know This</button>
+            </div>
+
+            <div class="shortcuts">
+                <h3>Keyboard Shortcuts</h3>
+                <div class="shortcut-list">
+                    <div class="shortcut-item">
+                        <span class="key">Space</span>
+                        <span>Flip card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">→</span>
+                        <span>Next card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">←</span>
+                        <span>Previous card</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">K</span>
+                        <span>Mark as known</span>
+                    </div>
+                    <div class="shortcut-item">
+                        <span class="key">L</span>
+                        <span>Still learning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-text">
+            <strong>© StudyCorner 2026</strong><br>
+            For educational use only · Respect copyright
+        </div>
+        <img src="/images/nel.png" alt="nel signature" class="footer-signature">
+    </footer>
+
+    <script>
+        // Nucleic Acid Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+const flashcards = [
+    // DNA Structure & Basics
+    {
+        type: "structure",
+        question: "What is DNA and what does it stand for?",
+        answer: "DNA stands for Deoxyribonucleic Acid. It is the primary genetic material found in all living organisms, containing the instructions necessary for an organism to develop, survive, and reproduce."
+    },
+    {
+        type: "structure",
+        question: "What are the three components of a nucleotide?",
+        answer: "1) Phosphate group (negatively charged, contains phosphorus), 2) Pentose sugar (5-carbon sugar: deoxyribose in DNA or ribose in RNA), 3) Nitrogenous base (A, T, G, C in DNA; A, U, G, C in RNA)."
+    },
+    {
+        type: "structure",
+        question: "What is the difference between deoxyribose and ribose?",
+        answer: "Deoxyribose (in DNA) lacks one oxygen atom that ribose (in RNA) has on the 2' carbon. This is why it's called 'deoxy' (without oxygen) ribose."
+    },
+    {
+        type: "structure",
+        question: "Which carbon atoms in the pentose sugar are important for bonding?",
+        answer: "The 5' carbon binds to the phosphate group, the 3' carbon bonds to the next nucleotide, and the 1' carbon binds to the nitrogenous base."
+    },
+    {
+        type: "structure",
+        question: "What are the two types of nitrogenous bases and their structures?",
+        answer: "Purines (double-ring structure): Adenine (A) and Guanine (G). Pyrimidines (single-ring structure): Cytosine (C), Thymine (T), and Uracil (U)."
+    },
+
+    // DNA vs RNA
+    {
+        type: "comparison",
+        question: "What are the main structural differences between DNA and RNA?",
+        answer: "DNA: double-stranded helix, deoxyribose sugar, bases A-T-G-C, longer. RNA: single-stranded, ribose sugar, bases A-U-G-C, shorter."
+    },
+    {
+        type: "comparison",
+        question: "Which base is found in RNA but NOT in DNA?",
+        answer: "Uracil (U) is found in RNA but not in DNA. DNA uses Thymine (T) instead."
+    },
+    {
+        type: "comparison",
+        question: "Which base is found in DNA but NOT in RNA?",
+        answer: "Thymine (T) is found in DNA but not in RNA. RNA uses Uracil (U) instead."
+    },
+    {
+        type: "comparison",
+        question: "How many strands does DNA have compared to RNA?",
+        answer: "DNA is double-stranded (double helix), while RNA is single-stranded."
+    },
+
+    // DNA Structure Details
+    {
+        type: "structure",
+        question: "What is the sugar-phosphate backbone?",
+        answer: "The backbone of DNA/RNA formed by alternating sugar (pentose) and phosphate groups connected by covalent bonds. The phosphate attaches to the 5' carbon of one sugar and the 3' carbon of the next sugar."
+    },
+    {
+        type: "structure",
+        question: "What does 'antiparallel' mean in DNA?",
+        answer: "Antiparallel means the two DNA strands run in opposite directions. One strand runs 5' to 3', while the complementary strand runs 3' to 5'."
+    },
+    {
+        type: "structure",
+        question: "What is the shape of DNA called?",
+        answer: "DNA is called a double helix - a twisted ladder shape formed by two antiparallel strands wound around each other."
+    },
+    {
+        type: "structure",
+        question: "What holds the two DNA strands together?",
+        answer: "Hydrogen bonds between complementary base pairs hold the two DNA strands together. These are weak bonds that can be easily broken during replication and transcription."
+    },
+
+    // Base Pairing
+    {
+        type: "basepairing",
+        question: "What are the complementary base pairing rules in DNA?",
+        answer: "Adenine (A) pairs with Thymine (T) via 2 hydrogen bonds. Guanine (G) pairs with Cytosine (C) via 3 hydrogen bonds. (A-T and G-C)"
+    },
+    {
+        type: "basepairing",
+        question: "How many hydrogen bonds form between A and T?",
+        answer: "Two (2) hydrogen bonds form between Adenine and Thymine."
+    },
+    {
+        type: "basepairing",
+        question: "How many hydrogen bonds form between G and C?",
+        answer: "Three (3) hydrogen bonds form between Guanine and Cytosine, making this pair stronger than A-T."
+    },
+    {
+        type: "basepairing",
+        question: "Why must every β-glucose in cellulose be inverted?",
+        answer: "In order to form glycosidic bonds between β-glucose molecules, every alternate molecule must flip upside down. This alternating pattern allows hydrogen bonding between strands, creating the strong microfibrils in cellulose."
+    },
+    {
+        type: "basepairing",
+        question: "What is complementary base pairing in RNA during transcription?",
+        answer: "During transcription, DNA base A pairs with RNA base U (not T), DNA base T pairs with RNA base A, DNA base G pairs with RNA base C, and DNA base C pairs with RNA base G."
+    },
+
+    // DNA Functions
+    {
+        type: "function",
+        question: "What are the two primary functions of nucleic acids?",
+        answer: "1) Gene Expression - DNA is used as a blueprint for protein production through transcription and translation. 2) DNA Replication - genetic information is passed from cell to cell through generations."
+    },
+    {
+        type: "function",
+        question: "What is gene expression?",
+        answer: "Gene expression is the process where information stored in DNA is used to produce proteins. It involves transcription (DNA → RNA) and translation (RNA → protein)."
+    },
+    {
+        type: "function",
+        question: "What happens during DNA replication?",
+        answer: "DNA replication is the process where DNA makes an exact copy of itself. The information stored in DNA is passed from cell to cell through generations, ensuring genetic continuity."
+    },
+    {
+        type: "function",
+        question: "What role does complementary base pairing play in replication?",
+        answer: "Complementary base pairing ensures that each new DNA strand is an exact copy of the original. Each original strand serves as a template, with bases pairing according to A-T and G-C rules."
+    },
+    {
+        type: "function",
+        question: "What role does complementary base pairing play in transcription?",
+        answer: "During transcription, complementary base pairing allows DNA to be accurately copied into mRNA. The DNA template strand pairs with complementary RNA nucleotides (A→U, T→A, G→C, C→G)."
+    },
+
+    // RNA Types
+    {
+        type: "rna",
+        question: "What are the three types of RNA involved in protein synthesis?",
+        answer: "1) mRNA (messenger RNA) - carries genetic code from DNA to ribosomes, 2) tRNA (transfer RNA) - brings amino acids to ribosomes, 3) rRNA (ribosomal RNA) - forms part of ribosome structure."
+    },
+    {
+        type: "rna",
+        question: "What is the function of mRNA?",
+        answer: "mRNA (messenger RNA) carries the genetic code from DNA in the nucleus to the ribosomes in the cytoplasm, where it is translated into proteins."
+    },
+    {
+        type: "rna",
+        question: "What is the function of tRNA?",
+        answer: "tRNA (transfer RNA) brings specific amino acids to the ribosome during translation. Each tRNA has an anticodon that pairs with mRNA codons."
+    },
+    {
+        type: "rna",
+        question: "What is the function of rRNA?",
+        answer: "rRNA (ribosomal RNA) combines with proteins to form ribosomes, the sites of protein synthesis. rRNA catalyzes peptide bond formation."
+    },
+
+    // Advanced Concepts
+    {
+        type: "advanced",
+        question: "What is a condensation reaction in nucleic acid formation?",
+        answer: "A condensation reaction joins nucleotides together by removing a water molecule (H₂O). A covalent bond forms between the phosphate group of one nucleotide and the 3' carbon of another, creating the sugar-phosphate backbone."
+    },
+    {
+        type: "advanced",
+        question: "What are the ends of a DNA/RNA strand called?",
+        answer: "The 5' end has a phosphate group attached to the 5' carbon. The 3' end has a hydroxyl (-OH) group on the 3' carbon of the pentose sugar."
+    },
+    {
+        type: "advanced",
+        question: "Why is DNA more stable than RNA?",
+        answer: "DNA is more stable because: 1) It's double-stranded (protected from damage), 2) Lacks the 2' OH group that makes RNA more reactive, 3) Uses thymine instead of uracil (more resistant to mutations)."
+    },
+    {
+        type: "advanced",
+        question: "What is the significance of the 5' to 3' direction?",
+        answer: "DNA and RNA are always synthesized in the 5' to 3' direction. DNA polymerase and RNA polymerase can only add nucleotides to the 3' end of a growing strand. This directionality is crucial for replication and transcription."
+    },
+    {
+        type: "advanced",
+        question: "How does the structure of DNA relate to its function?",
+        answer: "1) Double helix protects genetic information, 2) Complementary base pairing allows accurate replication, 3) Weak hydrogen bonds allow easy separation for replication/transcription, 4) Sugar-phosphate backbone provides stability, 5) Antiparallel structure enables proper pairing."
+    }
+];
+        let currentIndex = 0;
+        let isFlipped = false;
+        let cardStatus = new Array(flashcards.length).fill('new');
+        let currentFilter = 'all';
+        let filteredIndices = [...Array(flashcards.length).keys()];
+
+        function updateCard() {
+            const card = flashcards[filteredIndices[currentIndex]];
+            document.getElementById('question').textContent = card.question;
+            document.getElementById('answer').textContent = card.answer;
+            document.getElementById('cardType').textContent = capitalizeFirst(card.type);
+            document.getElementById('cardTypeBack').textContent = capitalizeFirst(card.type);
+            document.getElementById('cardNumber').textContent = `${currentIndex + 1}/${filteredIndices.length}`;
+            document.getElementById('cardNumberBack').textContent = `${currentIndex + 1}/${filteredIndices.length}`;
+            
+            updateStats();
+            updateProgress();
+        }
+
+        function flipCard() {
+            const flashcard = document.getElementById('flashcard');
+            flashcard.classList.toggle('flipped');
+            isFlipped = !isFlipped;
+        }
+
+        function nextCard() {
+            if (isFlipped) flipCard();
+            currentIndex = (currentIndex + 1) % filteredIndices.length;
+            updateCard();
+            
+            if (currentIndex === 0 && currentFilter === 'all') {
+                checkCompletion();
+            }
+        }
+
+        function previousCard() {
+            if (isFlipped) flipCard();
+            currentIndex = (currentIndex - 1 + filteredIndices.length) % filteredIndices.length;
+            updateCard();
+        }
+
+        function shuffleCards() {
+            if (isFlipped) flipCard();
+            
+            for (let i = filteredIndices.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [filteredIndices[i], filteredIndices[j]] = [filteredIndices[j], filteredIndices[i]];
+            }
+            
+            currentIndex = 0;
+            updateCard();
+        }
+
+        function markCard(status) {
+            const actualIndex = filteredIndices[currentIndex];
+            cardStatus[actualIndex] = status;
+            updateStats();
+            nextCard();
+        }
+
+        function updateStats() {
+            const known = cardStatus.filter(s => s === 'known').length;
+            const learning = cardStatus.filter(s => s === 'learning').length;
+            
+            document.getElementById('knownCards').textContent = known;
+            document.getElementById('learningCards').textContent = learning;
+            document.getElementById('totalCards').textContent = flashcards.length;
+        }
+
+        function updateProgress() {
+            const known = cardStatus.filter(s => s === 'known').length;
+            const percentage = (known / flashcards.length) * 100;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressPercent').textContent = Math.round(percentage) + '%';
+        }
+
+        function filterCards(filter) {
+            if (isFlipped) flipCard();
+            currentFilter = filter;
+            
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            if (filter === 'all') {
+                filteredIndices = [...Array(flashcards.length).keys()];
+            } else if (filter === 'learning') {
+                filteredIndices = cardStatus.map((status, index) => 
+                    status === 'learning' ? index : -1
+                ).filter(index => index !== -1);
+            } else {
+                filteredIndices = flashcards.map((card, index) => 
+                    card.type === filter ? index : -1
+                ).filter(index => index !== -1);
+            }
+            
+            if (filteredIndices.length === 0) {
+                alert('No cards in this category!');
+                filterCards('all');
+                return;
+            }
+            
+            currentIndex = 0;
+            updateCard();
+        }
+
+        function checkCompletion() {
+            const known = cardStatus.filter(s => s === 'known').length;
+            if (known === flashcards.length) {
+                document.getElementById('masteredCount').textContent = known;
+                document.getElementById('completionModal').classList.add('show');
+            }
+        }
+
+        function resetProgress() {
+            cardStatus = new Array(flashcards.length).fill('new');
+            currentIndex = 0;
+            document.getElementById('completionModal').classList.remove('show');
+            updateCard();
+        }
+
+        function capitalizeFirst(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
+        }
+
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                if (e.key === ' ' && !isFlipped) {
+                    flipCard();
+                } else {
+                    nextCard();
+                }
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousCard();
+            } else if (e.key === 'ArrowUp' || e.key === 'Enter') {
+                e.preventDefault();
+                flipCard();
+            } else if (e.key === 'k' || e.key === 'K') {
+                markCard('known');
+            } else if (e.key === 'l' || e.key === 'L') {
+                markCard('learning');
+            }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const nav = document.querySelector('nav');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!nav.contains(event.target)) {
+                navLinks.classList.remove('active');
+            }
+        });
+
+        // Initialize
+        updateCard();
+    </script>
+</body>
+</html>

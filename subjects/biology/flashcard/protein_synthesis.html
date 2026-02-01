@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbohydrate & Lipids - Flashcards | StudyCorner</title>
+    <title>Protein Synthesis - Flashcards | StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,13 +686,13 @@
             <div class="hero-content">
                 
                 <h1></h1>
-                <h1>Carbohydrate & Lipids</h1>
+                <h1>Protein Synthesis</h1>
                 <p class="subtitle">Flashcard</p>
                 
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-label">Total Cards</div>
-                        <div class="stat-value" id="totalCards">31</div>
+                        <div class="stat-value" id="totalCards">32</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Mastered</div>
@@ -708,18 +709,16 @@
         <div class="main-content">
             <!-- Subject Navigation at Top -->
             <div class="subject-navigation">
-                <a href="/term2/biology/biology.html" class="nav-button btn-back">
-                    <span class="nav-icon">←</span>
-                    <span class="nav-text">Back to Biology</span>
-                </a>
+                
                 
                 <div class="subject-nav-group">
-                    <a href="nucleic_acids.html" class="nav-button btn-prev-subject">
+                    <a href="dna_replication.html" class="nav-button btn-prev-subject">
                         <span class="nav-icon">←</span>
-                        <span class="nav-text">Nucleic Acids</span>
+                        <span class="nav-text">DNA Replication</span>
                     </a>
-                    <a href="proteins.html" class="nav-button btn-next-subject">
-                        <span class="nav-text">Proteins</span>
+
+                    <a href="/term2/biology/biology.html" class="nav-button btn-back">
+                        <span class="nav-text">Back to Biology</span>
                         <span class="nav-icon">→</span>
                     </a>
                 </div>
@@ -729,15 +728,15 @@
                 <span class="filter-label">Filter by Topic</span>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
-                    <button class="filter-btn" onclick="filterCards('carbon')">Carbon</button>
-                    <button class="filter-btn" onclick="filterCards('monosaccharides')">Monosaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('polysaccharides')">Polysaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('glycoproteins')">Glycoproteins</button>
-                    <button class="filter-btn" onclick="filterCards('lipids')">Lipids</button>
-                    <button class="filter-btn" onclick="filterCards('triglycerides')">Triglycerides</button>
-                    <button class="filter-btn" onclick="filterCards('fattyacids')">Fattyacids</button>
-                    <button class="filter-btn" onclick="filterCards('phospholipids')">Phospholipids</button>
-                    <button class="filter-btn" onclick="filterCards('advanced')">Advanced</button>
+                    <button class="filter-btn" onclick="filterCards('basics')">Basics</button>
+                    <button class="filter-btn" onclick="filterCards('dnastrands')">DNA Strands</button>
+                    <button class="filter-btn" onclick="filterCards('transcription')">Transcription</button>
+                    <button class="filter-btn" onclick="filterCards('translation')">Translation</button>
+                    <button class="filter-btn" onclick="filterCards('codons')">Codons</button>
+                    <button class="filter-btn" onclick="filterCards('geneticcode')">Genetic Code</button>
+                    <button class="filter-btn" onclick="filterCards('process')">Process</button>
+                    <button class="filter-btn" onclick="filterCards('mutations')">Mutations</button>
+                    <button class="filter-btn" onclick="filterCards('examples')">Examples</button>
                     <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
                 </div>
             </div>
@@ -827,213 +826,223 @@
 // Proteins Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
-// Carbohydrates & Lipids Flashcards Data for IB Biology HL
+// Enzymes & Metabolism Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// Cell Respiration Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+
+// Photosynthesis Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// DNA Replication Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// Protein Synthesis Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
 const flashcards = [
-    // Carbon & Chemical Compounds
+    // Basics
     {
-        type: "carbon",
-        question: "Why is carbon so important for biological molecules?",
-        answer: "Carbon has 4 valence electrons, allowing it to form 4 covalent bonds. It can make long chains or rings, bond with many elements (metallic and non-metallic), and form diverse macromolecules essential for life."
+        type: "basics",
+        question: "What are the two stages of protein synthesis?",
+        answer: "1) Transcription - the synthesis of RNA using a DNA template. 2) Translation - the synthesis of a polypeptide (protein) from the mRNA sequence."
     },
     {
-        type: "carbon",
-        question: "What types of bonds can carbon form?",
-        answer: "Carbon can form single bonds (C-C), double bonds (C=C), and triple bonds (C≡C) with other carbon atoms and different elements."
+        type: "basics",
+        question: "What is the central dogma of molecular biology?",
+        answer: "DNA → RNA → Protein. Genetic information flows from DNA (through transcription to RNA) and then from RNA (through translation to protein). This is the fundamental process of gene expression."
     },
     {
-        type: "carbon",
-        question: "What are the main functional groups in biological molecules?",
-        answer: "Hydroxyl groups (-OH), Carboxyl groups (-COOH), Amino groups (-NH₂), and Phosphate groups (-PO₄). These give organic compounds their individual properties."
+        type: "basics",
+        question: "What is gene expression?",
+        answer: "Gene expression is the process of switching certain genes on or off to match the requirements of the cell. Expressed genes undergo transcription and translation to produce proteins, while silenced genes do not."
     },
     {
-        type: "carbon",
-        question: "What is a condensation reaction?",
-        answer: "A condensation (dehydration synthesis) reaction joins two monomers by removing water (H₂O). One monomer loses -OH, the other loses -H, and a new covalent bond forms between them."
-    },
-    {
-        type: "carbon",
-        question: "What is a hydrolysis reaction?",
-        answer: "Hydrolysis breaks down polymers into monomers by adding water. Covalent bonds are broken, and the -OH and -H from water form functional groups of the products. This occurs during digestion."
+        type: "basics",
+        question: "What are the three types of RNA involved in protein synthesis?",
+        answer: "1) mRNA (messenger RNA) - carries the genetic code from DNA to ribosomes. 2) tRNA (transfer RNA) - brings amino acids to the ribosome. 3) rRNA (ribosomal RNA) - forms part of the ribosome structure."
     },
 
-    // Monosaccharides
+    // DNA Strands
     {
-        type: "monosaccharides",
-        question: "What is the general formula for monosaccharides?",
-        answer: "(CH₂O)ₙ where n = 3 to 7. Monosaccharides are composed of carbon (C), hydrogen (H), and oxygen (O)."
+        type: "dnastrands",
+        question: "What is the difference between the coding strand and template strand?",
+        answer: "The coding strand carries the genetic code (same sequence as mRNA, except T instead of U). The template strand is the opposite strand that is actually transcribed to form mRNA. The template is complementary and antiparallel to the coding strand."
     },
     {
-        type: "monosaccharides",
-        question: "What are the three types of monosaccharides based on carbon number?",
-        answer: "Triose (3 carbons, e.g., glyceraldehyde), Pentose (5 carbons, e.g., ribose), Hexose (6 carbons, e.g., glucose)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What is the difference between α-glucose and β-glucose?",
-        answer: "α-glucose has the -OH group on carbon 1 below the ring plane. β-glucose has the -OH group on carbon 1 above the ring plane. This small difference affects polymer structure."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose soluble in water?",
-        answer: "Glucose has multiple polar -OH (hydroxyl) groups, making it hydrophilic. This allows hydrogen bonding with water molecules, enabling transport in blood and phloem sap."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose important for cellular respiration?",
-        answer: "Glucose is the primary energy source. During cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP molecules)."
+        type: "dnastrands",
+        question: "Why is the template strand used instead of the coding strand?",
+        answer: "To get an RNA transcript that matches the coding strand, the template strand (which is complementary to the coding strand) must be transcribed. This ensures the mRNA has the correct sequence to code for the intended protein."
     },
 
-    // Polysaccharides - Structure
+    // Transcription
     {
-        type: "polysaccharides",
-        question: "What are polysaccharides?",
-        answer: "Polysaccharides are large carbohydrate polymers made by linking many glucose monomers via condensation reactions. They're ideal for energy storage due to compact shape, insolubility, and ease of breakdown."
+        type: "transcription",
+        question: "What is transcription?",
+        answer: "Transcription is the synthesis of mRNA using a DNA template strand. RNA polymerase reads the DNA template (3' to 5') and builds a complementary mRNA strand (5' to 3') by matching RNA nucleotides to DNA bases."
     },
     {
-        type: "polysaccharides",
-        question: "What is starch and where is it found?",
-        answer: "Starch is the storage polysaccharide of plants, stored as granules in chloroplasts. It's made of α-glucose and consists of amylose (unbranched helix) and amylopectin (branched)."
+        type: "transcription",
+        question: "Which enzyme synthesizes mRNA during transcription?",
+        answer: "RNA polymerase synthesizes mRNA. It binds to the DNA template strand, reads it in the 3' to 5' direction, and builds the mRNA strand in the 5' to 3' direction by adding complementary RNA nucleotides."
     },
     {
-        type: "polysaccharides",
-        question: "What is the difference between amylose and amylopectin?",
-        answer: "Amylose: 10-30% of starch, unbranched helix with 1,4 glycosidic bonds. Amylopectin: 70-90% of starch, branched with 1,4 and 1,6 glycosidic bonds, providing many terminal glucose molecules for quick access."
+        type: "transcription",
+        question: "What is the role of complementary base pairing in transcription?",
+        answer: "Complementary base pairing ensures accurate copying of DNA to mRNA. DNA base A pairs with RNA base U (not T), DNA T pairs with RNA A, DNA G pairs with RNA C, and DNA C pairs with RNA G."
     },
     {
-        type: "polysaccharides",
-        question: "What is glycogen and where is it stored?",
-        answer: "Glycogen is the storage polysaccharide of animals and fungi, made of α-glucose. More branched than amylopectin (branches every 8-12 units). Stored in liver and muscle cells as granules for quick energy release."
+        type: "transcription",
+        question: "What are the base pairing rules in transcription?",
+        answer: "DNA Adenine (A) → RNA Uracil (U), DNA Thymine (T) → RNA Adenine (A), DNA Guanine (G) → RNA Cytosine (C), DNA Cytosine (C) → RNA Guanine (G). Note: RNA uses U instead of T."
     },
     {
-        type: "polysaccharides",
-        question: "What is cellulose and what is its function?",
-        answer: "Cellulose is a structural carbohydrate made of β-glucose polymers. Found in plant cell walls, it provides mechanical strength, prevents cell bursting, and maintains shape. Humans cannot digest it (dietary fiber)."
-    },
-
-    // Polysaccharides - Comparison
-    {
-        type: "polysaccharides",
-        question: "Why is cellulose different from starch structurally?",
-        answer: "Cellulose uses β-glucose (every alternate molecule inverted), forming straight unbranched chains. Hydrogen bonds between chains create strong microfibrils. Starch uses α-glucose, forming helical or branched structures."
-    },
-    {
-        type: "polysaccharides",
-        question: "Compare the functions of starch, glycogen, and cellulose.",
-        answer: "Starch: energy storage in plants. Glycogen: energy storage in animals (faster mobilization). Cellulose: structural support in plant cell walls (cannot be digested by humans)."
+        type: "transcription",
+        question: "Why is the DNA template stable during transcription?",
+        answer: "Only hydrogen bonds (weak bonds) between base pairs are temporarily broken during transcription. The strong covalent bonds of the DNA backbone remain intact, so the DNA template is not damaged and can be used repeatedly to make many mRNA copies."
     },
 
-    // Glycoproteins
+    // Translation
     {
-        type: "glycoproteins",
-        question: "What are glycoproteins?",
-        answer: "Glycoproteins are proteins with carbohydrate chains covalently attached. Found in cell membranes with carbohydrates extending outside, involved in cell recognition, communication, and immune defense."
+        type: "translation",
+        question: "What is translation?",
+        answer: "Translation is the synthesis of a polypeptide (protein) from the base sequence of mRNA. It occurs at ribosomes where the mRNA code is read and converted into a specific sequence of amino acids."
     },
     {
-        type: "glycoproteins",
-        question: "How do glycoproteins function in cell recognition?",
-        answer: "Glycoproteins act as cell identity markers. For example, the ABO blood group system uses specific glycoprotein antigens on red blood cells (A, B, or neither) for recognition."
-    },
-
-    // Lipids - Basic Properties
-    {
-        type: "lipids",
-        question: "What makes lipids hydrophobic?",
-        answer: "Lipids are hydrophobic (water-repelling) because they consist mainly of non-polar C-H bonds in hydrocarbon chains. These cannot form hydrogen bonds with water, so lipids don't dissolve in water."
+        type: "translation",
+        question: "Where does translation occur?",
+        answer: "Translation occurs at ribosomes, which can be: 1) Free-floating in the cytoplasm, or 2) Attached to the rough endoplasmic reticulum (RER). The location depends on whether the protein is for internal use or export."
     },
     {
-        type: "lipids",
-        question: "What elements make up lipids?",
-        answer: "Lipids are mainly composed of carbon (C), hydrogen (H), and small amounts of oxygen (O). Some also contain phosphorus (P)."
-    },
-    {
-        type: "lipids",
-        question: "Why is lipid hydrophobicity biologically important?",
-        answer: "Hydrophobicity allows lipids to: 1) Form cell membrane barriers, 2) Store energy without affecting osmotic balance, 3) Provide waterproofing, 4) Create separate compartments in cells."
+        type: "translation",
+        question: "What is the structure of a ribosome relevant to translation?",
+        answer: "Ribosomes have two subunits (large and small) with binding sites for: 1) mRNA (binds to small subunit), 2) Two tRNA molecules simultaneously (bind to large subunit). This allows the ribosome to read mRNA and link amino acids together."
     },
 
-    // Triglycerides
+    // Codons and Anticodons
     {
-        type: "triglycerides",
-        question: "What is the structure of a triglyceride?",
-        answer: "A triglyceride consists of one glycerol molecule (3-carbon alcohol with -OH groups) bonded to three fatty acid chains (long hydrocarbon chains with terminal -COOH groups) via ester bonds."
+        type: "codons",
+        question: "What is a codon?",
+        answer: "A codon is a sequence of three nucleotide bases on mRNA that codes for one specific amino acid. There are 64 possible codons (4³ combinations) that code for 20 amino acids plus start and stop signals."
     },
     {
-        type: "triglycerides",
-        question: "How are triglycerides formed?",
-        answer: "Triglycerides form through esterification (condensation). The -OH from glycerol and -COOH from fatty acids react, releasing water and forming ester bonds. Three fatty acids attach to one glycerol."
+        type: "codons",
+        question: "What is an anticodon?",
+        answer: "An anticodon is a sequence of three nucleotide bases on tRNA that is complementary to a specific mRNA codon. The anticodon ensures the correct amino acid is delivered by base pairing with the mRNA codon at the ribosome."
     },
     {
-        type: "triglycerides",
-        question: "What are the functions of triglycerides?",
-        answer: "1) Long-term energy storage (more than double the energy per gram of carbohydrates), 2) Thermal insulation in adipose tissue, 3) Protection of internal organs, 4) Buoyancy in aquatic mammals."
-    },
-
-    // Fatty Acids
-    {
-        type: "fattyacids",
-        question: "What is the difference between saturated and unsaturated fatty acids?",
-        answer: "Saturated: NO C=C double bonds, straight chains, pack tightly, solid at room temperature, higher melting point. Unsaturated: ONE or MORE C=C double bonds, kinked chains, pack loosely, liquid at room temperature, lower melting point."
+        type: "codons",
+        question: "How do codons and anticodons work together?",
+        answer: "The tRNA anticodon binds to the complementary mRNA codon through base pairing (A-U, G-C). This ensures the amino acid attached to that specific tRNA is added in the correct position in the growing polypeptide chain."
     },
     {
-        type: "fattyacids",
-        question: "What are the two types of unsaturated fatty acids?",
-        answer: "Monounsaturated: ONE C=C double bond (e.g., olive oil). Polyunsaturated: TWO or MORE C=C double bonds (e.g., fish oil, vegetable oils) - lowest melting point."
+        type: "codons",
+        question: "What is the start codon and what does it code for?",
+        answer: "The start codon is AUG. It codes for the amino acid methionine (Met) and signals where translation should begin on the mRNA. All proteins initially start with methionine (though it may be removed later)."
     },
     {
-        type: "fattyacids",
-        question: "Why do unsaturated fats have lower melting points?",
-        answer: "C=C double bonds create 'kinks' in the fatty acid chains, preventing tight packing. This reduces intermolecular forces (van der Waals), resulting in lower melting points and liquid state at room temperature."
-    },
-    {
-        type: "fattyacids",
-        question: "What is the difference between cis and trans unsaturated fats?",
-        answer: "Cis: hydrogen atoms on same side of double bond, creates kink, natural form in most foods. Trans: hydrogen atoms on opposite sides, straighter chain, often artificial (hydrogenation), associated with health risks."
+        type: "codons",
+        question: "What are stop codons?",
+        answer: "Stop codons are UAA, UAG, and UGA. They don't code for any amino acid. Instead, they signal the end of translation, causing the ribosome to release the completed polypeptide chain."
     },
 
-    // Phospholipids
+    // Genetic Code
     {
-        type: "phospholipids",
-        question: "What is the structure of a phospholipid?",
-        answer: "A phospholipid has: 1 glycerol backbone, 2 hydrophobic fatty acid tails, 1 hydrophilic phosphate group (often with additional groups attached). This creates an amphipathic molecule."
+        type: "geneticcode",
+        question: "What are the three key features of the genetic code?",
+        answer: "1) Universal - the same codons code for the same amino acids in nearly all organisms. 2) Degenerate - multiple codons can code for the same amino acid (redundancy). 3) Non-overlapping - each nucleotide is part of only one codon."
     },
     {
-        type: "phospholipids",
-        question: "What does amphipathic mean?",
-        answer: "Amphipathic means having both hydrophilic (water-loving) and hydrophobic (water-fearing) regions. Phospholipids have hydrophilic phosphate heads and hydrophobic fatty acid tails."
+        type: "geneticcode",
+        question: "What does it mean that the genetic code is universal?",
+        answer: "The genetic code is nearly universal across all life forms. The same codon (e.g., AUG) codes for the same amino acid (methionine) whether in bacteria, plants, or humans. This suggests all life shares a common ancestor."
     },
     {
-        type: "phospholipids",
-        question: "Why do phospholipids form bilayers?",
-        answer: "In aqueous solutions, phospholipids spontaneously form bilayers with hydrophobic tails facing inward (away from water) and hydrophilic heads facing outward (toward water). This minimizes unfavorable interactions and creates stable cell membranes."
+        type: "geneticcode",
+        question: "What does it mean that the genetic code is degenerate?",
+        answer: "Degenerate means multiple different codons can code for the same amino acid. For example, leucine is coded by 6 different codons (UUA, UUG, CUU, CUC, CUA, CUG). This provides protection against some mutations."
     },
     {
-        type: "phospholipids",
-        question: "What is the function of phospholipid bilayers?",
-        answer: "Phospholipid bilayers form the foundation of all cell membranes, creating selective barriers that separate cell interior from exterior and organize cellular compartments. They control what enters and exits cells."
+        type: "geneticcode",
+        question: "Why is degeneracy of the genetic code important?",
+        answer: "Degeneracy provides a buffer against mutations. If a base changes (mutation) but the new codon still codes for the same amino acid (silent/same-sense mutation), the protein remains unchanged and functional. This reduces the impact of DNA copying errors."
     },
 
-    // Advanced Comparisons
+    // Translation Process
     {
-        type: "advanced",
-        question: "Compare triglycerides and phospholipids structurally.",
-        answer: "Triglycerides: 3 fatty acids + 1 glycerol, fully hydrophobic, energy storage. Phospholipids: 2 fatty acids + 1 glycerol + 1 phosphate group, amphipathic, membrane structure."
+        type: "process",
+        question: "Describe the process of translation step-by-step.",
+        answer: "1) mRNA binds to the small ribosomal subunit. 2) tRNA with anticodon complementary to the start codon (AUG) brings the first amino acid. 3) The ribosome moves along mRNA, reading codons. 4) tRNAs bring corresponding amino acids. 5) Peptide bonds form between adjacent amino acids. 6) The ribosome continues until a stop codon is reached. 7) The polypeptide is released."
     },
     {
-        type: "advanced",
-        question: "Why are lipids better for long-term energy storage than carbohydrates?",
-        answer: "Lipids store more than twice the energy per gram (9 kcal/g vs 4 kcal/g), are hydrophobic (don't affect osmotic balance), and are more compact. However, carbohydrates release energy faster."
+        type: "process",
+        question: "How does the ribosome move along the mRNA?",
+        answer: "The ribosome moves stepwise along the mRNA in the 5' to 3' direction, reading one codon (3 nucleotides) at a time. After each amino acid is added, the ribosome shifts exactly 3 nucleotides forward to the next codon."
     },
     {
-        type: "advanced",
-        question: "What is adipose tissue and its functions?",
-        answer: "Adipose tissue stores triglycerides beneath skin and around organs. Functions: 1) Long-term energy storage, 2) Thermal insulation (prevents heat loss), 3) Cushioning/protection of organs, 4) Hormone production (leptin)."
+        type: "process",
+        question: "How are amino acids linked together during translation?",
+        answer: "Peptide bonds form between the amino acid on the incoming tRNA and the growing polypeptide chain. This is a condensation reaction catalyzed by the ribosome (specifically rRNA), releasing water and creating a covalent bond."
+    },
+    {
+        type: "process",
+        question: "What happens when the ribosome reaches a stop codon?",
+        answer: "When a stop codon (UAA, UAG, or UGA) is reached, no tRNA binds because there's no corresponding anticodon. Instead, release factors bind, causing the ribosome to release the completed polypeptide chain and dissociate from the mRNA."
+    },
+
+    // Mutations
+    {
+        type: "mutations",
+        question: "What is a gene mutation?",
+        answer: "A gene mutation is a change in the sequence of base pairs in a DNA molecule. This may result in a new allele (gene variant). Most mutations are harmful or neutral (no effect), but some can be beneficial."
+    },
+    {
+        type: "mutations",
+        question: "What are the three main types of gene mutations?",
+        answer: "1) Substitution - one nucleotide base is randomly swapped for a different base. 2) Insertion - a nucleotide is randomly added into the DNA sequence. 3) Deletion - a nucleotide is randomly removed from the DNA sequence."
+    },
+    {
+        type: "mutations",
+        question: "What is a silent (same-sense) mutation?",
+        answer: "A silent mutation is when a base substitution occurs but the new codon still codes for the same amino acid due to the degeneracy of the genetic code. For example, ACG→AGT both code for the same amino acid, so the protein is unchanged."
+    },
+    {
+        type: "mutations",
+        question: "What is a missense mutation?",
+        answer: "A missense mutation is when a base substitution results in a codon that codes for a different amino acid. This changes one amino acid in the protein, which may affect protein structure and function (could be harmful, neutral, or rarely beneficial)."
+    },
+    {
+        type: "mutations",
+        question: "What is a nonsense mutation?",
+        answer: "A nonsense mutation is when a substitution changes a normal codon into a stop codon (UAA, UAG, UGA). This causes translation to terminate prematurely, producing a shortened, usually non-functional protein."
+    },
+    {
+        type: "mutations",
+        question: "What causes mutations?",
+        answer: "Mutations can be caused by: 1) Errors during DNA replication (spontaneous), 2) Chemical mutagens (e.g., benzopyrene in tobacco smoke, mustard gas), 3) Radiation (UV light, X-rays, gamma rays, alpha particles)."
+    },
+    {
+        type: "mutations",
+        question: "What is a mutation hotspot?",
+        answer: "A mutation hotspot is a region of DNA where mutations occur more frequently. One example is CpG sites (where cytosine is followed by guanine). When methylated, cytosine at these sites can mutate to thymine through substitution."
+    },
+
+    // Real-World Examples
+    {
+        type: "examples",
+        question: "What is sickle cell anemia and what causes it?",
+        answer: "Sickle cell anemia is caused by a single nucleotide polymorphism (SNP) - a missense mutation in the beta-globin gene. One base change causes glutamic acid to be replaced with valine, making hemoglobin malformed and red blood cells sickle-shaped."
+    },
+    {
+        type: "examples",
+        question: "What is the difference between mutations in somatic cells and germ cells?",
+        answer: "Somatic cell mutations occur in body cells (skin, liver, etc.) and are not inherited - they die with the individual. Germ cell mutations occur in gametes (sperm/egg cells) and CAN be inherited by offspring, potentially causing genetic diseases."
     }
 ];
 
-
-        let currentIndex = 0;
+let currentIndex = 0;
         let isFlipped = false;
         let cardStatus = new Array(flashcards.length).fill('new');
         let currentFilter = 'all';

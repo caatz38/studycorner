@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbohydrate & Lipids - Flashcards | StudyCorner</title>
+    <title>DNA Replication - Flashcards | StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,13 +686,13 @@
             <div class="hero-content">
                 
                 <h1></h1>
-                <h1>Carbohydrate & Lipids</h1>
+                <h1>DNA Replication</h1>
                 <p class="subtitle">Flashcard</p>
                 
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-label">Total Cards</div>
-                        <div class="stat-value" id="totalCards">31</div>
+                        <div class="stat-value" id="totalCards">32</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Mastered</div>
@@ -714,12 +715,12 @@
                 </a>
                 
                 <div class="subject-nav-group">
-                    <a href="nucleic_acids.html" class="nav-button btn-prev-subject">
+                    <a href="photosynthesis.html" class="nav-button btn-prev-subject">
                         <span class="nav-icon">←</span>
-                        <span class="nav-text">Nucleic Acids</span>
+                        <span class="nav-text">Photosynthesis</span>
                     </a>
-                    <a href="proteins.html" class="nav-button btn-next-subject">
-                        <span class="nav-text">Proteins</span>
+                    <a href="protein_synthesis.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">Protein Synthesis</span>
                         <span class="nav-icon">→</span>
                     </a>
                 </div>
@@ -729,15 +730,13 @@
                 <span class="filter-label">Filter by Topic</span>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
-                    <button class="filter-btn" onclick="filterCards('carbon')">Carbon</button>
-                    <button class="filter-btn" onclick="filterCards('monosaccharides')">Monosaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('polysaccharides')">Polysaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('glycoproteins')">Glycoproteins</button>
-                    <button class="filter-btn" onclick="filterCards('lipids')">Lipids</button>
-                    <button class="filter-btn" onclick="filterCards('triglycerides')">Triglycerides</button>
-                    <button class="filter-btn" onclick="filterCards('fattyacids')">Fattyacids</button>
-                    <button class="filter-btn" onclick="filterCards('phospholipids')">Phospholipids</button>
-                    <button class="filter-btn" onclick="filterCards('advanced')">Advanced</button>
+                    <button class="filter-btn" onclick="filterCards('basics')">Basics</button>
+                    <button class="filter-btn" onclick="filterCards('structure')">Structure</button>
+                    <button class="filter-btn" onclick="filterCards('enzymes')">Enzymes</button>
+                    <button class="filter-btn" onclick="filterCards('pcr')">PCR</button>
+                    <button class="filter-btn" onclick="filterCards('pcrstages')">PCR Stages</button>
+                    <button class="filter-btn" onclick="filterCards('gelelectrophoresis')">Gel Electrophoresis</button>
+                    <button class="filter-btn" onclick="filterCards('applications')">Applications</button>
                     <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
                 </div>
             </div>
@@ -827,213 +826,205 @@
 // Proteins Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
-// Carbohydrates & Lipids Flashcards Data for IB Biology HL
+// Enzymes & Metabolism Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// Cell Respiration Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+
+// Photosynthesis Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// DNA Replication Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
 const flashcards = [
-    // Carbon & Chemical Compounds
+    // DNA Replication Basics
     {
-        type: "carbon",
-        question: "Why is carbon so important for biological molecules?",
-        answer: "Carbon has 4 valence electrons, allowing it to form 4 covalent bonds. It can make long chains or rings, bond with many elements (metallic and non-metallic), and form diverse macromolecules essential for life."
+        type: "basics",
+        question: "What is DNA replication?",
+        answer: "DNA replication is the process of producing exact copies of DNA with identical base sequences. It occurs before cell division to ensure each daughter cell receives a complete copy of the genetic information."
     },
     {
-        type: "carbon",
-        question: "What types of bonds can carbon form?",
-        answer: "Carbon can form single bonds (C-C), double bonds (C=C), and triple bonds (C≡C) with other carbon atoms and different elements."
+        type: "basics",
+        question: "Why is DNA replication necessary?",
+        answer: "DNA replication is necessary so that when cells divide, each new daughter cell receives a complete and identical copy of the parent cell's DNA. This ensures genetic continuity across generations of cells."
     },
     {
-        type: "carbon",
-        question: "What are the main functional groups in biological molecules?",
-        answer: "Hydroxyl groups (-OH), Carboxyl groups (-COOH), Amino groups (-NH₂), and Phosphate groups (-PO₄). These give organic compounds their individual properties."
+        type: "basics",
+        question: "What does it mean that DNA replication is semi-conservative?",
+        answer: "Semi-conservative means each new DNA molecule consists of one original (conserved) strand from the parent DNA and one newly synthesized strand. Half of the original DNA is kept/conserved in each daughter molecule."
     },
     {
-        type: "carbon",
-        question: "What is a condensation reaction?",
-        answer: "A condensation (dehydration synthesis) reaction joins two monomers by removing water (H₂O). One monomer loses -OH, the other loses -H, and a new covalent bond forms between them."
+        type: "basics",
+        question: "Why is semi-conservative replication important?",
+        answer: "Semi-conservative replication ensures genetic continuity with a high degree of accuracy. By keeping one original strand as a template, the cell can produce exact copies of DNA, maintaining the correct sequence of bases through generations."
     },
     {
-        type: "carbon",
-        question: "What is a hydrolysis reaction?",
-        answer: "Hydrolysis breaks down polymers into monomers by adding water. Covalent bonds are broken, and the -OH and -H from water form functional groups of the products. This occurs during digestion."
-    },
-
-    // Monosaccharides
-    {
-        type: "monosaccharides",
-        question: "What is the general formula for monosaccharides?",
-        answer: "(CH₂O)ₙ where n = 3 to 7. Monosaccharides are composed of carbon (C), hydrogen (H), and oxygen (O)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What are the three types of monosaccharides based on carbon number?",
-        answer: "Triose (3 carbons, e.g., glyceraldehyde), Pentose (5 carbons, e.g., ribose), Hexose (6 carbons, e.g., glucose)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What is the difference between α-glucose and β-glucose?",
-        answer: "α-glucose has the -OH group on carbon 1 below the ring plane. β-glucose has the -OH group on carbon 1 above the ring plane. This small difference affects polymer structure."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose soluble in water?",
-        answer: "Glucose has multiple polar -OH (hydroxyl) groups, making it hydrophilic. This allows hydrogen bonding with water molecules, enabling transport in blood and phloem sap."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose important for cellular respiration?",
-        answer: "Glucose is the primary energy source. During cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP molecules)."
+        type: "basics",
+        question: "What is the role of complementary base pairing in replication?",
+        answer: "Complementary base pairing (A with T, G with C) ensures that each new DNA strand is an exact copy of the original. The template strand's bases determine which nucleotides are added, maintaining accuracy in copying genetic information."
     },
 
-    // Polysaccharides - Structure
+    // DNA Structure Review
     {
-        type: "polysaccharides",
-        question: "What are polysaccharides?",
-        answer: "Polysaccharides are large carbohydrate polymers made by linking many glucose monomers via condensation reactions. They're ideal for energy storage due to compact shape, insolubility, and ease of breakdown."
+        type: "structure",
+        question: "What are the components of a nucleotide?",
+        answer: "A nucleotide consists of: 1) A nitrogenous base (A, T, G, or C), 2) A pentose sugar (deoxyribose in DNA), 3) A phosphate group. These join together to form the building blocks of DNA."
     },
     {
-        type: "polysaccharides",
-        question: "What is starch and where is it found?",
-        answer: "Starch is the storage polysaccharide of plants, stored as granules in chloroplasts. It's made of α-glucose and consists of amylose (unbranched helix) and amylopectin (branched)."
+        type: "structure",
+        question: "Which bases are purines and which are pyrimidines?",
+        answer: "Purines (double-ring structure): Adenine (A) and Guanine (G). Pyrimidines (single-ring structure): Cytosine (C) and Thymine (T). A purine always pairs with a pyrimidine to maintain uniform DNA width."
     },
     {
-        type: "polysaccharides",
-        question: "What is the difference between amylose and amylopectin?",
-        answer: "Amylose: 10-30% of starch, unbranched helix with 1,4 glycosidic bonds. Amylopectin: 70-90% of starch, branched with 1,4 and 1,6 glycosidic bonds, providing many terminal glucose molecules for quick access."
+        type: "structure",
+        question: "How many hydrogen bonds form between base pairs?",
+        answer: "Adenine (A) pairs with Thymine (T) via 2 hydrogen bonds. Guanine (G) pairs with Cytosine (C) via 3 hydrogen bonds. The G-C pair is stronger due to the extra hydrogen bond."
     },
     {
-        type: "polysaccharides",
-        question: "What is glycogen and where is it stored?",
-        answer: "Glycogen is the storage polysaccharide of animals and fungi, made of α-glucose. More branched than amylopectin (branches every 8-12 units). Stored in liver and muscle cells as granules for quick energy release."
+        type: "structure",
+        question: "What does antiparallel mean in DNA structure?",
+        answer: "Antiparallel means the two DNA strands run in opposite directions. One strand runs 5' to 3', while the complementary strand runs 3' to 5'. The 5' end has a phosphate group, the 3' end has a hydroxyl (-OH) group."
     },
     {
-        type: "polysaccharides",
-        question: "What is cellulose and what is its function?",
-        answer: "Cellulose is a structural carbohydrate made of β-glucose polymers. Found in plant cell walls, it provides mechanical strength, prevents cell bursting, and maintains shape. Humans cannot digest it (dietary fiber)."
-    },
-
-    // Polysaccharides - Comparison
-    {
-        type: "polysaccharides",
-        question: "Why is cellulose different from starch structurally?",
-        answer: "Cellulose uses β-glucose (every alternate molecule inverted), forming straight unbranched chains. Hydrogen bonds between chains create strong microfibrils. Starch uses α-glucose, forming helical or branched structures."
-    },
-    {
-        type: "polysaccharides",
-        question: "Compare the functions of starch, glycogen, and cellulose.",
-        answer: "Starch: energy storage in plants. Glycogen: energy storage in animals (faster mobilization). Cellulose: structural support in plant cell walls (cannot be digested by humans)."
+        type: "structure",
+        question: "What is the DNA double helix?",
+        answer: "The DNA double helix is the three-dimensional twisted ladder shape of DNA. Two antiparallel polynucleotide strands are held together by hydrogen bonds between base pairs and wound around each other in a spiral."
     },
 
-    // Glycoproteins
+    // Enzymes in Replication
     {
-        type: "glycoproteins",
-        question: "What are glycoproteins?",
-        answer: "Glycoproteins are proteins with carbohydrate chains covalently attached. Found in cell membranes with carbohydrates extending outside, involved in cell recognition, communication, and immune defense."
+        type: "enzymes",
+        question: "What is the role of helicase in DNA replication?",
+        answer: "Helicase unwinds the DNA double helix by breaking the hydrogen bonds between base pairs. This separates the two DNA strands, exposing the bases so they can act as templates for new strand synthesis."
     },
     {
-        type: "glycoproteins",
-        question: "How do glycoproteins function in cell recognition?",
-        answer: "Glycoproteins act as cell identity markers. For example, the ABO blood group system uses specific glycoprotein antigens on red blood cells (A, B, or neither) for recognition."
-    },
-
-    // Lipids - Basic Properties
-    {
-        type: "lipids",
-        question: "What makes lipids hydrophobic?",
-        answer: "Lipids are hydrophobic (water-repelling) because they consist mainly of non-polar C-H bonds in hydrocarbon chains. These cannot form hydrogen bonds with water, so lipids don't dissolve in water."
+        type: "enzymes",
+        question: "What is the role of DNA polymerase?",
+        answer: "DNA polymerase links nucleotides together to form a new DNA strand, using the template strand as a guide. It catalyzes condensation reactions between the deoxyribose sugar and phosphate groups of adjacent nucleotides, creating the sugar-phosphate backbone."
     },
     {
-        type: "lipids",
-        question: "What elements make up lipids?",
-        answer: "Lipids are mainly composed of carbon (C), hydrogen (H), and small amounts of oxygen (O). Some also contain phosphorus (P)."
+        type: "enzymes",
+        question: "In which direction does DNA polymerase build new strands?",
+        answer: "DNA polymerase always builds new DNA strands in the 5' to 3' direction. It attaches to the 3' end of the template strand, reads it in the 3' to 5' direction, and adds new nucleotides to the 3' end of the growing strand."
     },
     {
-        type: "lipids",
-        question: "Why is lipid hydrophobicity biologically important?",
-        answer: "Hydrophobicity allows lipids to: 1) Form cell membrane barriers, 2) Store energy without affecting osmotic balance, 3) Provide waterproofing, 4) Create separate compartments in cells."
+        type: "enzymes",
+        question: "Why can DNA polymerase only work in one direction?",
+        answer: "DNA polymerase can only add nucleotides to the 3' end (the -OH group) of an existing strand. This structural limitation means new strands are always built 5' to 3', even though the template is read 3' to 5'."
+    },
+    {
+        type: "enzymes",
+        question: "Describe the complete process of DNA replication step by step.",
+        answer: "1) Helicase unwinds and separates the DNA strands by breaking hydrogen bonds. 2) Each single strand acts as a template. 3) Free nucleotides are attracted to exposed bases by base pairing rules. 4) DNA polymerase joins nucleotides together (5' to 3') to form new strands. 5) Two identical DNA molecules result, each with one old and one new strand."
     },
 
-    // Triglycerides
+    // PCR - Basics
     {
-        type: "triglycerides",
-        question: "What is the structure of a triglyceride?",
-        answer: "A triglyceride consists of one glycerol molecule (3-carbon alcohol with -OH groups) bonded to three fatty acid chains (long hydrocarbon chains with terminal -COOH groups) via ester bonds."
+        type: "pcr",
+        question: "What is PCR and what does it stand for?",
+        answer: "PCR stands for Polymerase Chain Reaction. It is a laboratory technique used to produce billions of identical copies of specific DNA fragments from very small quantities (even just one molecule) within a few hours."
     },
     {
-        type: "triglycerides",
-        question: "How are triglycerides formed?",
-        answer: "Triglycerides form through esterification (condensation). The -OH from glycerol and -COOH from fatty acids react, releasing water and forming ester bonds. Three fatty acids attach to one glycerol."
+        type: "pcr",
+        question: "What are the main applications of PCR?",
+        answer: "PCR is used for: 1) DNA profiling (criminal identification, paternity testing), 2) Genetic engineering, 3) Medical diagnostics (detecting pathogens), 4) Archaeological studies (ancient DNA), 5) Any situation requiring DNA amplification for analysis."
     },
     {
-        type: "triglycerides",
-        question: "What are the functions of triglycerides?",
-        answer: "1) Long-term energy storage (more than double the energy per gram of carbohydrates), 2) Thermal insulation in adipose tissue, 3) Protection of internal organs, 4) Buoyancy in aquatic mammals."
-    },
-
-    // Fatty Acids
-    {
-        type: "fattyacids",
-        question: "What is the difference between saturated and unsaturated fatty acids?",
-        answer: "Saturated: NO C=C double bonds, straight chains, pack tightly, solid at room temperature, higher melting point. Unsaturated: ONE or MORE C=C double bonds, kinked chains, pack loosely, liquid at room temperature, lower melting point."
+        type: "pcr",
+        question: "What are the four main requirements for PCR?",
+        answer: "1) Target DNA/RNA being amplified, 2) DNA polymerase (Taq polymerase from Thermus aquaticus bacteria), 3) Free nucleotides for building new strands, 4) Buffer solution to provide optimum pH for the reactions."
     },
     {
-        type: "fattyacids",
-        question: "What are the two types of unsaturated fatty acids?",
-        answer: "Monounsaturated: ONE C=C double bond (e.g., olive oil). Polyunsaturated: TWO or MORE C=C double bonds (e.g., fish oil, vegetable oils) - lowest melting point."
+        type: "pcr",
+        question: "Why is Taq polymerase used in PCR?",
+        answer: "Taq polymerase comes from Thermus aquaticus, a thermophilic (heat-loving) bacterium. It can withstand the high temperatures (95°C) used during PCR denaturation without being denatured itself, making it ideal for repeated heating cycles."
     },
     {
-        type: "fattyacids",
-        question: "Why do unsaturated fats have lower melting points?",
-        answer: "C=C double bonds create 'kinks' in the fatty acid chains, preventing tight packing. This reduces intermolecular forces (van der Waals), resulting in lower melting points and liquid state at room temperature."
-    },
-    {
-        type: "fattyacids",
-        question: "What is the difference between cis and trans unsaturated fats?",
-        answer: "Cis: hydrogen atoms on same side of double bond, creates kink, natural form in most foods. Trans: hydrogen atoms on opposite sides, straighter chain, often artificial (hydrogenation), associated with health risks."
+        type: "pcr",
+        question: "What equipment is used for PCR?",
+        answer: "PCR is performed in a thermal cycler (also called a thermocycler). This specialized machine automatically controls the temperature for each stage of PCR and the length of time spent at each temperature through multiple cycles."
     },
 
-    // Phospholipids
+    // PCR - Three Stages
     {
-        type: "phospholipids",
-        question: "What is the structure of a phospholipid?",
-        answer: "A phospholipid has: 1 glycerol backbone, 2 hydrophobic fatty acid tails, 1 hydrophilic phosphate group (often with additional groups attached). This creates an amphipathic molecule."
+        type: "pcrstages",
+        question: "What are the three stages of PCR?",
+        answer: "1) Denaturation (~95°C): DNA strands separate. 2) Annealing (~50-60°C): Primers bind to template strands. 3) Elongation/Extension (~72°C): Taq polymerase builds complementary DNA strands."
     },
     {
-        type: "phospholipids",
-        question: "What does amphipathic mean?",
-        answer: "Amphipathic means having both hydrophilic (water-loving) and hydrophobic (water-fearing) regions. Phospholipids have hydrophilic phosphate heads and hydrophobic fatty acid tails."
+        type: "pcrstages",
+        question: "What happens during denaturation in PCR?",
+        answer: "At approximately 95°C, the double-stranded DNA is heated to break the hydrogen bonds between base pairs. This separates the two DNA strands, creating single-stranded templates for the next stage."
     },
     {
-        type: "phospholipids",
-        question: "Why do phospholipids form bilayers?",
-        answer: "In aqueous solutions, phospholipids spontaneously form bilayers with hydrophobic tails facing inward (away from water) and hydrophilic heads facing outward (toward water). This minimizes unfavorable interactions and creates stable cell membranes."
+        type: "pcrstages",
+        question: "What happens during annealing in PCR?",
+        answer: "The temperature is decreased to 50-60°C so that primers (short DNA sequences) can bind (anneal) to the ends of the single-stranded DNA templates. Primers mark the starting points for DNA synthesis."
     },
     {
-        type: "phospholipids",
-        question: "What is the function of phospholipid bilayers?",
-        answer: "Phospholipid bilayers form the foundation of all cell membranes, creating selective barriers that separate cell interior from exterior and organize cellular compartments. They control what enters and exits cells."
+        type: "pcrstages",
+        question: "What happens during elongation/extension in PCR?",
+        answer: "The temperature is increased to 72°C (the optimum for Taq polymerase). Taq polymerase binds to the primers and builds complementary DNA strands by adding free nucleotides in the 5' to 3' direction, producing new double-stranded DNA molecules."
+    },
+    {
+        type: "pcrstages",
+        question: "How many DNA copies are produced after multiple PCR cycles?",
+        answer: "DNA doubles with each cycle. After 30 cycles, over 1 billion (2³⁰) copies are produced from a single DNA molecule through exponential amplification. Each cycle takes only a few minutes, so 30 cycles take just a few hours."
     },
 
-    // Advanced Comparisons
+    // Gel Electrophoresis
     {
-        type: "advanced",
-        question: "Compare triglycerides and phospholipids structurally.",
-        answer: "Triglycerides: 3 fatty acids + 1 glycerol, fully hydrophobic, energy storage. Phospholipids: 2 fatty acids + 1 glycerol + 1 phosphate group, amphipathic, membrane structure."
+        type: "gelelectrophoresis",
+        question: "What is gel electrophoresis?",
+        answer: "Gel electrophoresis is a technique used to separate and analyze DNA, RNA, or protein fragments based on their size and electrical charge. It uses an electric current to pull molecules through a gel matrix."
     },
     {
-        type: "advanced",
-        question: "Why are lipids better for long-term energy storage than carbohydrates?",
-        answer: "Lipids store more than twice the energy per gram (9 kcal/g vs 4 kcal/g), are hydrophobic (don't affect osmotic balance), and are more compact. However, carbohydrates release energy faster."
+        type: "gelelectrophoresis",
+        question: "Why does DNA move toward the positive electrode (anode)?",
+        answer: "DNA is negatively charged due to the phosphate groups in its sugar-phosphate backbone. When an electric current is applied, the negatively charged DNA molecules are attracted to and move toward the positive electrode (anode)."
     },
     {
-        type: "advanced",
-        question: "What is adipose tissue and its functions?",
-        answer: "Adipose tissue stores triglycerides beneath skin and around organs. Functions: 1) Long-term energy storage, 2) Thermal insulation (prevents heat loss), 3) Cushioning/protection of organs, 4) Hormone production (leptin)."
+        type: "gelelectrophoresis",
+        question: "Why do smaller DNA fragments move further than larger ones?",
+        answer: "Smaller DNA fragments move faster and further through the gel pores because they can navigate through the gel matrix more easily. Larger fragments are slowed down by the gel's mesh-like structure, so they don't travel as far."
+    },
+    {
+        type: "gelelectrophoresis",
+        question: "Describe the gel electrophoresis procedure.",
+        answer: "1) Create agarose gel plate with wells. 2) Submerge gel in electrolyte solution. 3) Load DNA samples into wells using micropipette. 4) Apply electric current (negative at wells, positive at far end). 5) DNA fragments separate by size. 6) Visualize using fluorescent dye or radioactive label."
+    },
+    {
+        type: "gelelectrophoresis",
+        question: "How are DNA fragments visualized after electrophoresis?",
+        answer: "DNA is not visible, so fragments are visualized using: 1) Fluorescent dyes (e.g., ethidium bromide) that bind to DNA and glow under UV light, creating colored bands, OR 2) Radioactive labels that expose X-ray film, creating dark bands."
+    },
+
+    // Applications
+    {
+        type: "applications",
+        question: "How is DNA profiling used in forensic investigations?",
+        answer: "DNA from a crime scene is amplified using PCR, then separated by gel electrophoresis. The pattern of DNA bands (DNA fingerprint) is compared with suspects' DNA. Matching band patterns indicate the same individual."
+    },
+    {
+        type: "applications",
+        question: "How is DNA profiling used in paternity testing?",
+        answer: "A child's DNA profile is compared to the potential father's DNA. The child inherits half their DNA from each parent, so approximately 50% of the child's DNA bands should match the biological father's bands."
+    },
+    {
+        type: "applications",
+        question: "Why is PCR necessary before gel electrophoresis in DNA profiling?",
+        answer: "Crime scenes or biological samples often contain very small amounts of DNA. PCR amplifies (makes billions of copies of) the DNA so there is enough material to analyze using gel electrophoresis. Without PCR, there wouldn't be enough DNA to detect."
+    },
+    {
+        type: "applications",
+        question: "What is a DNA ladder in gel electrophoresis?",
+        answer: "A DNA ladder (or size marker) is a mixture of DNA fragments of known sizes. It runs alongside samples and creates a reference pattern of bands. By comparing sample bands to the ladder, you can determine the approximate size of unknown DNA fragments."
     }
 ];
-
-
-        let currentIndex = 0;
+let currentIndex = 0;
         let isFlipped = false;
         let cardStatus = new Array(flashcards.length).fill('new');
         let currentFilter = 'all';

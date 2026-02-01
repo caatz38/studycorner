@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbohydrate & Lipids - Flashcards | StudyCorner</title>
+    <title>Enzyme & Metabolism - Flashcards | StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,13 +685,13 @@
             <div class="hero-content">
                 
                 <h1></h1>
-                <h1>Carbohydrate & Lipids</h1>
+                <h1>Enzyme & Metabolism</h1>
                 <p class="subtitle">Flashcard</p>
                 
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-label">Total Cards</div>
-                        <div class="stat-value" id="totalCards">31</div>
+                        <div class="stat-value" id="totalCards">32</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Mastered</div>
@@ -714,12 +714,12 @@
                 </a>
                 
                 <div class="subject-nav-group">
-                    <a href="nucleic_acids.html" class="nav-button btn-prev-subject">
+                    <a href="proteins.html" class="nav-button btn-prev-subject">
                         <span class="nav-icon">←</span>
-                        <span class="nav-text">Nucleic Acids</span>
-                    </a>
-                    <a href="proteins.html" class="nav-button btn-next-subject">
                         <span class="nav-text">Proteins</span>
+                    </a>
+                    <a href="cell_respiration.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">Cell Respiration</span>
                         <span class="nav-icon">→</span>
                     </a>
                 </div>
@@ -729,15 +729,13 @@
                 <span class="filter-label">Filter by Topic</span>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
-                    <button class="filter-btn" onclick="filterCards('carbon')">Carbon</button>
-                    <button class="filter-btn" onclick="filterCards('monosaccharides')">Monosaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('polysaccharides')">Polysaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('glycoproteins')">Glycoproteins</button>
-                    <button class="filter-btn" onclick="filterCards('lipids')">Lipids</button>
-                    <button class="filter-btn" onclick="filterCards('triglycerides')">Triglycerides</button>
-                    <button class="filter-btn" onclick="filterCards('fattyacids')">Fattyacids</button>
-                    <button class="filter-btn" onclick="filterCards('phospholipids')">Phospholipids</button>
-                    <button class="filter-btn" onclick="filterCards('advanced')">Advanced</button>
+                    <button class="filter-btn" onclick="filterCards('metabolism')">Metabolism</button>
+                    <button class="filter-btn" onclick="filterCards('enzymes')">Enzymes</button>
+                    <button class="filter-btn" onclick="filterCards('mechanism')">Mechanism</button>
+                    <button class="filter-btn" onclick="filterCards('factors')">Factors</button>
+                    <button class="filter-btn" onclick="filterCards('atp')">ATP</button>
+                    <button class="filter-btn" onclick="filterCards('immobilised')">Immobilised</button>
+                    <button class="filter-btn" onclick="filterCards('applications')">Applications</button>
                     <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
                 </div>
             </div>
@@ -827,211 +825,179 @@
 // Proteins Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
-// Carbohydrates & Lipids Flashcards Data for IB Biology HL
+// Enzymes & Metabolism Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
 const flashcards = [
-    // Carbon & Chemical Compounds
+    // Metabolism Basics
     {
-        type: "carbon",
-        question: "Why is carbon so important for biological molecules?",
-        answer: "Carbon has 4 valence electrons, allowing it to form 4 covalent bonds. It can make long chains or rings, bond with many elements (metallic and non-metallic), and form diverse macromolecules essential for life."
+        type: "metabolism",
+        question: "What is metabolism?",
+        answer: "Metabolism is a complex network of interdependent chemical reactions that occur in living organisms. It includes all chemical reactions needed to maintain life, divided into anabolism and catabolism."
     },
     {
-        type: "carbon",
-        question: "What types of bonds can carbon form?",
-        answer: "Carbon can form single bonds (C-C), double bonds (C=C), and triple bonds (C≡C) with other carbon atoms and different elements."
+        type: "metabolism",
+        question: "What is anabolism? Give examples.",
+        answer: "Anabolism is the metabolic process that builds up complex organic molecules from simpler ones. It requires energy input. Examples: photosynthesis, protein synthesis, and glycogen formation."
     },
     {
-        type: "carbon",
-        question: "What are the main functional groups in biological molecules?",
-        answer: "Hydroxyl groups (-OH), Carboxyl groups (-COOH), Amino groups (-NH₂), and Phosphate groups (-PO₄). These give organic compounds their individual properties."
+        type: "metabolism",
+        question: "What is catabolism? Give examples.",
+        answer: "Catabolism is the metabolic process that breaks down complex organic molecules into simpler ones. It releases energy. Examples: digestion and the oxidation of substrates in cellular respiration."
     },
     {
-        type: "carbon",
-        question: "What is a condensation reaction?",
-        answer: "A condensation (dehydration synthesis) reaction joins two monomers by removing water (H₂O). One monomer loses -OH, the other loses -H, and a new covalent bond forms between them."
+        type: "metabolism",
+        question: "What is the relationship between anabolism and catabolism?",
+        answer: "Anabolism and catabolism work together. Catabolism releases energy (e.g., from breaking down glucose) which is captured as ATP, and that ATP then powers anabolic reactions (e.g., building proteins). They are interdependent processes."
     },
     {
-        type: "carbon",
-        question: "What is a hydrolysis reaction?",
-        answer: "Hydrolysis breaks down polymers into monomers by adding water. Covalent bonds are broken, and the -OH and -H from water form functional groups of the products. This occurs during digestion."
-    },
-
-    // Monosaccharides
-    {
-        type: "monosaccharides",
-        question: "What is the general formula for monosaccharides?",
-        answer: "(CH₂O)ₙ where n = 3 to 7. Monosaccharides are composed of carbon (C), hydrogen (H), and oxygen (O)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What are the three types of monosaccharides based on carbon number?",
-        answer: "Triose (3 carbons, e.g., glyceraldehyde), Pentose (5 carbons, e.g., ribose), Hexose (6 carbons, e.g., glucose)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What is the difference between α-glucose and β-glucose?",
-        answer: "α-glucose has the -OH group on carbon 1 below the ring plane. β-glucose has the -OH group on carbon 1 above the ring plane. This small difference affects polymer structure."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose soluble in water?",
-        answer: "Glucose has multiple polar -OH (hydroxyl) groups, making it hydrophilic. This allows hydrogen bonding with water molecules, enabling transport in blood and phloem sap."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose important for cellular respiration?",
-        answer: "Glucose is the primary energy source. During cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP molecules)."
+        type: "metabolism",
+        question: "How is energy measured in biology?",
+        answer: "Energy in biology is often measured as heat using kilocalories (kcal). ATP (adenosine triphosphate) serves as the energy currency of the cell, storing and delivering energy for cellular activities."
     },
 
-    // Polysaccharides - Structure
+    // Enzymes Basics
     {
-        type: "polysaccharides",
-        question: "What are polysaccharides?",
-        answer: "Polysaccharides are large carbohydrate polymers made by linking many glucose monomers via condensation reactions. They're ideal for energy storage due to compact shape, insolubility, and ease of breakdown."
+        type: "enzymes",
+        question: "What are enzymes?",
+        answer: "Enzymes are biological catalysts, mostly globular proteins, that increase the rate of specific chemical reactions without being consumed or permanently changed. They are essential for nearly all metabolic processes."
     },
     {
-        type: "polysaccharides",
-        question: "What is starch and where is it found?",
-        answer: "Starch is the storage polysaccharide of plants, stored as granules in chloroplasts. It's made of α-glucose and consists of amylose (unbranched helix) and amylopectin (branched)."
+        type: "enzymes",
+        question: "What is a catalyst?",
+        answer: "A catalyst is a substance that increases the rate of a chemical reaction without being changed itself. Enzymes are biological catalysts that speed up reactions in living organisms."
     },
     {
-        type: "polysaccharides",
-        question: "What is the difference between amylose and amylopectin?",
-        answer: "Amylose: 10-30% of starch, unbranched helix with 1,4 glycosidic bonds. Amylopectin: 70-90% of starch, branched with 1,4 and 1,6 glycosidic bonds, providing many terminal glucose molecules for quick access."
+        type: "enzymes",
+        question: "Why are enzymes specific to their substrate?",
+        answer: "Enzymes are specific because the shape and chemical properties of the active site are complementary to a particular substrate, like two jigsaw pieces fitting together. This is called enzyme-substrate specificity, which is why thousands of different enzymes are needed."
     },
     {
-        type: "polysaccharides",
-        question: "What is glycogen and where is it stored?",
-        answer: "Glycogen is the storage polysaccharide of animals and fungi, made of α-glucose. More branched than amylopectin (branches every 8-12 units). Stored in liver and muscle cells as granules for quick energy release."
+        type: "enzymes",
+        question: "What is the active site of an enzyme?",
+        answer: "The active site is the specific region on the enzyme where the substrate binds. It has a complementary shape and chemical properties to the substrate. The active site is usually a small pocket or groove on the enzyme's surface."
     },
     {
-        type: "polysaccharides",
-        question: "What is cellulose and what is its function?",
-        answer: "Cellulose is a structural carbohydrate made of β-glucose polymers. Found in plant cell walls, it provides mechanical strength, prevents cell bursting, and maintains shape. Humans cannot digest it (dietary fiber)."
-    },
-
-    // Polysaccharides - Comparison
-    {
-        type: "polysaccharides",
-        question: "Why is cellulose different from starch structurally?",
-        answer: "Cellulose uses β-glucose (every alternate molecule inverted), forming straight unbranched chains. Hydrogen bonds between chains create strong microfibrils. Starch uses α-glucose, forming helical or branched structures."
-    },
-    {
-        type: "polysaccharides",
-        question: "Compare the functions of starch, glycogen, and cellulose.",
-        answer: "Starch: energy storage in plants. Glycogen: energy storage in animals (faster mobilization). Cellulose: structural support in plant cell walls (cannot be digested by humans)."
+        type: "enzymes",
+        question: "What is activation energy?",
+        answer: "Activation energy is the minimum energy required to destabilize existing bonds in a substrate so that a reaction can proceed. Enzymes lower this activation energy barrier, allowing reactions to occur faster at body temperature."
     },
 
-    // Glycoproteins
+    // Enzyme Mechanism
     {
-        type: "glycoproteins",
-        question: "What are glycoproteins?",
-        answer: "Glycoproteins are proteins with carbohydrate chains covalently attached. Found in cell membranes with carbohydrates extending outside, involved in cell recognition, communication, and immune defense."
+        type: "mechanism",
+        question: "What is the induced-fit model of enzyme action?",
+        answer: "The induced-fit model states that when the substrate enters the active site, both the enzyme and substrate change shape slightly to provide a better fit. This is more accurate than the older lock-and-key model, which assumed a rigid, unchanging active site."
     },
     {
-        type: "glycoproteins",
-        question: "How do glycoproteins function in cell recognition?",
-        answer: "Glycoproteins act as cell identity markers. For example, the ABO blood group system uses specific glycoprotein antigens on red blood cells (A, B, or neither) for recognition."
-    },
-
-    // Lipids - Basic Properties
-    {
-        type: "lipids",
-        question: "What makes lipids hydrophobic?",
-        answer: "Lipids are hydrophobic (water-repelling) because they consist mainly of non-polar C-H bonds in hydrocarbon chains. These cannot form hydrogen bonds with water, so lipids don't dissolve in water."
+        type: "mechanism",
+        question: "What is the lock-and-key model?",
+        answer: "The lock-and-key model suggests the enzyme's active site (lock) has a fixed shape that perfectly fits the substrate (key). However, this model is outdated because it doesn't account for the slight shape changes that actually occur during binding."
     },
     {
-        type: "lipids",
-        question: "What elements make up lipids?",
-        answer: "Lipids are mainly composed of carbon (C), hydrogen (H), and small amounts of oxygen (O). Some also contain phosphorus (P)."
+        type: "mechanism",
+        question: "Describe the three phases of enzyme action.",
+        answer: "Phase 1: The substrate contacts the active site of the enzyme. Phase 2: The enzyme and substrate change shape to form an enzyme-substrate complex, lowering activation energy. Phase 3: The substrate is transformed into product(s), which are released. The enzyme is unchanged and free to bind another substrate."
     },
     {
-        type: "lipids",
-        question: "Why is lipid hydrophobicity biologically important?",
-        answer: "Hydrophobicity allows lipids to: 1) Form cell membrane barriers, 2) Store energy without affecting osmotic balance, 3) Provide waterproofing, 4) Create separate compartments in cells."
+        type: "mechanism",
+        question: "What is collision theory and how does it relate to enzymes?",
+        answer: "Collision theory states that for a chemical reaction to occur, reacting particles must collide. Enzymes increase the frequency of successful collisions by holding the substrate in the correct orientation at the active site, increasing reaction rate."
+    },
+    {
+        type: "mechanism",
+        question: "How do enzymes lower activation energy?",
+        answer: "Enzymes lower activation energy by: 1) Holding substrates in the correct orientation, 2) Straining bonds in the substrate, 3) Providing an alternative reaction pathway with lower energy requirement. This allows reactions to proceed faster without needing high temperatures."
     },
 
-    // Triglycerides
+    // Factors Affecting Enzymes
     {
-        type: "triglycerides",
-        question: "What is the structure of a triglyceride?",
-        answer: "A triglyceride consists of one glycerol molecule (3-carbon alcohol with -OH groups) bonded to three fatty acid chains (long hydrocarbon chains with terminal -COOH groups) via ester bonds."
+        type: "factors",
+        question: "How does temperature affect enzyme activity?",
+        answer: "At low temperatures, molecules move slowly causing fewer successful collisions (slower rate). As temperature rises, collisions increase (faster rate). At the optimum temperature, rate is maximum. Above this, enzymes denature as bonds break, permanently destroying the active site."
     },
     {
-        type: "triglycerides",
-        question: "How are triglycerides formed?",
-        answer: "Triglycerides form through esterification (condensation). The -OH from glycerol and -COOH from fatty acids react, releasing water and forming ester bonds. Three fatty acids attach to one glycerol."
+        type: "factors",
+        question: "How does pH affect enzyme activity?",
+        answer: "Each enzyme has an optimum pH where it functions best. pH affects the charge and shape of R groups. A 10x increase in hydrogen ion concentration lowers pH by 1 unit. Extreme pH values alter hydrogen bonding within the enzyme, causing irreversible denaturation."
     },
     {
-        type: "triglycerides",
-        question: "What are the functions of triglycerides?",
-        answer: "1) Long-term energy storage (more than double the energy per gram of carbohydrates), 2) Thermal insulation in adipose tissue, 3) Protection of internal organs, 4) Buoyancy in aquatic mammals."
-    },
-
-    // Fatty Acids
-    {
-        type: "fattyacids",
-        question: "What is the difference between saturated and unsaturated fatty acids?",
-        answer: "Saturated: NO C=C double bonds, straight chains, pack tightly, solid at room temperature, higher melting point. Unsaturated: ONE or MORE C=C double bonds, kinked chains, pack loosely, liquid at room temperature, lower melting point."
+        type: "factors",
+        question: "How does substrate concentration affect enzyme activity?",
+        answer: "As substrate concentration increases, reaction rate rises because more substrate molecules collide with active sites. However, at a certain point all active sites become saturated (occupied), and increasing substrate further has no effect. Rate can only increase by adding more enzyme."
     },
     {
-        type: "fattyacids",
-        question: "What are the two types of unsaturated fatty acids?",
-        answer: "Monounsaturated: ONE C=C double bond (e.g., olive oil). Polyunsaturated: TWO or MORE C=C double bonds (e.g., fish oil, vegetable oils) - lowest melting point."
+        type: "factors",
+        question: "What happens when an enzyme is denatured?",
+        answer: "Denaturation permanently damages the enzyme's 3D shape by breaking hydrogen bonds and other weak bonds that maintain its structure. This changes the active site shape, preventing substrate binding. The enzyme becomes insoluble and often forms a precipitate. This is irreversible."
     },
     {
-        type: "fattyacids",
-        question: "Why do unsaturated fats have lower melting points?",
-        answer: "C=C double bonds create 'kinks' in the fatty acid chains, preventing tight packing. This reduces intermolecular forces (van der Waals), resulting in lower melting points and liquid state at room temperature."
-    },
-    {
-        type: "fattyacids",
-        question: "What is the difference between cis and trans unsaturated fats?",
-        answer: "Cis: hydrogen atoms on same side of double bond, creates kink, natural form in most foods. Trans: hydrogen atoms on opposite sides, straighter chain, often artificial (hydrogenation), associated with health risks."
+        type: "factors",
+        question: "What is enzyme saturation?",
+        answer: "Enzyme saturation occurs when all available active sites on enzymes are occupied by substrate molecules. At this point, increasing substrate concentration no longer increases the reaction rate. To increase rate further, more enzyme must be added."
     },
 
-    // Phospholipids
+    // ATP
     {
-        type: "phospholipids",
-        question: "What is the structure of a phospholipid?",
-        answer: "A phospholipid has: 1 glycerol backbone, 2 hydrophobic fatty acid tails, 1 hydrophilic phosphate group (often with additional groups attached). This creates an amphipathic molecule."
+        type: "atp",
+        question: "What is ATP and why is it important?",
+        answer: "ATP (Adenosine Triphosphate) is the energy currency of the cell. It stores chemical energy in its phosphate bonds and provides usable energy for cellular activities including synthesis of macromolecules, mechanical work, and active transport."
     },
     {
-        type: "phospholipids",
-        question: "What does amphipathic mean?",
-        answer: "Amphipathic means having both hydrophilic (water-loving) and hydrophobic (water-fearing) regions. Phospholipids have hydrophilic phosphate heads and hydrophobic fatty acid tails."
+        type: "atp",
+        question: "What are the main functions of ATP in an organism?",
+        answer: "1) Supplying energy to synthesize macromolecules, 2) Providing energy for mechanical work (muscle action, chromosome movement, cilia/flagella motion), 3) Moving substances across cell membranes (e.g., sodium-potassium pump)."
     },
     {
-        type: "phospholipids",
-        question: "Why do phospholipids form bilayers?",
-        answer: "In aqueous solutions, phospholipids spontaneously form bilayers with hydrophobic tails facing inward (away from water) and hydrophilic heads facing outward (toward water). This minimizes unfavorable interactions and creates stable cell membranes."
-    },
-    {
-        type: "phospholipids",
-        question: "What is the function of phospholipid bilayers?",
-        answer: "Phospholipid bilayers form the foundation of all cell membranes, creating selective barriers that separate cell interior from exterior and organize cellular compartments. They control what enters and exits cells."
+        type: "atp",
+        question: "How is ATP related to enzyme function?",
+        answer: "ATP provides the energy needed for many enzyme-catalyzed reactions. Enzymes help convert ATP to ADP + Pi (releasing energy) or ADP + Pi back to ATP (storing energy). ATP powers the energy-requiring steps in metabolic pathways."
     },
 
-    // Advanced Comparisons
+    // Immobilised Enzymes
     {
-        type: "advanced",
-        question: "Compare triglycerides and phospholipids structurally.",
-        answer: "Triglycerides: 3 fatty acids + 1 glycerol, fully hydrophobic, energy storage. Phospholipids: 2 fatty acids + 1 glycerol + 1 phosphate group, amphipathic, membrane structure."
+        type: "immobilised",
+        question: "What is an immobilised enzyme?",
+        answer: "An immobilised enzyme is attached to an insoluble material (support), preventing it from mixing with the product. This allows the enzyme to be reused multiple times in subsequent reactions, making industrial processes more efficient and cost-effective."
     },
     {
-        type: "advanced",
-        question: "Why are lipids better for long-term energy storage than carbohydrates?",
-        answer: "Lipids store more than twice the energy per gram (9 kcal/g vs 4 kcal/g), are hydrophobic (don't affect osmotic balance), and are more compact. However, carbohydrates release energy faster."
+        type: "immobilised",
+        question: "What are the three methods of immobilising enzymes?",
+        answer: "1) Attachment to an inert substance (e.g., glass), 2) Entrapment within a matrix (e.g., alginate gel), 3) Entrapment within a partially permeable membrane. Each method has different advantages depending on the application."
     },
     {
-        type: "advanced",
-        question: "What is adipose tissue and its functions?",
-        answer: "Adipose tissue stores triglycerides beneath skin and around organs. Functions: 1) Long-term energy storage, 2) Thermal insulation (prevents heat loss), 3) Cushioning/protection of organs, 4) Hormone production (leptin)."
+        type: "immobilised",
+        question: "What are the advantages of immobilised enzymes?",
+        answer: "1) No enzyme contamination in the product, 2) Can be reused multiple times (cost-effective), 3) Greater tolerance of temperature and pH changes, 4) Higher enzyme concentrations possible, 5) Conditions can be carefully controlled for optimum function."
+    },
+    {
+        type: "immobilised",
+        question: "What are the disadvantages of immobilised enzymes?",
+        answer: "1) Specialist expensive equipment required, 2) More costly to buy initially, 3) Rate of reaction can be lower because enzymes cannot mix freely with substrate. Not financially worthwhile for smaller industries."
+    },
+    {
+        type: "immobilised",
+        question: "How does the immobilised enzyme column work?",
+        answer: "Immobilised enzymes are placed inside a column. Substrate solution is filtered through the column. As it flows through, enzyme-substrate complexes form and products are produced. Products flow out while enzymes stay behind, ready to catalyse more reactions."
+    },
+
+    // Real-World Applications
+    {
+        type: "applications",
+        question: "How is lactase used commercially?",
+        answer: "Lactase is used to produce lactose-free dairy products. It converts lactose (disaccharide) into glucose and galactose (both sweeter), reducing the amount of added sugar needed. This helps the 5-10% of the population that is lactose intolerant."
+    },
+    {
+        type: "applications",
+        question: "Give three examples of immobilised enzyme applications.",
+        answer: "1) Lactase: converts lactose to glucose and galactose for lactose-free milk, 2) Penicillin acylase: converts penicillin to overcome antibiotic resistance, 3) Glucoamylase: converts starch into glucose for food sweetening and thickening."
+    },
+    {
+        type: "applications",
+        question: "What industrial sectors use immobilised enzymes?",
+        answer: "Agriculture, biosensors (diagnosis and analysis), manufacturing processes, energy generation, environmental management, food and drinks industry, and medicines production. They are used wherever enzymes need to be reused efficiently."
     }
 ];
-
 
         let currentIndex = 0;
         let isFlipped = false;

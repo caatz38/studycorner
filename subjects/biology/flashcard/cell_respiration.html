@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbohydrate & Lipids - Flashcards | StudyCorner</title>
+    <title>Cell Respiration - Flashcards | StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,13 +685,13 @@
             <div class="hero-content">
                 
                 <h1></h1>
-                <h1>Carbohydrate & Lipids</h1>
+                <h1>Cell Respiration</h1>
                 <p class="subtitle">Flashcard</p>
                 
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-label">Total Cards</div>
-                        <div class="stat-value" id="totalCards">31</div>
+                        <div class="stat-value" id="totalCards">32</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Mastered</div>
@@ -714,12 +714,12 @@
                 </a>
                 
                 <div class="subject-nav-group">
-                    <a href="nucleic_acids.html" class="nav-button btn-prev-subject">
+                    <a href="enzyme_and_metabolism.html" class="nav-button btn-prev-subject">
                         <span class="nav-icon">←</span>
-                        <span class="nav-text">Nucleic Acids</span>
+                        <span class="nav-text">Enzyme & Metabolism</span>
                     </a>
-                    <a href="proteins.html" class="nav-button btn-next-subject">
-                        <span class="nav-text">Proteins</span>
+                    <a href="photosynthesis.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">Photosynthesis</span>
                         <span class="nav-icon">→</span>
                     </a>
                 </div>
@@ -729,15 +729,14 @@
                 <span class="filter-label">Filter by Topic</span>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
-                    <button class="filter-btn" onclick="filterCards('carbon')">Carbon</button>
-                    <button class="filter-btn" onclick="filterCards('monosaccharides')">Monosaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('polysaccharides')">Polysaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('glycoproteins')">Glycoproteins</button>
-                    <button class="filter-btn" onclick="filterCards('lipids')">Lipids</button>
-                    <button class="filter-btn" onclick="filterCards('triglycerides')">Triglycerides</button>
-                    <button class="filter-btn" onclick="filterCards('fattyacids')">Fattyacids</button>
-                    <button class="filter-btn" onclick="filterCards('phospholipids')">Phospholipids</button>
-                    <button class="filter-btn" onclick="filterCards('advanced')">Advanced</button>
+                    <button class="filter-btn" onclick="filterCards('atp')">ATP</button>
+                    <button class="filter-btn" onclick="filterCards('lifeprocesses')">Lifeprocesses</button>
+                    <button class="filter-btn" onclick="filterCards('overview')">Overview</button>
+                    <button class="filter-btn" onclick="filterCards('aerobic')">Aerobic</button>
+                    <button class="filter-btn" onclick="filterCards('anaerobic')">Anaerobic</button>
+                    <button class="filter-btn" onclick="filterCards('comparison')">Comparison</button>
+                    <button class="filter-btn" onclick="filterCards('rate')">Rate</button>
+                    <button class="filter-btn" onclick="filterCards('respirometers')">Respirometers</button>
                     <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
                 </div>
             </div>
@@ -827,212 +826,189 @@
 // Proteins Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
-// Carbohydrates & Lipids Flashcards Data for IB Biology HL
+// Enzymes & Metabolism Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// Cell Respiration Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
 const flashcards = [
-    // Carbon & Chemical Compounds
+    // ATP Basics
     {
-        type: "carbon",
-        question: "Why is carbon so important for biological molecules?",
-        answer: "Carbon has 4 valence electrons, allowing it to form 4 covalent bonds. It can make long chains or rings, bond with many elements (metallic and non-metallic), and form diverse macromolecules essential for life."
+        type: "atp",
+        question: "What is ATP and what does it stand for?",
+        answer: "ATP stands for Adenosine Triphosphate. It is the energy currency of cells, storing chemical energy in its phosphate bonds. It provides immediate, usable energy for cellular processes exactly when needed."
     },
     {
-        type: "carbon",
-        question: "What types of bonds can carbon form?",
-        answer: "Carbon can form single bonds (C-C), double bonds (C=C), and triple bonds (C≡C) with other carbon atoms and different elements."
+        type: "atp",
+        question: "What are the properties that make ATP suitable as an energy source?",
+        answer: "1) Contains chemical energy locked in its structure, 2) Releases energy in small, manageable amounts, 3) It is a very reactive molecule, 4) It is small and can be moved easily through facilitated diffusion."
     },
     {
-        type: "carbon",
-        question: "What are the main functional groups in biological molecules?",
-        answer: "Hydroxyl groups (-OH), Carboxyl groups (-COOH), Amino groups (-NH₂), and Phosphate groups (-PO₄). These give organic compounds their individual properties."
+        type: "atp",
+        question: "What happens when ATP releases energy?",
+        answer: "ATP is converted to ADP (adenosine diphosphate) and an inorganic phosphate (Pi). The bond between the second and third phosphate group is broken, releasing energy for the cell to use."
     },
     {
-        type: "carbon",
-        question: "What is a condensation reaction?",
-        answer: "A condensation (dehydration synthesis) reaction joins two monomers by removing water (H₂O). One monomer loses -OH, the other loses -H, and a new covalent bond forms between them."
+        type: "atp",
+        question: "How is ATP regenerated?",
+        answer: "ADP and phosphate (Pi) are re-converted back into ATP during respiration. This requires energy from the breakdown of organic molecules like glucose. This constant cycling of ATP and ADP happens continuously in every cell."
     },
     {
-        type: "carbon",
-        question: "What is a hydrolysis reaction?",
-        answer: "Hydrolysis breaks down polymers into monomers by adding water. Covalent bonds are broken, and the -OH and -H from water form functional groups of the products. This occurs during digestion."
-    },
-
-    // Monosaccharides
-    {
-        type: "monosaccharides",
-        question: "What is the general formula for monosaccharides?",
-        answer: "(CH₂O)ₙ where n = 3 to 7. Monosaccharides are composed of carbon (C), hydrogen (H), and oxygen (O)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What are the three types of monosaccharides based on carbon number?",
-        answer: "Triose (3 carbons, e.g., glyceraldehyde), Pentose (5 carbons, e.g., ribose), Hexose (6 carbons, e.g., glucose)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What is the difference between α-glucose and β-glucose?",
-        answer: "α-glucose has the -OH group on carbon 1 below the ring plane. β-glucose has the -OH group on carbon 1 above the ring plane. This small difference affects polymer structure."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose soluble in water?",
-        answer: "Glucose has multiple polar -OH (hydroxyl) groups, making it hydrophilic. This allows hydrogen bonding with water molecules, enabling transport in blood and phloem sap."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose important for cellular respiration?",
-        answer: "Glucose is the primary energy source. During cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP molecules)."
+        type: "atp",
+        question: "Why do organisms need a constant supply of ATP?",
+        answer: "Much of the energy released from ATP is dissipated (lost) as heat to the surroundings. ATP cannot be stockpiled effectively, so it must be constantly regenerated through respiration to meet the cell's ongoing energy demands."
     },
 
-    // Polysaccharides - Structure
+    // Life Processes Using ATP
     {
-        type: "polysaccharides",
-        question: "What are polysaccharides?",
-        answer: "Polysaccharides are large carbohydrate polymers made by linking many glucose monomers via condensation reactions. They're ideal for energy storage due to compact shape, insolubility, and ease of breakdown."
+        type: "lifeprocesses",
+        question: "What life processes require ATP?",
+        answer: "ATP powers: active transport (e.g., sodium-potassium pump), muscle contraction, nerve impulse transmission, DNA replication, protein synthesis, cell division, biosynthesis of molecules, and maintaining cell structure and function."
     },
     {
-        type: "polysaccharides",
-        question: "What is starch and where is it found?",
-        answer: "Starch is the storage polysaccharide of plants, stored as granules in chloroplasts. It's made of α-glucose and consists of amylose (unbranched helix) and amylopectin (branched)."
+        type: "lifeprocesses",
+        question: "Why is ATP needed for active transport?",
+        answer: "Active transport moves molecules against their concentration gradient (from low to high concentration). This requires energy input from ATP to power carrier proteins in the membrane to move substances uphill."
     },
     {
-        type: "polysaccharides",
-        question: "What is the difference between amylose and amylopectin?",
-        answer: "Amylose: 10-30% of starch, unbranched helix with 1,4 glycosidic bonds. Amylopectin: 70-90% of starch, branched with 1,4 and 1,6 glycosidic bonds, providing many terminal glucose molecules for quick access."
-    },
-    {
-        type: "polysaccharides",
-        question: "What is glycogen and where is it stored?",
-        answer: "Glycogen is the storage polysaccharide of animals and fungi, made of α-glucose. More branched than amylopectin (branches every 8-12 units). Stored in liver and muscle cells as granules for quick energy release."
-    },
-    {
-        type: "polysaccharides",
-        question: "What is cellulose and what is its function?",
-        answer: "Cellulose is a structural carbohydrate made of β-glucose polymers. Found in plant cell walls, it provides mechanical strength, prevents cell bursting, and maintains shape. Humans cannot digest it (dietary fiber)."
+        type: "lifeprocesses",
+        question: "Why do all organisms need a constant energy supply?",
+        answer: "All organisms require a constant supply of energy to maintain their cells and stay alive. Without ATP, cells cannot carry out essential processes like maintaining ion gradients, repairing damage, growing, and reproducing."
     },
 
-    // Polysaccharides - Comparison
+    // Cell Respiration Overview
     {
-        type: "polysaccharides",
-        question: "Why is cellulose different from starch structurally?",
-        answer: "Cellulose uses β-glucose (every alternate molecule inverted), forming straight unbranched chains. Hydrogen bonds between chains create strong microfibrils. Starch uses α-glucose, forming helical or branched structures."
+        type: "overview",
+        question: "What is cellular respiration?",
+        answer: "Cellular respiration is a series of chemical reactions that happens in every cell. Its purpose is to release energy in usable forms (ATP) from the chemical energy stored in organic molecules like glucose."
     },
     {
-        type: "polysaccharides",
-        question: "Compare the functions of starch, glycogen, and cellulose.",
-        answer: "Starch: energy storage in plants. Glycogen: energy storage in animals (faster mobilization). Cellulose: structural support in plant cell walls (cannot be digested by humans)."
-    },
-
-    // Glycoproteins
-    {
-        type: "glycoproteins",
-        question: "What are glycoproteins?",
-        answer: "Glycoproteins are proteins with carbohydrate chains covalently attached. Found in cell membranes with carbohydrates extending outside, involved in cell recognition, communication, and immune defense."
+        type: "overview",
+        question: "Is respiration the same as breathing?",
+        answer: "No. Breathing is the movement of air in and out of the lungs (gas exchange). Cellular respiration is the chemical process inside cells that breaks down glucose to produce ATP. They are related but completely different processes."
     },
     {
-        type: "glycoproteins",
-        question: "How do glycoproteins function in cell recognition?",
-        answer: "Glycoproteins act as cell identity markers. For example, the ABO blood group system uses specific glycoprotein antigens on red blood cells (A, B, or neither) for recognition."
-    },
-
-    // Lipids - Basic Properties
-    {
-        type: "lipids",
-        question: "What makes lipids hydrophobic?",
-        answer: "Lipids are hydrophobic (water-repelling) because they consist mainly of non-polar C-H bonds in hydrocarbon chains. These cannot form hydrogen bonds with water, so lipids don't dissolve in water."
+        type: "overview",
+        question: "Why can't energy be released all at once from glucose?",
+        answer: "If all energy were released in one uncontrolled step, it would cause cell damage and tissue death. Enzymes control the release of energy through a series of chemical reactions called a pathway, producing ATP gradually and safely."
     },
     {
-        type: "lipids",
-        question: "What elements make up lipids?",
-        answer: "Lipids are mainly composed of carbon (C), hydrogen (H), and small amounts of oxygen (O). Some also contain phosphorus (P)."
+        type: "overview",
+        question: "What is the main respiratory fuel used in cells?",
+        answer: "Glucose is the main respiratory fuel. However, lipids and proteins can also be used as fuel sources when glucose is unavailable or depleted."
     },
     {
-        type: "lipids",
-        question: "Why is lipid hydrophobicity biologically important?",
-        answer: "Hydrophobicity allows lipids to: 1) Form cell membrane barriers, 2) Store energy without affecting osmotic balance, 3) Provide waterproofing, 4) Create separate compartments in cells."
+        type: "overview",
+        question: "Is respiration an anabolic or catabolic process?",
+        answer: "Respiration is a catabolic process. It breaks down complex organic molecules (glucose) into simpler molecules (CO₂ and H₂O), releasing energy in the process to make ATP."
     },
 
-    // Triglycerides
+    // Aerobic Respiration
     {
-        type: "triglycerides",
-        question: "What is the structure of a triglyceride?",
-        answer: "A triglyceride consists of one glycerol molecule (3-carbon alcohol with -OH groups) bonded to three fatty acid chains (long hydrocarbon chains with terminal -COOH groups) via ester bonds."
+        type: "aerobic",
+        question: "What is aerobic respiration?",
+        answer: "Aerobic respiration is the process of breaking down glucose in the presence of oxygen to produce ATP. It fully oxidises glucose into carbon dioxide and water, yielding approximately 36-38 ATP molecules per glucose molecule."
     },
     {
-        type: "triglycerides",
-        question: "How are triglycerides formed?",
-        answer: "Triglycerides form through esterification (condensation). The -OH from glycerol and -COOH from fatty acids react, releasing water and forming ester bonds. Three fatty acids attach to one glycerol."
+        type: "aerobic",
+        question: "Write the equation for aerobic respiration.",
+        answer: "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP). Glucose + Oxygen → Carbon dioxide + Water + Energy (ATP)."
     },
     {
-        type: "triglycerides",
-        question: "What are the functions of triglycerides?",
-        answer: "1) Long-term energy storage (more than double the energy per gram of carbohydrates), 2) Thermal insulation in adipose tissue, 3) Protection of internal organs, 4) Buoyancy in aquatic mammals."
-    },
-
-    // Fatty Acids
-    {
-        type: "fattyacids",
-        question: "What is the difference between saturated and unsaturated fatty acids?",
-        answer: "Saturated: NO C=C double bonds, straight chains, pack tightly, solid at room temperature, higher melting point. Unsaturated: ONE or MORE C=C double bonds, kinked chains, pack loosely, liquid at room temperature, lower melting point."
+        type: "aerobic",
+        question: "Where does aerobic respiration mainly take place?",
+        answer: "Most reactions of aerobic respiration in eukaryotes take place in the mitochondria. Glycolysis (the first stage) occurs in the cytoplasm, but the Krebs cycle and electron transport chain occur inside the mitochondria."
     },
     {
-        type: "fattyacids",
-        question: "What are the two types of unsaturated fatty acids?",
-        answer: "Monounsaturated: ONE C=C double bond (e.g., olive oil). Polyunsaturated: TWO or MORE C=C double bonds (e.g., fish oil, vegetable oils) - lowest melting point."
+        type: "aerobic",
+        question: "What are the three stages of aerobic respiration?",
+        answer: "1) Glycolysis (cytoplasm): glucose splits into 2 pyruvate molecules, producing 2 ATP. 2) Krebs Cycle (mitochondrial matrix): pyruvate is broken down, producing energy carriers. 3) Electron Transport Chain (inner mitochondrial membrane): produces ~34 ATP."
     },
     {
-        type: "fattyacids",
-        question: "Why do unsaturated fats have lower melting points?",
-        answer: "C=C double bonds create 'kinks' in the fatty acid chains, preventing tight packing. This reduces intermolecular forces (van der Waals), resulting in lower melting points and liquid state at room temperature."
-    },
-    {
-        type: "fattyacids",
-        question: "What is the difference between cis and trans unsaturated fats?",
-        answer: "Cis: hydrogen atoms on same side of double bond, creates kink, natural form in most foods. Trans: hydrogen atoms on opposite sides, straighter chain, often artificial (hydrogenation), associated with health risks."
+        type: "aerobic",
+        question: "What happens to the CO₂ and H₂O produced in aerobic respiration?",
+        answer: "CO₂ is a waste product that must be excreted (breathed out), except in plants where it can be used for photosynthesis. H₂O is a useful byproduct that contributes to the organism's water needs — desert animals like kangaroo rats survive partly on this metabolic water."
     },
 
-    // Phospholipids
+    // Anaerobic Respiration
     {
-        type: "phospholipids",
-        question: "What is the structure of a phospholipid?",
-        answer: "A phospholipid has: 1 glycerol backbone, 2 hydrophobic fatty acid tails, 1 hydrophilic phosphate group (often with additional groups attached). This creates an amphipathic molecule."
+        type: "anaerobic",
+        question: "What is anaerobic respiration?",
+        answer: "Anaerobic respiration is the breakdown of glucose without oxygen. It only partially oxidises glucose, releasing a small amount of energy and producing only 2 ATP per glucose molecule. It is much less efficient than aerobic respiration."
     },
     {
-        type: "phospholipids",
-        question: "What does amphipathic mean?",
-        answer: "Amphipathic means having both hydrophilic (water-loving) and hydrophobic (water-fearing) regions. Phospholipids have hydrophilic phosphate heads and hydrophobic fatty acid tails."
+        type: "anaerobic",
+        question: "When does anaerobic respiration occur?",
+        answer: "Anaerobic respiration occurs when: 1) Oxygen supply can't keep up with demand in heavily respiring cells (e.g., vigorous exercise), 2) Oxygen cannot reach the organism (e.g., waterlogged soil), 3) The organism lives in an oxygen-poor environment."
     },
     {
-        type: "phospholipids",
-        question: "Why do phospholipids form bilayers?",
-        answer: "In aqueous solutions, phospholipids spontaneously form bilayers with hydrophobic tails facing inward (away from water) and hydrophilic heads facing outward (toward water). This minimizes unfavorable interactions and creates stable cell membranes."
+        type: "anaerobic",
+        question: "What are the products of anaerobic respiration in animals?",
+        answer: "In animals, anaerobic respiration produces lactate (lactic acid) and 2 ATP. Glucose → Lactate + 2 ATP. The lactate must later be broken down when oxygen becomes available again (oxygen debt)."
     },
     {
-        type: "phospholipids",
-        question: "What is the function of phospholipid bilayers?",
-        answer: "Phospholipid bilayers form the foundation of all cell membranes, creating selective barriers that separate cell interior from exterior and organize cellular compartments. They control what enters and exits cells."
+        type: "anaerobic",
+        question: "What are the products of anaerobic respiration in plants and yeast?",
+        answer: "In plants and yeast, anaerobic respiration produces ethanol (alcohol) and carbon dioxide, plus 2 ATP. Glucose → Ethanol + CO₂ + 2 ATP. This is alcoholic fermentation."
+    },
+    {
+        type: "anaerobic",
+        question: "Why does anaerobic respiration only produce 2 ATP?",
+        answer: "Only glycolysis (the first stage) can continue without oxygen, producing 2 ATP. The Krebs cycle and electron transport chain require oxygen as the final electron acceptor. Without oxygen, ~36 ATP that would have been produced are not made."
     },
 
-    // Advanced Comparisons
+    // Aerobic vs Anaerobic Comparison
     {
-        type: "advanced",
-        question: "Compare triglycerides and phospholipids structurally.",
-        answer: "Triglycerides: 3 fatty acids + 1 glycerol, fully hydrophobic, energy storage. Phospholipids: 2 fatty acids + 1 glycerol + 1 phosphate group, amphipathic, membrane structure."
+        type: "comparison",
+        question: "Compare aerobic and anaerobic respiration.",
+        answer: "Aerobic: requires O₂, produces ~36-38 ATP, fully breaks down glucose to CO₂ + H₂O, occurs in mitochondria, used during normal activity. Anaerobic: no O₂ needed, produces only 2 ATP, partially breaks down glucose, only glycolysis occurs, used as emergency backup."
     },
     {
-        type: "advanced",
-        question: "Why are lipids better for long-term energy storage than carbohydrates?",
-        answer: "Lipids store more than twice the energy per gram (9 kcal/g vs 4 kcal/g), are hydrophobic (don't affect osmotic balance), and are more compact. However, carbohydrates release energy faster."
+        type: "comparison",
+        question: "Why bother with anaerobic respiration if it's so inefficient?",
+        answer: "2 ATP is better than zero ATP. During oxygen shortage (e.g., sprinting), anaerobic respiration provides a short burst of energy to keep muscles working. It acts as an emergency backup when aerobic respiration can't meet energy demands fast enough."
+    },
+
+    // Rate of Respiration
+    {
+        type: "rate",
+        question: "What factors affect the rate of cellular respiration?",
+        answer: "1) Temperature (optimum 20-30°C), 2) CO₂ concentration (higher CO₂ decreases rate), 3) O₂ concentration (lower O₂ slows rate), 4) Glucose concentration (low glucose decreases rate), 5) Type of cell (cells needing more energy respire faster)."
     },
     {
-        type: "advanced",
-        question: "What is adipose tissue and its functions?",
-        answer: "Adipose tissue stores triglycerides beneath skin and around organs. Functions: 1) Long-term energy storage, 2) Thermal insulation (prevents heat loss), 3) Cushioning/protection of organs, 4) Hormone production (leptin)."
+        type: "rate",
+        question: "How does temperature affect the rate of respiration?",
+        answer: "The optimum temperature is 20-30°C. Below this, enzyme activity is low so respiration is slow. At the optimum, enzymes work at maximum efficiency. Significantly above the optimum, enzymes denature, greatly decreasing the rate."
+    },
+    {
+        type: "rate",
+        question: "How does oxygen concentration affect respiration?",
+        answer: "Lower O₂ concentration lowers the rate of aerobic respiration. The complete absence of oxygen forces cells to switch to anaerobic respiration, which produces far less ATP. This is why we breathe faster during exercise — to increase O₂ supply."
+    },
+    {
+        type: "rate",
+        question: "Why do different cell types have different respiration rates?",
+        answer: "Some cells require more energy than others. For example, heart muscle cells and nerve cells have very high respiration rates and many mitochondria because they work constantly. Fat storage cells have lower respiration rates as they need less energy."
+    },
+
+    // Respirometers
+    {
+        type: "respirometers",
+        question: "What is a respirometer and what does it measure?",
+        answer: "A respirometer is a device used to measure and investigate the rate of oxygen consumption during respiration in organisms. It measures how much O₂ an organism uses over time, giving an indication of the rate of aerobic respiration."
+    },
+    {
+        type: "respirometers",
+        question: "What organisms are typically used in respirometer experiments?",
+        answer: "Seeds (especially germinating seeds) and invertebrates are commonly used. The use of animals should be minimised when seeds can provide excellent data. Seeds are preferred as they are ethical and still show clear respiration patterns."
+    },
+    {
+        type: "respirometers",
+        question: "How can respirometers be used to investigate factors affecting respiration?",
+        answer: "Respirometers can test how different factors affect respiration rate over time. For example, seeds can be placed in water baths at different temperatures to investigate the effect of temperature on the rate of oxygen consumption."
     }
 ];
-
-
         let currentIndex = 0;
         let isFlipped = false;
         let cardStatus = new Array(flashcards.length).fill('new');

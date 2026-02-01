@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbohydrate & Lipids - Flashcards | StudyCorner</title>
+    <title>Proteins - Flashcards | StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,13 +685,13 @@
             <div class="hero-content">
                 
                 <h1></h1>
-                <h1>Carbohydrate & Lipids</h1>
+                <h1>Proteins</h1>
                 <p class="subtitle">Flashcard</p>
                 
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-label">Total Cards</div>
-                        <div class="stat-value" id="totalCards">31</div>
+                        <div class="stat-value" id="totalCards">32</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Mastered</div>
@@ -714,12 +714,12 @@
                 </a>
                 
                 <div class="subject-nav-group">
-                    <a href="nucleic_acids.html" class="nav-button btn-prev-subject">
+                    <a href="carbohydrate_and_lipids.html" class="nav-button btn-prev-subject">
                         <span class="nav-icon">←</span>
-                        <span class="nav-text">Nucleic Acids</span>
+                        <span class="nav-text">Carbohydrate & Lipids</span>
                     </a>
-                    <a href="proteins.html" class="nav-button btn-next-subject">
-                        <span class="nav-text">Proteins</span>
+                    <a href="enzyme_and_metabolism.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">Enzyme & Metabolism</span>
                         <span class="nav-icon">→</span>
                     </a>
                 </div>
@@ -729,14 +729,12 @@
                 <span class="filter-label">Filter by Topic</span>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
-                    <button class="filter-btn" onclick="filterCards('carbon')">Carbon</button>
-                    <button class="filter-btn" onclick="filterCards('monosaccharides')">Monosaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('polysaccharides')">Polysaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('glycoproteins')">Glycoproteins</button>
-                    <button class="filter-btn" onclick="filterCards('lipids')">Lipids</button>
-                    <button class="filter-btn" onclick="filterCards('triglycerides')">Triglycerides</button>
-                    <button class="filter-btn" onclick="filterCards('fattyacids')">Fattyacids</button>
-                    <button class="filter-btn" onclick="filterCards('phospholipids')">Phospholipids</button>
+                    <button class="filter-btn" onclick="filterCards('basics')">Basics</button>
+                    <button class="filter-btn" onclick="filterCards('peptidebonds')">Peptidebonds</button>
+                    <button class="filter-btn" onclick="filterCards('structure')">Structure</button>
+                    <button class="filter-btn" onclick="filterCards('types')">Types</button>
+                    <button class="filter-btn" onclick="filterCards('denaturation')">Denaturation</button>
+                    <button class="filter-btn" onclick="filterCards('examples')">Examples</button>
                     <button class="filter-btn" onclick="filterCards('advanced')">Advanced</button>
                     <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
                 </div>
@@ -827,208 +825,174 @@
 // Proteins Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
-// Carbohydrates & Lipids Flashcards Data for IB Biology HL
-// Replace the flashcards array in your HTML with this data
-
 const flashcards = [
-    // Carbon & Chemical Compounds
+    // Basics
     {
-        type: "carbon",
-        question: "Why is carbon so important for biological molecules?",
-        answer: "Carbon has 4 valence electrons, allowing it to form 4 covalent bonds. It can make long chains or rings, bond with many elements (metallic and non-metallic), and form diverse macromolecules essential for life."
+        type: "basics",
+        question: "What are proteins and what are they made of?",
+        answer: "Proteins are polymers (macromolecules) made of amino acid monomers linked by peptide bonds. They contain Hydrogen, Carbon, Oxygen, and some contain Nitrogen, Sulfur, or Phosphorus."
     },
     {
-        type: "carbon",
-        question: "What types of bonds can carbon form?",
-        answer: "Carbon can form single bonds (C-C), double bonds (C=C), and triple bonds (C≡C) with other carbon atoms and different elements."
+        type: "basics",
+        question: "How many different amino acids are commonly found in proteins?",
+        answer: "20 different amino acids are used to build proteins. 9 of these are essential amino acids (cannot be synthesized by the body and must be obtained from food). The remaining 11 are non-essential (can be made via metabolic pathways)."
     },
     {
-        type: "carbon",
-        question: "What are the main functional groups in biological molecules?",
-        answer: "Hydroxyl groups (-OH), Carboxyl groups (-COOH), Amino groups (-NH₂), and Phosphate groups (-PO₄). These give organic compounds their individual properties."
+        type: "basics",
+        question: "What is the general structure of an amino acid?",
+        answer: "Every amino acid has: a central carbon atom, an amino group (-NH₂), a carboxyl group (-COOH), a hydrogen atom (H), and an R group (side chain). The R group is what differs between amino acids and determines their properties."
     },
     {
-        type: "carbon",
-        question: "What is a condensation reaction?",
-        answer: "A condensation (dehydration synthesis) reaction joins two monomers by removing water (H₂O). One monomer loses -OH, the other loses -H, and a new covalent bond forms between them."
+        type: "basics",
+        question: "Where do amino acids come from?",
+        answer: "Plants make amino acids during photosynthesis. Animals obtain amino acids from their food through digestion. Essential amino acids cannot be synthesized, so they must be obtained from food."
     },
     {
-        type: "carbon",
-        question: "What is a hydrolysis reaction?",
-        answer: "Hydrolysis breaks down polymers into monomers by adding water. Covalent bonds are broken, and the -OH and -H from water form functional groups of the products. This occurs during digestion."
-    },
-
-    // Monosaccharides
-    {
-        type: "monosaccharides",
-        question: "What is the general formula for monosaccharides?",
-        answer: "(CH₂O)ₙ where n = 3 to 7. Monosaccharides are composed of carbon (C), hydrogen (H), and oxygen (O)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What are the three types of monosaccharides based on carbon number?",
-        answer: "Triose (3 carbons, e.g., glyceraldehyde), Pentose (5 carbons, e.g., ribose), Hexose (6 carbons, e.g., glucose)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What is the difference between α-glucose and β-glucose?",
-        answer: "α-glucose has the -OH group on carbon 1 below the ring plane. β-glucose has the -OH group on carbon 1 above the ring plane. This small difference affects polymer structure."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose soluble in water?",
-        answer: "Glucose has multiple polar -OH (hydroxyl) groups, making it hydrophilic. This allows hydrogen bonding with water molecules, enabling transport in blood and phloem sap."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose important for cellular respiration?",
-        answer: "Glucose is the primary energy source. During cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP molecules)."
+        type: "basics",
+        question: "What are the main roles of proteins in cells?",
+        answer: "Enzymes (catalysis), hormones (signaling), transport proteins (e.g., hemoglobin), structural proteins (e.g., keratin, collagen), contractile proteins (e.g., myosin), cell membrane proteins (e.g., carriers), and immunoproteins (e.g., immunoglobulins/antibodies)."
     },
 
-    // Polysaccharides - Structure
+    // Peptide Bonds & Condensation
     {
-        type: "polysaccharides",
-        question: "What are polysaccharides?",
-        answer: "Polysaccharides are large carbohydrate polymers made by linking many glucose monomers via condensation reactions. They're ideal for energy storage due to compact shape, insolubility, and ease of breakdown."
+        type: "peptidebonds",
+        question: "What is a peptide bond?",
+        answer: "A peptide bond is a covalent bond formed between two amino acids during a condensation reaction. It forms between the carboxyl group (-COOH) of one amino acid and the amino group (-NH₂) of another, releasing water (H₂O)."
     },
     {
-        type: "polysaccharides",
-        question: "What is starch and where is it found?",
-        answer: "Starch is the storage polysaccharide of plants, stored as granules in chloroplasts. It's made of α-glucose and consists of amylose (unbranched helix) and amylopectin (branched)."
+        type: "peptidebonds",
+        question: "How is a peptide bond formed step by step?",
+        answer: "1) A hydroxyl (-OH) is removed from the carboxyl group of one amino acid, 2) A hydrogen (-H) is removed from the amino group of another, 3) Water (H₂O) is released, 4) The remaining carbon bonds to the nitrogen, forming the peptide bond (C-N)."
     },
     {
-        type: "polysaccharides",
-        question: "What is the difference between amylose and amylopectin?",
-        answer: "Amylose: 10-30% of starch, unbranched helix with 1,4 glycosidic bonds. Amylopectin: 70-90% of starch, branched with 1,4 and 1,6 glycosidic bonds, providing many terminal glucose molecules for quick access."
+        type: "peptidebonds",
+        question: "What is a dipeptide and a polypeptide?",
+        answer: "A dipeptide is two amino acids joined by one peptide bond. A polypeptide is many amino acids joined by multiple peptide bonds. A protein can be one polypeptide chain or multiple chains interacting together."
     },
     {
-        type: "polysaccharides",
-        question: "What is glycogen and where is it stored?",
-        answer: "Glycogen is the storage polysaccharide of animals and fungi, made of α-glucose. More branched than amylopectin (branches every 8-12 units). Stored in liver and muscle cells as granules for quick energy release."
+        type: "peptidebonds",
+        question: "How are polypeptides broken down?",
+        answer: "Polypeptides are broken down into amino acids through hydrolysis reactions. Water is added to break the peptide bonds, releasing individual amino acids. This occurs during digestion of protein foods."
     },
     {
-        type: "polysaccharides",
-        question: "What is cellulose and what is its function?",
-        answer: "Cellulose is a structural carbohydrate made of β-glucose polymers. Found in plant cell walls, it provides mechanical strength, prevents cell bursting, and maintains shape. Humans cannot digest it (dietary fiber)."
-    },
-
-    // Polysaccharides - Comparison
-    {
-        type: "polysaccharides",
-        question: "Why is cellulose different from starch structurally?",
-        answer: "Cellulose uses β-glucose (every alternate molecule inverted), forming straight unbranched chains. Hydrogen bonds between chains create strong microfibrils. Starch uses α-glucose, forming helical or branched structures."
-    },
-    {
-        type: "polysaccharides",
-        question: "Compare the functions of starch, glycogen, and cellulose.",
-        answer: "Starch: energy storage in plants. Glycogen: energy storage in animals (faster mobilization). Cellulose: structural support in plant cell walls (cannot be digested by humans)."
+        type: "peptidebonds",
+        question: "Why does the sequence of amino acids matter?",
+        answer: "The precise sequence of amino acids determines how the protein folds and aligns. Amino acids are always added in the same sequence, so a protein can start forming its shape even before it is fully formed at the ribosome."
     },
 
-    // Glycoproteins
+    // Protein Structure Levels
     {
-        type: "glycoproteins",
-        question: "What are glycoproteins?",
-        answer: "Glycoproteins are proteins with carbohydrate chains covalently attached. Found in cell membranes with carbohydrates extending outside, involved in cell recognition, communication, and immune defense."
+        type: "structure",
+        question: "What is the primary structure of a protein?",
+        answer: "The primary structure is the linear sequence of amino acids in a polypeptide chain, linked by peptide bonds. This sequence is determined by the gene (DNA) encoding the protein and dictates all higher levels of structure."
     },
     {
-        type: "glycoproteins",
-        question: "How do glycoproteins function in cell recognition?",
-        answer: "Glycoproteins act as cell identity markers. For example, the ABO blood group system uses specific glycoprotein antigens on red blood cells (A, B, or neither) for recognition."
-    },
-
-    // Lipids - Basic Properties
-    {
-        type: "lipids",
-        question: "What makes lipids hydrophobic?",
-        answer: "Lipids are hydrophobic (water-repelling) because they consist mainly of non-polar C-H bonds in hydrocarbon chains. These cannot form hydrogen bonds with water, so lipids don't dissolve in water."
+        type: "structure",
+        question: "What is the secondary structure of a protein?",
+        answer: "Secondary structure includes local folding patterns: Alpha helix (polypeptide wound into a helix shape, stabilized by hydrogen bonds) and Beta sheets (two or more polypeptide strands arranged in parallel, connected by hydrogen bonds)."
     },
     {
-        type: "lipids",
-        question: "What elements make up lipids?",
-        answer: "Lipids are mainly composed of carbon (C), hydrogen (H), and small amounts of oxygen (O). Some also contain phosphorus (P)."
+        type: "structure",
+        question: "What is the tertiary structure of a protein?",
+        answer: "Tertiary structure is the overall 3D shape of a single polypeptide chain. It is maintained by interactions between R groups including: hydrogen bonds, ionic bonds, hydrophobic interactions, and disulfide bridges (covalent bonds between sulfur atoms)."
     },
     {
-        type: "lipids",
-        question: "Why is lipid hydrophobicity biologically important?",
-        answer: "Hydrophobicity allows lipids to: 1) Form cell membrane barriers, 2) Store energy without affecting osmotic balance, 3) Provide waterproofing, 4) Create separate compartments in cells."
+        type: "structure",
+        question: "What is the quaternary structure of a protein?",
+        answer: "Quaternary structure refers to the arrangement of multiple polypeptide chains (subunits) working together as a single functional protein. Example: hemoglobin has four polypeptide subunits (2 alpha, 2 beta)."
+    },
+    {
+        type: "structure",
+        question: "What types of bonds maintain tertiary and quaternary structure?",
+        answer: "Hydrogen bonds, ionic bonds (between charged R groups), hydrophobic interactions (non-polar R groups clustering together), and disulfide bridges (covalent S-S bonds between cysteine R groups). These are all weaker than peptide bonds."
     },
 
-    // Triglycerides
+    // Protein Types
     {
-        type: "triglycerides",
-        question: "What is the structure of a triglyceride?",
-        answer: "A triglyceride consists of one glycerol molecule (3-carbon alcohol with -OH groups) bonded to three fatty acid chains (long hydrocarbon chains with terminal -COOH groups) via ester bonds."
+        type: "types",
+        question: "What is the difference between globular and fibrous proteins?",
+        answer: "Globular proteins are folded into compact, roughly spherical shapes (e.g., enzymes, hemoglobin, insulin). Fibrous proteins are long, thread-like, insoluble structures (e.g., collagen, keratin, myosin)."
     },
     {
-        type: "triglycerides",
-        question: "How are triglycerides formed?",
-        answer: "Triglycerides form through esterification (condensation). The -OH from glycerol and -COOH from fatty acids react, releasing water and forming ester bonds. Three fatty acids attach to one glycerol."
+        type: "types",
+        question: "What is Rubisco and why is it important?",
+        answer: "Rubisco (Ribulose Bisphosphate Carboxylase) is an enzyme that fixes CO₂ during photosynthesis. It's composed of 16 polypeptide chains, is the most abundant enzyme on Earth (present in all leaves), and is arguably the most important enzyme in nature as the source of all organic carbon."
     },
     {
-        type: "triglycerides",
-        question: "What are the functions of triglycerides?",
-        answer: "1) Long-term energy storage (more than double the energy per gram of carbohydrates), 2) Thermal insulation in adipose tissue, 3) Protection of internal organs, 4) Buoyancy in aquatic mammals."
-    },
-
-    // Fatty Acids
-    {
-        type: "fattyacids",
-        question: "What is the difference between saturated and unsaturated fatty acids?",
-        answer: "Saturated: NO C=C double bonds, straight chains, pack tightly, solid at room temperature, higher melting point. Unsaturated: ONE or MORE C=C double bonds, kinked chains, pack loosely, liquid at room temperature, lower melting point."
+        type: "types",
+        question: "What is insulin and how does it work?",
+        answer: "Insulin is a hormone produced by β-cells in the pancreas. It's a short globular protein made of 2 polypeptide chains. It binds reversibly to insulin receptors on liver, fat, and muscle cells, causing absorption of glucose from the blood."
     },
     {
-        type: "fattyacids",
-        question: "What are the two types of unsaturated fatty acids?",
-        answer: "Monounsaturated: ONE C=C double bond (e.g., olive oil). Polyunsaturated: TWO or MORE C=C double bonds (e.g., fish oil, vegetable oils) - lowest melting point."
+        type: "types",
+        question: "What is collagen and why is it important?",
+        answer: "Collagen is a fibrous structural protein made of three polypeptide chains. It's the most abundant protein in the human body (~25%). It forms networks in skin, blood vessels, and connective tissue that resist tearing, and plays a role in teeth and bones."
     },
     {
-        type: "fattyacids",
-        question: "Why do unsaturated fats have lower melting points?",
-        answer: "C=C double bonds create 'kinks' in the fatty acid chains, preventing tight packing. This reduces intermolecular forces (van der Waals), resulting in lower melting points and liquid state at room temperature."
-    },
-    {
-        type: "fattyacids",
-        question: "What is the difference between cis and trans unsaturated fats?",
-        answer: "Cis: hydrogen atoms on same side of double bond, creates kink, natural form in most foods. Trans: hydrogen atoms on opposite sides, straighter chain, often artificial (hydrogenation), associated with health risks."
+        type: "types",
+        question: "What is rhodopsin?",
+        answer: "Rhodopsin is a pigment protein in the retina found in rod cells. It's a membrane protein containing a light-sensitive part called retinal (derived from Vitamin A). When light hits it, it changes shape and sends nerve impulses to the brain via the optic nerve."
     },
 
-    // Phospholipids
+    // Denaturation
     {
-        type: "phospholipids",
-        question: "What is the structure of a phospholipid?",
-        answer: "A phospholipid has: 1 glycerol backbone, 2 hydrophobic fatty acid tails, 1 hydrophilic phosphate group (often with additional groups attached). This creates an amphipathic molecule."
+        type: "denaturation",
+        question: "What is denaturation?",
+        answer: "Denaturation is the irreversible change in protein conformation (3D shape) caused by extreme temperature or pH. The weak bonds (hydrogen, ionic) between R groups break, altering the protein's shape and destroying its function."
     },
     {
-        type: "phospholipids",
-        question: "What does amphipathic mean?",
-        answer: "Amphipathic means having both hydrophilic (water-loving) and hydrophobic (water-fearing) regions. Phospholipids have hydrophilic phosphate heads and hydrophobic fatty acid tails."
+        type: "denaturation",
+        question: "What causes denaturation?",
+        answer: "The most common causes are: 1) High temperature (breaks hydrogen bonds, increases molecular movement), 2) Extreme pH (alters hydrogen bonding and charge interactions between R groups). Heavy metals and organic solvents can also cause it."
     },
     {
-        type: "phospholipids",
-        question: "Why do phospholipids form bilayers?",
-        answer: "In aqueous solutions, phospholipids spontaneously form bilayers with hydrophobic tails facing inward (away from water) and hydrophilic heads facing outward (toward water). This minimizes unfavorable interactions and creates stable cell membranes."
+        type: "denaturation",
+        question: "Why is denaturation usually irreversible?",
+        answer: "Denaturation is almost always irreversible because the protein cannot reform its original 3D conformation once the weak bonds are broken. The precise arrangement of R groups is too complex to spontaneously reassemble. However, small denaturations are possible in some proteins like hemoglobin."
     },
     {
-        type: "phospholipids",
-        question: "What is the function of phospholipid bilayers?",
-        answer: "Phospholipid bilayers form the foundation of all cell membranes, creating selective barriers that separate cell interior from exterior and organize cellular compartments. They control what enters and exits cells."
+        type: "denaturation",
+        question: "Why does denaturation affect protein function?",
+        answer: "Protein function depends entirely on its 3D structure. Denaturation changes the shape, which affects: enzyme active sites, binding sites, structural integrity, and transport capabilities. The altered shape means the protein can no longer carry out its original role."
+    },
+    {
+        type: "denaturation",
+        question: "What is the optimum pH of a protein?",
+        answer: "Each protein has an optimum pH at which its 3D structure is maintained and it functions best. Moving away from this optimum can cause denaturation. For example, pepsin (stomach enzyme) has an optimum pH of ~2, while trypsin (intestinal enzyme) works best at pH ~8."
     },
 
-    // Advanced Comparisons
+    // Real-World Examples
+    {
+        type: "examples",
+        question: "What happens when you cook an egg?",
+        answer: "Cooking denatures the egg proteins (mainly albumin). The heat breaks the weak bonds holding the protein's 3D shape, causing it to unfold and aggregate. This is why the egg turns white and solid - the proteins lose their original structure permanently."
+    },
+    {
+        type: "examples",
+        question: "Why does milk curdle when acid is added?",
+        answer: "Milk contains the protein casein. When acid is added, the extreme pH denatures casein, causing it to lose its globular shape. The denatured proteins aggregate and form visible curds, separating from the liquid whey."
+    },
+    {
+        type: "examples",
+        question: "Why is it important that hemoglobin can partially denature and renature?",
+        answer: "Hemoglobin undergoes small conformational changes to respond to fluctuations in pH and oxygen levels. This allows it to efficiently pick up oxygen in the lungs and release it in body tissues, adapting its shape to changing conditions."
+    },
+
+    // Advanced
     {
         type: "advanced",
-        question: "Compare triglycerides and phospholipids structurally.",
-        answer: "Triglycerides: 3 fatty acids + 1 glycerol, fully hydrophobic, energy storage. Phospholipids: 2 fatty acids + 1 glycerol + 1 phosphate group, amphipathic, membrane structure."
+        question: "How does the primary structure determine higher structure levels?",
+        answer: "The primary structure (amino acid sequence) determines everything above it: specific R groups dictate which bonds form (hydrogen, ionic, hydrophobic, disulfide), which determines secondary structure, then tertiary folding, and finally quaternary assembly. Change one amino acid and the entire protein can be affected."
     },
     {
         type: "advanced",
-        question: "Why are lipids better for long-term energy storage than carbohydrates?",
-        answer: "Lipids store more than twice the energy per gram (9 kcal/g vs 4 kcal/g), are hydrophobic (don't affect osmotic balance), and are more compact. However, carbohydrates release energy faster."
+        question: "Why are so many different enzymes needed in an organism?",
+        answer: "Enzymes are specific to their substrate due to the complementary shape of the active site. Each chemical reaction requires its own specific enzyme. The unique R group arrangements in thousands of different proteins create thousands of differently shaped active sites."
     },
     {
         type: "advanced",
-        question: "What is adipose tissue and its functions?",
-        answer: "Adipose tissue stores triglycerides beneath skin and around organs. Functions: 1) Long-term energy storage, 2) Thermal insulation (prevents heat loss), 3) Cushioning/protection of organs, 4) Hormone production (leptin)."
+        question: "How does protein structure relate to its function?",
+        answer: "Structure directly determines function: globular proteins (enzymes, hormones) have compact shapes for specific binding; fibrous proteins (collagen, keratin) have elongated shapes for structural support; membrane proteins have hydrophobic regions for embedding in lipid bilayers."
     }
 ];
 

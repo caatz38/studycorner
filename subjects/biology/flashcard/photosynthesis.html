@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carbohydrate & Lipids - Flashcards | StudyCorner</title>
+    <title>Photosynthesis - Flashcards | StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,13 +686,13 @@
             <div class="hero-content">
                 
                 <h1></h1>
-                <h1>Carbohydrate & Lipids</h1>
+                <h1>Photosynthesis</h1>
                 <p class="subtitle">Flashcard</p>
                 
                 <div class="stats-container">
                     <div class="stat-box">
                         <div class="stat-label">Total Cards</div>
-                        <div class="stat-value" id="totalCards">31</div>
+                        <div class="stat-value" id="totalCards">32</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-label">Mastered</div>
@@ -714,12 +715,12 @@
                 </a>
                 
                 <div class="subject-nav-group">
-                    <a href="nucleic_acids.html" class="nav-button btn-prev-subject">
+                    <a href="cell_respiration.html" class="nav-button btn-prev-subject">
                         <span class="nav-icon">←</span>
-                        <span class="nav-text">Nucleic Acids</span>
+                        <span class="nav-text">Cell Respiration</span>
                     </a>
-                    <a href="proteins.html" class="nav-button btn-next-subject">
-                        <span class="nav-text">Proteins</span>
+                    <a href="dna_replication.html" class="nav-button btn-next-subject">
+                        <span class="nav-text">DNA Replication</span>
                         <span class="nav-icon">→</span>
                     </a>
                 </div>
@@ -729,15 +730,13 @@
                 <span class="filter-label">Filter by Topic</span>
                 <div class="filter-buttons">
                     <button class="filter-btn active" onclick="filterCards('all')">All Cards</button>
-                    <button class="filter-btn" onclick="filterCards('carbon')">Carbon</button>
-                    <button class="filter-btn" onclick="filterCards('monosaccharides')">Monosaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('polysaccharides')">Polysaccharides</button>
-                    <button class="filter-btn" onclick="filterCards('glycoproteins')">Glycoproteins</button>
-                    <button class="filter-btn" onclick="filterCards('lipids')">Lipids</button>
-                    <button class="filter-btn" onclick="filterCards('triglycerides')">Triglycerides</button>
-                    <button class="filter-btn" onclick="filterCards('fattyacids')">Fattyacids</button>
-                    <button class="filter-btn" onclick="filterCards('phospholipids')">Phospholipids</button>
-                    <button class="filter-btn" onclick="filterCards('advanced')">Advanced</button>
+                    <button class="filter-btn" onclick="filterCards('basics')">Basics</button>
+                    <button class="filter-btn" onclick="filterCards('chloroplast')">Chloroplast</button>
+                    <button class="filter-btn" onclick="filterCards('pigments')">Pigments</button>
+                    <button class="filter-btn" onclick="filterCards('stages')">Stages</button>
+                    <button class="filter-btn" onclick="filterCards('limiting')">Limiting</button>
+                    <button class="filter-btn" onclick="filterCards('scenarios')">Scenarios</button>
+                    <button class="filter-btn" onclick="filterCards('investigation')">Investigation</button>
                     <button class="filter-btn" onclick="filterCards('learning')">Still Learning</button>
                 </div>
             </div>
@@ -827,212 +826,196 @@
 // Proteins Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
-// Carbohydrates & Lipids Flashcards Data for IB Biology HL
+// Enzymes & Metabolism Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+// Cell Respiration Flashcards Data for IB Biology HL
+// Replace the flashcards array in your HTML with this data
+
+
+// Photosynthesis Flashcards Data for IB Biology HL
 // Replace the flashcards array in your HTML with this data
 
 const flashcards = [
-    // Carbon & Chemical Compounds
+    // Photosynthesis Basics
     {
-        type: "carbon",
-        question: "Why is carbon so important for biological molecules?",
-        answer: "Carbon has 4 valence electrons, allowing it to form 4 covalent bonds. It can make long chains or rings, bond with many elements (metallic and non-metallic), and form diverse macromolecules essential for life."
+        type: "basics",
+        question: "What is photosynthesis?",
+        answer: "Photosynthesis is the process by which simple inorganic compounds (CO₂ and H₂O) are converted into complex organic compounds (glucose) using light energy. It occurs in autotrophic organisms such as plants, algae, and cyanobacteria."
     },
     {
-        type: "carbon",
-        question: "What types of bonds can carbon form?",
-        answer: "Carbon can form single bonds (C-C), double bonds (C=C), and triple bonds (C≡C) with other carbon atoms and different elements."
+        type: "basics",
+        question: "Write the equation for photosynthesis.",
+        answer: "6CO₂ + 6H₂O + Light Energy → C₆H₁₂O₆ + 6O₂. Carbon dioxide + Water + Light Energy → Glucose + Oxygen."
     },
     {
-        type: "carbon",
-        question: "What are the main functional groups in biological molecules?",
-        answer: "Hydroxyl groups (-OH), Carboxyl groups (-COOH), Amino groups (-NH₂), and Phosphate groups (-PO₄). These give organic compounds their individual properties."
+        type: "basics",
+        question: "What type of energy conversion does photosynthesis involve?",
+        answer: "Photosynthesis converts light energy into chemical energy, which is stored in the bonds of organic compounds like glucose (biomass). This stored energy can later be released through cellular respiration."
     },
     {
-        type: "carbon",
-        question: "What is a condensation reaction?",
-        answer: "A condensation (dehydration synthesis) reaction joins two monomers by removing water (H₂O). One monomer loses -OH, the other loses -H, and a new covalent bond forms between them."
+        type: "basics",
+        question: "What is the relationship between photosynthesis and respiration?",
+        answer: "Photosynthesis and respiration are essentially the reverse of each other. Photosynthesis builds glucose using light energy and releases O₂. Respiration breaks down glucose, releasing energy as ATP and producing CO₂. They are interdependent processes."
     },
     {
-        type: "carbon",
-        question: "What is a hydrolysis reaction?",
-        answer: "Hydrolysis breaks down polymers into monomers by adding water. Covalent bonds are broken, and the -OH and -H from water form functional groups of the products. This occurs during digestion."
-    },
-
-    // Monosaccharides
-    {
-        type: "monosaccharides",
-        question: "What is the general formula for monosaccharides?",
-        answer: "(CH₂O)ₙ where n = 3 to 7. Monosaccharides are composed of carbon (C), hydrogen (H), and oxygen (O)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What are the three types of monosaccharides based on carbon number?",
-        answer: "Triose (3 carbons, e.g., glyceraldehyde), Pentose (5 carbons, e.g., ribose), Hexose (6 carbons, e.g., glucose)."
-    },
-    {
-        type: "monosaccharides",
-        question: "What is the difference between α-glucose and β-glucose?",
-        answer: "α-glucose has the -OH group on carbon 1 below the ring plane. β-glucose has the -OH group on carbon 1 above the ring plane. This small difference affects polymer structure."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose soluble in water?",
-        answer: "Glucose has multiple polar -OH (hydroxyl) groups, making it hydrophilic. This allows hydrogen bonding with water molecules, enabling transport in blood and phloem sap."
-    },
-    {
-        type: "monosaccharides",
-        question: "Why is glucose important for cellular respiration?",
-        answer: "Glucose is the primary energy source. During cellular respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ATP (~36-38 ATP molecules)."
+        type: "basics",
+        question: "What are the raw materials needed for photosynthesis?",
+        answer: "The raw materials are H₂O (water) and CO₂ (carbon dioxide). Water is absorbed by roots and transported through xylem. CO₂ enters leaves through stomata by diffusion."
     },
 
-    // Polysaccharides - Structure
+    // Chloroplast Structure
     {
-        type: "polysaccharides",
-        question: "What are polysaccharides?",
-        answer: "Polysaccharides are large carbohydrate polymers made by linking many glucose monomers via condensation reactions. They're ideal for energy storage due to compact shape, insolubility, and ease of breakdown."
+        type: "chloroplast",
+        question: "What is a chloroplast and where is it found?",
+        answer: "A chloroplast is an organelle found in plant cells that is the site of photosynthesis. It contains chlorophyll pigments that absorb light energy and has a double membrane structure with internal thylakoids."
     },
     {
-        type: "polysaccharides",
-        question: "What is starch and where is it found?",
-        answer: "Starch is the storage polysaccharide of plants, stored as granules in chloroplasts. It's made of α-glucose and consists of amylose (unbranched helix) and amylopectin (branched)."
+        type: "chloroplast",
+        question: "What is chlorophyll and what does it do?",
+        answer: "Chlorophyll is the main photosynthetic pigment found in chloroplasts. It absorbs red and blue light most effectively, reflects green light (making plants appear green), and uses the absorbed light energy to drive photosynthesis."
     },
     {
-        type: "polysaccharides",
-        question: "What is the difference between amylose and amylopectin?",
-        answer: "Amylose: 10-30% of starch, unbranched helix with 1,4 glycosidic bonds. Amylopectin: 70-90% of starch, branched with 1,4 and 1,6 glycosidic bonds, providing many terminal glucose molecules for quick access."
+        type: "chloroplast",
+        question: "Why do plants appear green?",
+        answer: "Plants appear green because chlorophyll absorbs red and blue light for photosynthesis but reflects green light. The reflected green light reaches our eyes, making leaves and plants look green to us."
     },
     {
-        type: "polysaccharides",
-        question: "What is glycogen and where is it stored?",
-        answer: "Glycogen is the storage polysaccharide of animals and fungi, made of α-glucose. More branched than amylopectin (branches every 8-12 units). Stored in liver and muscle cells as granules for quick energy release."
+        type: "chloroplast",
+        question: "What are the two forms of chlorophyll?",
+        answer: "Chlorophyll exists in two main forms: Chlorophyll a and Chlorophyll b. Both are primary pigments that absorb wavelengths in the blue-violet and red regions of the light spectrum."
     },
     {
-        type: "polysaccharides",
-        question: "What is cellulose and what is its function?",
-        answer: "Cellulose is a structural carbohydrate made of β-glucose polymers. Found in plant cell walls, it provides mechanical strength, prevents cell bursting, and maintains shape. Humans cannot digest it (dietary fiber)."
-    },
-
-    // Polysaccharides - Comparison
-    {
-        type: "polysaccharides",
-        question: "Why is cellulose different from starch structurally?",
-        answer: "Cellulose uses β-glucose (every alternate molecule inverted), forming straight unbranched chains. Hydrogen bonds between chains create strong microfibrils. Starch uses α-glucose, forming helical or branched structures."
-    },
-    {
-        type: "polysaccharides",
-        question: "Compare the functions of starch, glycogen, and cellulose.",
-        answer: "Starch: energy storage in plants. Glycogen: energy storage in animals (faster mobilization). Cellulose: structural support in plant cell walls (cannot be digested by humans)."
+        type: "chloroplast",
+        question: "What are carotenoids and what is their role?",
+        answer: "Carotenoids are accessory pigments found in chloroplasts. They absorb wavelengths mainly in the blue-violet region of the spectrum. Together with chlorophyll, they maximise the amount of white light energy that can be captured for photosynthesis."
     },
 
-    // Glycoproteins
+    // Pigments & Light Absorption
     {
-        type: "glycoproteins",
-        question: "What are glycoproteins?",
-        answer: "Glycoproteins are proteins with carbohydrate chains covalently attached. Found in cell membranes with carbohydrates extending outside, involved in cell recognition, communication, and immune defense."
+        type: "pigments",
+        question: "Why do chloroplasts contain several different pigments?",
+        answer: "Different pigments absorb different wavelengths of light. Having multiple pigments (chlorophyll a, chlorophyll b, carotenoids) allows the plant to absorb a wider range of light wavelengths, maximising the total light energy captured."
     },
     {
-        type: "glycoproteins",
-        question: "How do glycoproteins function in cell recognition?",
-        answer: "Glycoproteins act as cell identity markers. For example, the ABO blood group system uses specific glycoprotein antigens on red blood cells (A, B, or neither) for recognition."
-    },
-
-    // Lipids - Basic Properties
-    {
-        type: "lipids",
-        question: "What makes lipids hydrophobic?",
-        answer: "Lipids are hydrophobic (water-repelling) because they consist mainly of non-polar C-H bonds in hydrocarbon chains. These cannot form hydrogen bonds with water, so lipids don't dissolve in water."
+        type: "pigments",
+        question: "What is a photon?",
+        answer: "A photon is a particle (unit) of light energy. The energy a photon holds is related to its wavelength — the longer the wavelength, the less energy the photon holds. Shorter wavelengths (blue/violet) carry more energy than longer wavelengths (red)."
     },
     {
-        type: "lipids",
-        question: "What elements make up lipids?",
-        answer: "Lipids are mainly composed of carbon (C), hydrogen (H), and small amounts of oxygen (O). Some also contain phosphorus (P)."
+        type: "pigments",
+        question: "What is the visible light spectrum range relevant to photosynthesis?",
+        answer: "Violet light has the shortest wavelength (~400nm) and red light has the longest wavelength (~700nm). Green light sits in the middle (~550nm). Chlorophyll absorbs most effectively at the blue-violet and red ends of the spectrum."
     },
     {
-        type: "lipids",
-        question: "Why is lipid hydrophobicity biologically important?",
-        answer: "Hydrophobicity allows lipids to: 1) Form cell membrane barriers, 2) Store energy without affecting osmotic balance, 3) Provide waterproofing, 4) Create separate compartments in cells."
+        type: "pigments",
+        question: "What is an absorption spectrum?",
+        answer: "An absorption spectrum shows how much light of different wavelengths is absorbed by a particular pigment. For chlorophyll, it shows absorption peaks in the blue-violet (~430nm) and red (~680nm) regions."
+    },
+    {
+        type: "pigments",
+        question: "What is an action spectrum?",
+        answer: "An action spectrum shows the rate of photosynthesis at different wavelengths of light — which wavelengths are most effective at driving photosynthesis. It closely matches the absorption spectrum of chlorophyll, confirming chlorophyll is the main photosynthetic pigment."
     },
 
-    // Triglycerides
+    // Stages of Photosynthesis
     {
-        type: "triglycerides",
-        question: "What is the structure of a triglyceride?",
-        answer: "A triglyceride consists of one glycerol molecule (3-carbon alcohol with -OH groups) bonded to three fatty acid chains (long hydrocarbon chains with terminal -COOH groups) via ester bonds."
+        type: "stages",
+        question: "What are the two main stages of photosynthesis?",
+        answer: "1) Light-Dependent Reactions (LDR): occur in thylakoid membranes, use light energy to produce ATP and NADPH, and split water releasing O₂. 2) Light-Independent Reactions (Calvin Cycle): occur in stroma, use ATP and NADPH to fix CO₂ into glucose."
     },
     {
-        type: "triglycerides",
-        question: "How are triglycerides formed?",
-        answer: "Triglycerides form through esterification (condensation). The -OH from glycerol and -COOH from fatty acids react, releasing water and forming ester bonds. Three fatty acids attach to one glycerol."
+        type: "stages",
+        question: "What happens during the light-dependent reactions?",
+        answer: "Light energy is absorbed by chlorophyll, which excites electrons. Water molecules are split (photolysis), releasing O₂ as a byproduct. The energy is used to produce ATP (via chemiosmosis) and NADPH, which are then used in the Calvin Cycle."
     },
     {
-        type: "triglycerides",
-        question: "What are the functions of triglycerides?",
-        answer: "1) Long-term energy storage (more than double the energy per gram of carbohydrates), 2) Thermal insulation in adipose tissue, 3) Protection of internal organs, 4) Buoyancy in aquatic mammals."
-    },
-
-    // Fatty Acids
-    {
-        type: "fattyacids",
-        question: "What is the difference between saturated and unsaturated fatty acids?",
-        answer: "Saturated: NO C=C double bonds, straight chains, pack tightly, solid at room temperature, higher melting point. Unsaturated: ONE or MORE C=C double bonds, kinked chains, pack loosely, liquid at room temperature, lower melting point."
+        type: "stages",
+        question: "What happens during the light-independent reactions (Calvin Cycle)?",
+        answer: "CO₂ from the atmosphere is fixed (combined with existing molecules) using energy from ATP and NADPH produced in the light-dependent reactions. Through a cycle of reactions, glucose (C₆H₁₂O₆) is eventually formed."
     },
     {
-        type: "fattyacids",
-        question: "What are the two types of unsaturated fatty acids?",
-        answer: "Monounsaturated: ONE C=C double bond (e.g., olive oil). Polyunsaturated: TWO or MORE C=C double bonds (e.g., fish oil, vegetable oils) - lowest melting point."
+        type: "stages",
+        question: "What is photolysis?",
+        answer: "Photolysis is the splitting of water molecules (H₂O) using light energy during the light-dependent reactions. This produces hydrogen ions (H⁺), electrons (e⁻), and oxygen (O₂). The O₂ is released as a byproduct of photosynthesis."
     },
     {
-        type: "fattyacids",
-        question: "Why do unsaturated fats have lower melting points?",
-        answer: "C=C double bonds create 'kinks' in the fatty acid chains, preventing tight packing. This reduces intermolecular forces (van der Waals), resulting in lower melting points and liquid state at room temperature."
-    },
-    {
-        type: "fattyacids",
-        question: "What is the difference between cis and trans unsaturated fats?",
-        answer: "Cis: hydrogen atoms on same side of double bond, creates kink, natural form in most foods. Trans: hydrogen atoms on opposite sides, straighter chain, often artificial (hydrogenation), associated with health risks."
+        type: "stages",
+        question: "Where do the light-dependent and light-independent reactions take place?",
+        answer: "Light-dependent reactions occur in the thylakoid membranes (inside the chloroplast). Light-independent reactions (Calvin Cycle) occur in the stroma (the fluid surrounding the thylakoids inside the chloroplast)."
     },
 
-    // Phospholipids
+    // Limiting Factors
     {
-        type: "phospholipids",
-        question: "What is the structure of a phospholipid?",
-        answer: "A phospholipid has: 1 glycerol backbone, 2 hydrophobic fatty acid tails, 1 hydrophilic phosphate group (often with additional groups attached). This creates an amphipathic molecule."
+        type: "limiting",
+        question: "What are the limiting factors of photosynthesis?",
+        answer: "The three main limiting factors are: 1) Light intensity, 2) Carbon dioxide (CO₂) concentration, 3) Temperature. Each can limit the rate of photosynthesis when below optimal levels."
     },
     {
-        type: "phospholipids",
-        question: "What does amphipathic mean?",
-        answer: "Amphipathic means having both hydrophilic (water-loving) and hydrophobic (water-fearing) regions. Phospholipids have hydrophilic phosphate heads and hydrophobic fatty acid tails."
+        type: "limiting",
+        question: "What is a limiting factor?",
+        answer: "A limiting factor is a variable that holds back (limits) the rate of a chemical reaction. If that variable is increased, the reaction rate increases. Under any set of conditions, only one factor is the limiting factor at any given time."
     },
     {
-        type: "phospholipids",
-        question: "Why do phospholipids form bilayers?",
-        answer: "In aqueous solutions, phospholipids spontaneously form bilayers with hydrophobic tails facing inward (away from water) and hydrophilic heads facing outward (toward water). This minimizes unfavorable interactions and creates stable cell membranes."
+        type: "limiting",
+        question: "How does light intensity affect photosynthesis?",
+        answer: "As light intensity increases, the rate of photosynthesis increases because more photons are available to drive the light-dependent reactions. At very high light intensities, another factor (CO₂ or temperature) becomes limiting instead."
     },
     {
-        type: "phospholipids",
-        question: "What is the function of phospholipid bilayers?",
-        answer: "Phospholipid bilayers form the foundation of all cell membranes, creating selective barriers that separate cell interior from exterior and organize cellular compartments. They control what enters and exits cells."
+        type: "limiting",
+        question: "How does CO₂ concentration affect photosynthesis?",
+        answer: "Higher CO₂ concentration increases the rate of photosynthesis because more CO₂ is available for carbon fixation in the Calvin Cycle. At a certain point, another factor becomes limiting and increasing CO₂ has no further effect."
+    },
+    {
+        type: "limiting",
+        question: "How does temperature affect photosynthesis?",
+        answer: "Temperature affects enzyme activity in photosynthesis. At low temperatures, enzymes work slowly. At the optimum temperature, enzymes function at maximum rate. Above the optimum, enzymes denature and the rate drops sharply."
     },
 
-    // Advanced Comparisons
+    // Limiting Factor Scenarios
     {
-        type: "advanced",
-        question: "Compare triglycerides and phospholipids structurally.",
-        answer: "Triglycerides: 3 fatty acids + 1 glycerol, fully hydrophobic, energy storage. Phospholipids: 2 fatty acids + 1 glycerol + 1 phosphate group, amphipathic, membrane structure."
+        type: "scenarios",
+        question: "At night, which factor is most likely limiting photosynthesis?",
+        answer: "Light intensity is the limiting factor at night because there is little to no light available for the light-dependent reactions to occur, regardless of how much CO₂ or temperature is available."
     },
     {
-        type: "advanced",
-        question: "Why are lipids better for long-term energy storage than carbohydrates?",
-        answer: "Lipids store more than twice the energy per gram (9 kcal/g vs 4 kcal/g), are hydrophobic (don't affect osmotic balance), and are more compact. However, carbohydrates release energy faster."
+        type: "scenarios",
+        question: "On a cold, sunny day, which factor is most likely limiting photosynthesis?",
+        answer: "Temperature is the limiting factor. Even though light intensity is high (sunny), the cold temperature slows enzyme activity in the Calvin Cycle. Increasing light intensity further will not increase the rate because temperature is the bottleneck."
     },
     {
-        type: "advanced",
-        question: "What is adipose tissue and its functions?",
-        answer: "Adipose tissue stores triglycerides beneath skin and around organs. Functions: 1) Long-term energy storage, 2) Thermal insulation (prevents heat loss), 3) Cushioning/protection of organs, 4) Hormone production (leptin)."
+        type: "scenarios",
+        question: "On a warm, bright day indoors, which factor might be limiting?",
+        answer: "CO₂ concentration is likely limiting. Indoor environments often have lower CO₂ levels. Even though light and temperature are adequate, the lack of CO₂ limits carbon fixation in the Calvin Cycle, slowing photosynthesis."
+    },
+
+    // Investigating Photosynthesis
+    {
+        type: "investigation",
+        question: "How can the rate of photosynthesis be measured?",
+        answer: "The rate can be measured by counting oxygen bubbles produced per minute (in aquatic plants like Elodea), or by measuring the volume of O₂ released over time. More bubbles or more O₂ = faster rate of photosynthesis."
+    },
+    {
+        type: "investigation",
+        question: "How does distance from a light source affect photosynthesis rate?",
+        answer: "As distance from the light increases, light intensity decreases (following the inverse square law), so the rate of photosynthesis decreases. Closer to the light = more photons = faster rate, until another factor becomes limiting."
+    },
+    {
+        type: "investigation",
+        question: "What is paper chromatography used for in photosynthesis?",
+        answer: "Paper chromatography is used to separate photosynthetic pigments (chlorophyll a, chlorophyll b, carotenoids). Pigments travel different distances based on solubility in the solvent, and can be identified by calculating their Rf values."
+    },
+    {
+        type: "investigation",
+        question: "What is the Rf value and how is it calculated?",
+        answer: "The Rf (retention factor) value identifies a pigment on a chromatography paper. It is calculated as: Rf = distance traveled by pigment ÷ distance traveled by solvent front. Each pigment has a unique Rf value."
+    },
+    {
+        type: "investigation",
+        question: "What is the inverse square law and how does it apply to photosynthesis experiments?",
+        answer: "The inverse square law states that light intensity decreases proportionally to the square of the distance from the source. So doubling the distance reduces light intensity to one quarter. This is used to calculate relative light intensity in photosynthesis experiments."
     }
 ];
-
-
         let currentIndex = 0;
         let isFlipped = false;
         let cardStatus = new Array(flashcards.length).fill('new');

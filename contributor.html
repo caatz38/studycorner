@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - StudyCorner</title>
+    <title>Contributors - StudyCorner</title>
     <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,23 @@
             box-sizing: border-box;
         }
 
+        
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
             background: #ffffff;
             color: #968686;
             line-height: 1.6;
+        }
+
+        h2 {
+            color: #6c426c;
+            font-weight: 300;
+        }
+
+        h2:hover {
+            font-weight: 500;
+
         }
 
         /* Header & Navigation */
@@ -91,7 +103,7 @@
         }
 
         .hero-content {
-            background: linear-gradient(to bottom, #f9dcf6 0%, #ffffff 100%);
+            background: linear-gradient(to bottom, #ead0ff 0%, #ffffff 100%);
             border-radius: 32px;
             padding: 80px 60px;
             text-align: center;
@@ -125,12 +137,6 @@
             margin-bottom: 60px;
         }
 
-        .about-section h2 {
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            color: #1a1a1a;
-        }
 
         .about-section p {
             font-size: 16px;
@@ -151,9 +157,10 @@
         }
 
         .info-card {
-            background: #fff4fd;
+            background: #f6fff4;
             border-radius: 20px;
             padding: 32px;
+            align-items: center;
         }
 
         .info-card h3 {
@@ -174,13 +181,6 @@
             margin-top: 80px;
         }
 
-        .faq-section h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 32px;
-            text-align: center;
-            color: #1a1a1a;
-        }
 
         .faq-item {
             background: #ffffff;
@@ -222,7 +222,7 @@
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.5s ease, 0.1s;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
             padding: 0 24px;
         }
 
@@ -345,13 +345,7 @@
                 padding: 40px 20px 60px;
             }
 
-            .about-section h2 {
-                font-size: 28px;
-            }
 
-            .faq-section h2 {
-                font-size: 28px;
-            }
 
             .faq-question {
                 font-size: 16px;
@@ -368,7 +362,7 @@
 
         @media (max-width: 480px) {
             h1 {
-                font-size: 40px;
+                font-size: 32px;
             }
 
             .subtitle {
@@ -392,13 +386,13 @@
 <body>
     <header>
         <nav>
-            <img src="/images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            <img src="images/studycorner_logo.png" alt="StudyCorner" class="logo">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="/contributor.html">Contributor</a></li>
+                <li><a href="/contributor.html"class="active">Contributor</a></li>
                 <li><a href="/donate.html">Donate</a></li>
-                <li><a href="/about_us.html" class="active">About Us</a></li>
+                <li><a href="/about_us.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -407,147 +401,20 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="cards-grid"></div>
-                <h1>About StudyCorner</h1>
+                <h1>Contributors</h1>
                 <div class="cards-grid"></div>
-                <div class="cards-grid">
-                <div class="info-card">
-                    <h3>Our Story</h3>
-                    <p>
-                        StudyCorner (formerly MindShare) was born out of frustration. As IB students, we were constantly overwhelmed by scattered notes, unclear explanations, too many links, and a lack of quality practice questions. We knew there had to be a better way.
-                    So we built it. StudyCorner is a platform where students help other students organizing notes, sharing teacher materials, and creating practice questions all in one simple, accessible place.
-                    
-                    </p>
-                    
-                </div>
+                <div class="cards-grid"></div>
 
-
+                    <h2>Bernadeta Asih Wuri Damayanti</h2>
+                    <h1></h1>
+                    <h2>Nabil Lintang Favian</h2>
+                    <h2>Mikhail Fahim Dhiaulhaq</h2>
+                    <h2>Orozco Welfort Tomosegu</h2>
+                    <h2>Indobona Firman</h2>
             </div>
         </section>
 
-        <div class="content">
- 
-            <section class="faq-section">
-                <h2>Frequently Asked Questions</h2>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Who asked?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p> Nobody </p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        What is StudyCorner?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>StudyCorner is a student-powered learning platform designed specifically for PD08 students. We collect, organize, and share notes, teacher materials, practice questions, and study resources all in one place.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Is StudyCorner free to use?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely!</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Is this a social project?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>YESSS! StudyCorner is our way of helping each other out. We succeed when everyone succeeds.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Are the notes accurate and reliable?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>maybe 👉👈</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Can I download the materials?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Most of our materials are available for download, including PDFs, Canva slides, and note documents. We want you to be able to study offline whenever you need.</p>
-                    </div>
-                </div>
-
-                
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        How can I contribute to StudyCorner?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We love contributions! You can share your notes, create practice questions, or help review existing content. Click on the "Become a Contributor" button on our homepage to get started. All contributors are credited for their work.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Why are there missing subjects?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We're so sorry. There are some subject that have are not added yet due to limited time. We assure you they will be added next term 😉</p>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        How can i add missing materials?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <a href="https://forms.gle/9H4WxwAXHd6Lzm1d7">
-                             <button>click this button.</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        How do I report an error in the content?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <a href="https://forms.gle/9H4WxwAXHd6Lzm1d7">
-                             <button>click this button.</button>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        Any suggestions?
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <a href="https://forms.gle/9H4WxwAXHd6Lzm1d7">
-                             <button>click this button.</button>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
+        
     </main>
 
     <footer>

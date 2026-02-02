@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math - Choose Your Course - StudyCorner</title>
+    <title>BM - Choose Your Teacher - StudyCorner</title>
+    <link rel="icon" type="image/x-icon" href="/images/sc-icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -90,7 +91,7 @@
         }
 
         .hero-content {
-            background: linear-gradient(to bottom, #dde4ff 0%, #ffffff 100%);
+            background: linear-gradient(to bottom, #b7e9ff 0%, #ffffff 100%);
             border-radius: 32px;
             padding: 60px;
             display: flex;
@@ -108,7 +109,7 @@
             justify-content: center;
             font-size: 40px;
             flex-shrink: 0;
-            transform: translate(0, -47px);
+            transform: translate(0,-30px);
         }
 
         .hero-text h1 {
@@ -153,6 +154,30 @@
             font-size: 16px;
             color: #6b7280;
             margin-bottom: 48px;
+        }
+
+        /* back button */
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 10px 16px;
+            border-radius: 12px;
+        }
+
+        .back-button:hover {
+            color: #1a1a1a;
+            background: #f3f4f6;
+        }
+
+        .back-arrow {
+            font-size: 18px;
         }
 
         /* Course Cards Grid */
@@ -276,30 +301,6 @@
             height: 40px;
         }
 
-        /* Back Button */
-        .back-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #6b7280;
-            text-decoration: none;
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 40px;
-            transition: all 0.3s;
-            padding: 8px 16px;
-            border-radius: 12px;
-        }
-
-        .back-button:hover {
-            color: #1a1a1a;
-            background: #f3f4f6;
-        }
-
-        .back-arrow {
-            font-size: 18px;
-        }
-
         /* Responsive Design */
         @media (max-width: 1024px) {
             .courses-grid {
@@ -309,7 +310,7 @@
 
         @media (max-width: 768px) {
 
-            .subject-hero-icon {
+        .subject-hero-icon {
             width: 80px;
             height: 80px;
             background: white;
@@ -319,7 +320,7 @@
             justify-content: center;
             font-size: 40px;
             flex-shrink: 0;
-            transform: translate(0, 0px);
+            transform: translate(0,0);
         }
 
             header {
@@ -404,7 +405,7 @@
 <body>
     <header>
         <nav>
-            <img src="/../images/studycorner_logo.png" alt="StudyCorner" class="logo">
+            <img src="/images/studycorner_logo.png" alt="StudyCorner" class="logo">
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="/index.html">Home</a></li>
@@ -418,56 +419,39 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <div class="subject-hero-icon">🔢</div>
+                <div class="subject-hero-icon">💼</div>
                 <div class="hero-text">
-                    <h1>Mathematics</h1>
+                    <h1>Business Management</h1>
                     <div class="breadcrumb">
-                        <a href="/index.html">Home</a> / <a href="/term2/subject.html">Term 2</a> / Math
+                        <a href="/index.html">Home</a> / <a href="/term2/subject.html">Subjects</a> / Business Management
                     </div>
                     <h1></h1>
                     <a href="/term2/subject.html" class="back-button">
                         <span class="back-arrow">←</span>
                         Back
                     </a>
-                </div>
 
-                
-                
+                </div>
             </div>
 
             <div class="content">
-            
+
+                <h2 class="section-title">Choose Your Teacher:</h2>
             <div class="courses-grid">
-                <a href="math-aa-hl.html" class="course-card">
-                    
-                    <h3 class="course-title">Math AA HL</h3>
 
-                    <span class="badge hl">HIGHER LEVEL</span>
+                <a href="intan.html" class="course-card">
+                    
+                    <h3 class="course-title">Intan Yulfi Latifah</h3>
+
                 </a>
 
-                <a href="math-aa-sl.html" class="course-card">
+                <a href="riski.html" class="course-card">
                     
-                    <h3 class="course-title">Math AA SL</h3>
-          
-                    <span class="badge sl">STANDARD LEVEL</span>
-                </a>
-
-                <a href="math-ai-hl.html" class="course-card">
-                    
-                    <h3 class="course-title">Math AI HL</h3>
-                    <span class="badge hl">HIGHER LEVEL</span>
-                </a>
-
-                <a href="math-ai-sl.html" class="course-card">
-                    
-                    <h3 class="course-title">Math AI SL</h3>
-                    <span class="badge sl">STANDARD LEVEL</span>
+                    <h3 class="course-title">Riski Utama Putriani</h3>
+        
                 </a>
             </div>
-        </div>
         </section>
-
-        
     </main>
 
     <footer>
@@ -475,7 +459,7 @@
             <strong>© StudyCorner 2026</strong><br>
             For educational use only · Respect copyright
         </div>
-        <img src="/../images/nel.png" alt="nel signature" class="footer-signature">
+        <img src="/images/nel.png" alt="nel signature" class="footer-signature">
     </footer>
 
     <script>
